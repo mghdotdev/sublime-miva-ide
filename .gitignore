@@ -1,3 +1,6 @@
+# Hide AAAPackageDev Build file
+*.YAML-tmLanguage
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
