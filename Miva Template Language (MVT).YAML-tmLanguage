@@ -1,0 +1,257 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Miva Template Language (MVT)
+scopeName: text.html
+fileTypes: [mvt,html,htm]
+uuid: 21ad5f2b-6228-46a4-9061-2986f82e4f9a
+
+patterns:
+- include: '#mvt-all'
+- include: text.html.basic
+
+repository:
+  mvt-all:
+    patterns:
+    - comment: MVT Comment
+      begin: <mvt:comment>
+      beginCaptures:
+        '0': {name: punctuation.definition.comment.html}
+      end: </mvt:comment>
+      endCaptures:
+        '0': {name: punctuation.definition.comment.html}
+      name: comment.block.html
+
+    - comment: MVT Tags
+      begin: (</?)((?i:mvt:item|mvt:assign|mvt:if|mvt:elseif|mvt:while|mvt:eval|mvt:foreach|mvt:else|mvt:do|mvt:call|mvt:callcontinue|mvt:callstop|mvt:foreachcontinue|mvt:foreachstop|mvt:whilecontinue|mvt:whilestop|mvt:exit)\b)
+      beginCaptures:
+        '1': {name: meta.preprocessor.generic.mvt}
+        '2': {name: meta.preprocessor.generic.mvt}
+      end: ((?:[ ]?/)?>)
+      endCaptures:
+        '1': {name: meta.preprocessor.generic.mvt}
+      name: meta.preprocessor.generic.mvt
+      patterns:
+      - include: '#mvt-attributes'
+
+    - comment: MVT Entities
+      include: '#mvt-entities'
+
+  mvt-source:
+    patterns:
+      ## Numbers
+    - comment: Numbers
+      name: constant.numeric.mvt
+      match: \b(([0-9]+(\.[0-9]+)?))\b
+
+    ## Strings
+    - comment: Single Quote String
+      begin: \'
+      beginCaptures:
+        '0': {name: punctuation.definition.string.begin.mvt}
+      end: \'
+      endCaptures:
+        '0': {name: punctuation.definition.string.end.mvt}
+      name: string.quoted.single
+
+    ## Operators
+    - comment: Arithmetic Operators
+      name: keyword.operator.arithmetic.mvt
+      match: (\b(POW|MOD|ROUND)\b)
+    - comment: Arithmetic Operators (Symbols)
+      name: keyword.operator.arithmetic.mvt
+      match: ((?<!\S)(\+|\-|\*|\/)\B)
+    - comment: Arithmetic Operators (Increment and Decrement)
+      name: keyword.operator.arithmetic.mvt
+      match: (\b(\+\+|\-\-)\B)
+
+    - comment: Comparison Operators
+      name: keyword.operator.comparison.mvt
+      match: (\b(EQ|GT|GE|LT|NE|LE)\b)
+
+    - comment: Logical Operators
+      name: keyword.operator.logical.mvt
+      match: (\b(NOT|AND|OR|ISNULL)\b)
+
+    - comment: Text Operators
+      name: keyword.operator.string.mvt
+      match: (\b(IN|CIN|EIN|ECIN|CRYPT)\b)
+    - comment: Text Operators (Symbols)
+      name: keyword.operator.string.mvt
+      match: ((?<!\S)(\$)\B)
+
+    ## Booleans
+    - comment: True
+      name: constant.language.boolean.true.mvt
+      match: (\b(?i:true)\b)
+    - comment: False
+      name: constant.language.boolean.false.mvt
+      match: (\b(?i:false)\b)
+
+    ## Variables
+    - comment: Local Variable
+      name: variable.other.local.mvt
+      match: (l\.)([A-Za-z_]+)([a-zA-Z0-9:_\[\]]*)
+
+    - comment: Local Variable (NO L)
+      name: variable.other.local.mvt
+      match: ([A-Za-z_]+)([a-zA-Z0-9_\[\]]+(:)[a-zA-Z0-9:_\[\]]*)
+
+    - comment: Global Variable
+      name: variable.other.global.mvt
+      match: (g\.)([A-Za-z_]+)([a-zA-Z0-9:_\[\]]*)
+
+    - comment: System Variable
+      name: variable.other.system.mvt
+      match: (s\.)([A-Za-z_]+)([a-zA-Z0-9:_\[\]]*)
+
+  mvt-variable-generic:
+    comment: MVT Variable Generic (No l. g. s.)
+    name: variable.other.generic.mvt
+    match: ([A-Za-z_]+)([a-zA-Z0-9:_\[\]]*)
+
+  mvt-functions-assign:
+    comment: MVT Functions (mvt:assign)
+    name: support.function.assign.mvt
+    match: \b(?i:abs|acos|asciichar|sacreate|asort|asciivalue|asin|atan|atan2|bf_decrypt|bf_encrypt|ceil|cos|cosh|crypto_base64_decode|crypto_base64_encode|crypto_cipher_block_size|crypto_cipher_iv_length|crypto_cipher_key_length|crypto_cipher_mode|crypto_digest_block_size|crypto_digest_size|crypto_evp_decrypt|crypto_evp_digest|crypto_evp_encrypt|crypto_evp_hmac|crypto_hmac_md5|crypto_hmac_sha1|crypto_hmac_sha256|crypto_last_error|crypto_last_ssl_error|crypto_library_version|crypto_md5|crypto_md5_file|crypto_pbkdf1|crypto_pbkdf2|crypto_rand_bytes|crypto_sha1|crypto_sha256|crypto_xor|decodeattribute|decodeentities|dir|encodeattribute|encodeentities|exp|fchmod|fcopy|fdelete|fexists|file_append|file_create|file_read|file_read_bytes|fisdir|floor|fmkdir|fmod|fmode|frename|fscopy|fsize|fsrename|fsymlink|ftime|gettoken|glosub|glosub_array|indexof|indexofi|int|isalnum|isalpha|isascii|iscntrl|isdigit|isgraph|islower|isprint|ispunct|isspace|isupper|isxdigit|keyword_extract|keyword_extract_merge|keyword_extract_merge_init|keyword_extract_merge_results|keyword_in|len|len_var|log|log10|ltrim|makesessionid|miva_array_binarysearch|miva_array_clear|miva_array_collapse|miva_array_copy|miva_array_copy_ref|miva_array_delete|miva_array_deserialize|miva_array_elements|miva_array_find|miva_array_insert|miva_array_insert_ref|miva_array_insert_var|miva_array_max|miva_array_merge|miva_array_merge_ref|miva_array_min|miva_array_next|miva_array_pop|miva_array_pop_ref|miva_array_previous|miva_array_search|miva_array_serialize|miva_array_shift|miva_array_shift_ref|miva_array_sort|miva_closelog|miva_element_exists|miva_getvarlist|miva_hex_decode|miva_hex_encode|miva_lockfile|miva_member_exists|miva_openlog|miva_output_flush|miva_output_header|miva_setdefaultdatabase|miva_setdefaultlanguage|miva_setlanguage|miva_setlogmask|miva_sleep|miva_struct_members|miva_template_compile|miva_template_compile_dump|miva_template_compile_itemlist|miva_variable_value|miva_writelog|mktime_t|padl|padr|power|random|rnd|rsa_free|rsa_generate_keypair|rsa_generate_keypair_mem|rsa_generate_keypair_mem_cipher|rsa_load_privatekey|rsa_load_privatekey_mem|rsa_load_publickey|rsa_load_publickey_mem|rsa_private_decrypt|rsa_private_encrypt|rsa_public_decrypt|rsa_public_encrypt|rsa_save_privatekey|rsa_save_privatekey_mem|rsa_save_privatekey_mem_cipher|rsa_sign|rsa_verify|rtrim|schmod|scopy|sdelete|sexists|sfcopy|sfrename|sin|sinh|sisdir|smkdir|smode|sqrt|srandom|srename|ssize|ssymlink|stime|substring|substring_var|tan|tanh|tar_create|tar_directory|tar_extract|timezone|time_t_dayofmonth|time_t_dayofweek|time_t_dayofyear|time_t_hour|time_t_min|time_t_month|time_t_sec|time_t_year|tokenize|tolower|toupper|trim|wdownload|wget|x509_create|x509_free|x509_load|x509_rsa_publickey|x509_verify|miva_json_decode|miva_json_decode_last_error|xml_parse|xml_parse_error|xml_parse_section|xml_parse_section_getstate|xml_parse_section_init|xml_parse_section_setstate|xml_parse_set_colon_replacement|xml_parse_var)(?=\s*\()
+
+  mvt-functions-item:
+    patterns:
+    - comment: ReadyTheme Functions
+      name: support.function.readytheme.mvt
+      match: \b(?i:Load_Image|Load_Banner|Load_NavigationSet|Load_ContentSection|Load_ProductListing|image|banner|productlisting|contentsection|navigationset)(?=\s*\()
+
+    - comment: Custom Field Functions
+      name: support.function.customfield.mvt
+      match: \b(?i:Debug|(Write|Read)_Basket|(Write|Read)_Category_Code|(Write|Read)_Category_ID|(Write|Read)_Customer_Login|(Write|Read)_Customer_ID|(Write|Read)_Order|(Write|Read)_Product_Code|(Write|Read)_Product_ID)(?=\s*\()
+    
+    - comment: Toolkit Functions
+      name: support.function.toolkit.mvt
+      match: (?<!\w|\|)(?i:customc|waitlistshow|vquick|cxpc|math_round|mktime_t|set_time_zone|time_t_hour|time_t_minute|time_t_second|time_t_dayofweek|vrender|vheaderoutput|subtotalorder|exportxmlend|sacreate|sacreate|asort|vrandom|vcallurl|vgettoken|time_t_year|time_t_month|time_t_dayofmonth|discount|substring|gettoken|vassign|sassign|vlength|vglosub|vglosub|sglosub|math_add|math_subtract|math_multiply|math_divide|currencyformat|padl|padr|callurl|custom|attr|cxp|parentcat|subcat|pgroup|agroup|pgroup-p|agroup-p|breadcrumb|sexists|vproduct_find|render|no_apostrophe|bestseller|last|basket|random|states|nextprevious|concat|prompt|quick|pgrpinsert|vacreate|agrpinsert|related|catimage|cattreeimage|export|import|productmeta|categorymeta|exportxml|logbackin|childof|pastorders|weight|subtotal|alsobought|clearall|basketoneclick|agroup-c|agroup-cats|lasturl|updatebasket|productincategory|header|footer|mvassign|mveval|catpages|customer|custinsert|sendpage|randomcat|randomall|counter|prodthumb|shipcalc|fileread|affiliate|loginlookup|hyphen|hyphen2|customcategory|country|current|pageinfo|headeroutput|plstpages|tksl|systemaction|lastupdate|custadd|custdelete|pgrpdelete|agrpdelete|smtp|randomstring|pickprompt|promptimage|exit|basketfiller|custfavcount|prodinsert|acount|sibling|waitlist|ctgyproduct_list|plstproduct_list|simplesearch|prior|footsteps|visitors|savebasket|savebasketdate|order|brief|savebasketascookie|savebasketshow|setcookie|reviewsetup|ratingshow|reviewshow|reviewerlist|reviewfriendshow|rrinsert|variantlistbasketinfo|reviewsnew|alsobought_list_load|savebasket2email|customimage|asortmulti|altpagecode|fexists|bestseller_recent|bask_getsum|dynamicattributebasket|taxadjustitem|upcharge|variantarray|catinfo|basketchargedelete|basketattributepercent|ascii2html|json_encode|batchsummary|donotemail|donotemail_e|decrypt_email)(?=\|)
+
+    - comment: RyToolbelt Functions
+      name: support.function.toolbelt.mvt
+      match: (?<!\w|\|)(?i:asciichar|asciivalue|gettoken|glosub|glosub_array|indexof|indexofi|keyword_extract|keyword_extract_merge|keyword_extract_merge_init|keyword_extract_merge_results|keyword_in|len|len_var|ltrim|padl|padr|rtrim|substring|substring_var|tokenize|tolower|toupper|trim|miva_array_collapse|miva_array_deserialize|miva_array_elements|miva_array_max|miva_array_min|miva_array_next|miva_array_previous|miva_array_serialize|miva_array_sort|miva_element_exists|miva_member_exists|fchmod|fcopy|fdelete|fexists|fisdir|fmkdir|fmode|frename|fscopy|fsize|fsrename|fsymlink|ftime|schmod|scopy|sdelete|sexists|sfcopy|sfrename|sisdir|smkdir|smode|srename|ssize|ssymlink|stime|dir|file_append|file_create|file_read|miva_lockfile|file_read_bytes|decodeattribute|decodeentities|encodeattribute|encodeentities|makesessionid|miva_array_collapse|miva_array_deserialize|miva_array_elements|miva_array_max|miva_array_min|miva_array_next|miva_array_previous|miva_array_serialize|miva_array_sort|miva_element_exists|miva_getvarlist|miva_member_exists|miva_output_flush|miva_output_header|miva_setdefaultdatabase|miva_setdefaultlanguage|miva_setlanguage|miva_struct_members|miva_variable_value|miva_template_compile_dump|miva_template_compile|miva_template_compile_itemlist|miva_sleep|miva_hex_encode|miva_hex_decode|miva_array_clear|miva_array_delete|miva_array_merge|miva_array_merge_ref|miva_array_copy|miva_array_copy_ref|miva_array_insert|miva_array_insert_var|miva_array_insert_ref|miva_array_pop|miva_array_pop_ref|miva_array_shift|miva_array_shift_ref|miva_array_find|miva_array_search|miva_array_binarysearch|encodejavascriptstring|miva_json_decode|miva_json_decode_last_error|abs|acos|asin|atan|atan2|ceil|cos|cosh|exp|floor|fmod|int|log|log10|power|random|rnd|sin|sinh|sqrt|tan|tanh|srandom|fisdir|isalnum|isalpha|isascii|iscntrl|isdigit|isgraph|islower|isprint|ispunct|isspace|isupper|isxdigit|sisdir|gdClearLastError|gdImageAABlend|gdImageAlpha|gdImageAlphaBlending|gdImageArc|gdImageBlue|gdImageBoundsSafe|gdImageColorAllocate|gdImageColorAllocateAlpha|gdImageColorClosest|gdImageColorClosestAlpha|gdImageColorClosestHWB|gdImageColorDeallocate|gdImageColorExact|gdImageColorExactAlpha|gdImageColorResolve|gdImageColorResolveAlpha|gdImageColorsTotal|gdImageColorTransparent|gdImageCompare|gdImageCopy|gdImageCopyMerge|gdImageCopyMergeGray|gdImageCopyResampled|gdImageCopyResized|gdImageCopyRotated|gdImageCreate|gdImageCreateFromGd|gdImageCreateFromGd2|gdImageCreateFromGd2Mem|gdImageCreateFromGd2Part|gdImageCreateFromGd2PartMem|gdImageCreateFromGdMem|gdImageCreateFromGif|gdImageCreateFromGifMem|gdImageCreateFromJpeg|gdImageCreateFromJpegMem|gdImageCreateFromPng|gdImageCreateFromPngMem|gdImageCreateFromWBMP|gdImageCreateFromWBMPMem|gdImageCreatePaletteFromTrueColor|gdImageCreateTrueColor|gdImageDashedLine|gdImageDestroy|gdImageEllipse|gdImageFill|gdImageFilledArc|gdImageFilledEllipse|gdImageFilledPolygon|gdImageFilledRectangle|gdImageFillToBorder|gdImageGetClip|gdImageGetInterlaced|gdImageGetPixel|gdImageGetTransparent|gdImageGetTrueColorPixel|gdImageGif|gdImageGifAnimAdd|gdImageGifAnimAddMem|gdImageGifAnimAddOutput|gdImageGifAnimBegin|gdImageGifAnimBeginMem|gdImageGifAnimBeginOutput|gdImageGifAnimEnd|gdImageGifAnimEndMem|gdImageGifAnimEndOutput|gdImageGifMem|gdImageGifOutput|gdImageGreen|gdImageInterlace|gdImageJpeg|gdImageJpegMem|gdImageJpegOutput|gdImageLine|gdImageOpenPolygon|gdImagePaletteCopy|gdImagePalettePixel|gdImagePng|gdImagePngMem|gdImagePngOutput|gdImagePolygon|gdImageRectangle|gdImageRed|gdImageSaveAlpha|gdImageSetAntiAliased|gdImageSetAntiAliasedDontBlend|gdImageSetBrush|gdImageSetClip|gdImageSetPixel|gdImageSetStyle|gdImageSetThickness|gdImageSetTile|gdImageSharpen|gdImageSquareToCircle|gdImageStringFT|gdImageStringFTCircle|gdImageSX|gdImageSY|gdImageTrueColor|gdImageTrueColorPixel|gdImageTrueColorToPalette|gdImageWBMP|gdImageWBMPMem|gdImageWBMPOutput|gdLastError|gdTrueColor|gdTrueColorAlpha|tar_create|tar_directory|tar_extract|wdownload|wget|miva_closelog|miva_openlog|miva_setlogmask|miva_writelog|xml_parse|xml_parse_error|xml_parse_section|xml_parse_section_getstate|xml_parse_section_init|xml_parse_section_setstate|xml_parse_set_colon_replacement|xml_parse_var|mktime_t|timezone|time_t_dayofmonth|time_t_dayofweek|time_t_dayofyear|time_t_hour|time_t_min|time_t_month|time_t_sec|time_t_year|bf_decrypt|bf_encrypt|crypto_base64_decode|crypto_base64_encode|crypto_hmac_sha1|crypto_hmac_sha256|crypto_last_error|crypto_last_ssl_error|crypto_library_version|crypto_md5|crypto_md5_file|crypto_rand_bytes|crypto_sha1|crypto_sha256|crypto_cipher_block_size|crypto_cipher_key_length|crypto_cipher_iv_length|crypto_cipher_mode|crypto_evp_encrypt|crypto_evp_decrypt|crypto_digest_block_size|crypto_digest_size|crypto_evp_digest|crypto_evp_hmac|crypto_xor|crypto_pbkdf1|crypto_pbkdf2|crypto_hmac_md5|rsa_free|rsa_generate_keypair|rsa_generate_keypair_mem|rsa_load_privatekey|rsa_load_privatekey_mem|rsa_load_publickey|rsa_load_publickey_mem|rsa_private_decrypt|rsa_private_encrypt|rsa_public_decrypt|rsa_public_encrypt|rsa_save_privatekey|rsa_save_privatekey_mem|rsa_sign|rsa_verify|rsa_generate_keypair_mem_cipher|rsa_save_privatekey_mem_cipher|x509_create|x509_free|x509_load|x509_rsa_publickey|x509_verify|Arccos|Body_innerHTML|Capitalize|Compress|Cookie_Delete|Cookie_Load|Cookie_Save|Cookies_LoadAll|da|de|DecodeHtml|Degrees|ea|ee|EncodeHtml|FinalIndexOf|Get_ID|GettokenCount|GettokenLast|Hardbreak|isAlphaNumPlus|IsAnyWordInText|isEmail|isNumeric|isURL|Json_Call|Json_Parse|Json_Parse_Call|Json_Stringify|Left|MemberNames_FromArray|MySqlEscape|Name2Code|NumberFormat|PercentFormat|Radians|RemoveChars|Replace|ReplaceChars|Right|StateList_Load_All|StripHTML|Table_Exists|Time2Seconds|Assign|Array_Elements|Array_FromList|Array_Sort|Availgroup|Basket|BasketButtons|BasketCombined|BasketEmpty|Basket_Update|Benchmark|BreadCrumbs|Call|Category_Children|Category_Images|Category_Load|Category_Meta|Category_Paging|Category_Parents|Category_Products|Category_Siblings|Cattree_Expanded|Compress|Counter|Cookie|CurrencyFormat|Customer_Restore|Custom_Category|Custom_Customer|Custom_Products|Datetime_Format|Datetime_Value|Dir|Dir_Subs|Do|DoFile|Eval|Event_Timer|Export|Import|Include|Json_Call|Json_Parse|Json_Parse_Call|Json_Stringify|Form_Radio|Form_Select|For|hasAttributes|Lookup|NumberFormat|OrderSubtotal|PercentFormat|PreAction|PostAction|Pricegroup|Product_BestSellers|Product_Categories|Product_Images|Product_List|Product_Load|Product_Meta|Products_New|Product_NextPrev|Products_Random|Products_Related|Products_Purchased|Products_Viewed|Query|Random_Numbers|Reference|RememberMe|Screen|SearchArray|Search_Products|Search_Files|SearchText|SelectState|SendEmail|SeoLinks|SeoLink|SEOName|SortArray|SortCSV|StripHTML|Structure|Trace|Varlist)(?=\|)
+
+  mvt-item-names:
+    patterns:
+    - comment: ReadyTheme Class
+      name: entity.name.type.class.mvt
+      match: \b(?i:readytheme)\b
+
+    - comment: ReadyTheme Class
+      name: entity.name.type.class.mvt
+      match: \b(?i:customfields)\b
+
+    - comment: Toolkit Class
+      name: entity.name.type.class.mvt
+      match: \b(?i:toolkit)\b
+
+    - comment: RyToolbelt Functions
+      name: entity.name.type.class.mvt
+      match: \b(?i:ry_toolbelt)\b
+
+  mvt-attributes:
+    patterns:
+    - comment: Generic Attributes
+      match: \b([a-zA-Z\-:]+)
+      name: entity.other.attribute-name.html
+
+    - comment: Name Attribute
+      begin: (?i)(?<=name\=)(\")
+      beginCaptures:
+        '0': {name: embedded.begin.mvt}
+      end: \"
+      endCaptures:
+        '0': {name: embedded.end.mvt}
+      name: source.mvt.embedded.html
+      patterns:
+      - include: '#mvt-source'
+      - include: '#mvt-item-names'
+
+    - comment: Param Attribute
+      begin: (?i)(?<=param\=)(\")
+      beginCaptures:
+        '0': {name: embedded.begin.mvt}
+      end: \"
+      endCaptures:
+        '0': {name: embedded.end.mvt}
+      name: source.mvt.embedded.html
+      patterns:
+      - include: '#mvt-source'
+      - include: '#mvt-functions-item'
+
+    - comment: Value Attribute
+      begin: (?i)(?<=value\=)(\")
+      beginCaptures:
+        '0': {name: embedded.begin.mvt}
+      end: \"
+      endCaptures:
+        '0': {name: embedded.end.mvt}
+      name: source.mvt.embedded.html
+      patterns:
+      - include: '#mvt-source'
+      - include: '#mvt-functions-assign'
+
+    - comment: Expression Attribute
+      begin: (?i)(?<=expr\=)(\")
+      beginCaptures:
+        '0': {name: embedded.begin.mvt}
+      end: \"
+      endCaptures:
+        '0': {name: embedded.end.mvt}
+      name: source.mvt.embedded.html
+      patterns:
+      - include: '#mvt-source'
+      - include: '#mvt-functions-assign'
+
+    - comment: Iterator Attribute
+      begin: (?i)(?<=iterator\=)(\")
+      beginCaptures:
+        '0': {name: embedded.begin.mvt}
+      end: \"
+      endCaptures:
+        '0': {name: embedded.end.mvt}
+      name: source.mvt.embedded.html
+      patterns:
+      - include: '#mvt-source'
+      - include: '#mvt-variable-generic'
+
+    - comment: Array Attribute
+      begin: (?i)(?<=array\=)(\")
+      beginCaptures:
+        '0': {name: embedded.begin.mvt}
+      end: \"
+      endCaptures:
+        '0': {name: embedded.end.mvt}
+      name: source.mvt.embedded.html
+      patterns:
+      - include: '#mvt-source'
+      - include: '#mvt-variable-generic'
+
+    - comment: File Attribute
+      begin: (?i)(?<=file\=)(\")
+      beginCaptures:
+        '0': {name: embedded.begin.mvt}
+      end: \"
+      endCaptures:
+        '0': {name: embedded.end.mvt}
+      name: source.mvt.embedded.html
+      patterns:
+      - include: '#mvt-source'
+
+    - comment: MVT:Call Attributes
+      begin: (?i)(?<=method\=|action\=|content-type\=|fields\=|certpass\=|files\=|certtype\=|cerfile\=|timeout\=|headers\=)(\")
+      beginCaptures:
+        '0': {name: embedded.begin.mvt}
+      end: \"
+      endCaptures:
+        '0': {name: embedded.end.mvt}
+      name: source.mvt.embedded.html
+      patterns:
+      - include: '#mvt-source'
+
+  mvt-entities:
+    comment: MVT Entities
+    match: (&)(mvt|mvte|mvta)([a-zA-Z0-9:\-_\[\]]+)(;)
+    name: constant.character.entity.mvt
+...
