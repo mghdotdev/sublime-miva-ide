@@ -1,5 +1,5 @@
-# Miva Template Language
-A Miva Template Language (MVT) syntax plugin for Sublime Text 2/3
+# Miva Template Language (MVT) + Snippets
+Miva Template Language (MVT) syntax plugin for Sublime Text 2/3. It includes some .mvt specific snippets.
 
 ### Install via Package Control
 * Open Sublime Text 2/3
