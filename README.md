@@ -14,8 +14,3 @@ Miva Template Language (MVT) syntax plugin for Sublime Text 2/3.
 * Type "Package Control: Install Package" ... Press ENTER.
 * Search for "MVT", "Miva Template Language" or any simular search term ... Press ENTER.
 * Done!
-
-### Manually Install
-* Download the latest release.
-* Unzip the downloaded release.
-* Copy the nested "Miva-Template-Language" folder into your /Packages folder.
