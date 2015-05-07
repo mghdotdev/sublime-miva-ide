@@ -1,7 +1,7 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
 ---
 name: Miva Template Language (MVT)
-scopeName: text.html
+scopeName: text.html.mvt
 fileTypes: [mvt,html,htm]
 uuid: 21ad5f2b-6228-46a4-9061-2986f82e4f9a
 
