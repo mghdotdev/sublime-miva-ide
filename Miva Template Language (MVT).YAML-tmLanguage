@@ -15,20 +15,20 @@ repository:
     - comment: MVT Comment
       begin: <mvt:comment>
       beginCaptures:
-        '0': {name: punctuation.definition.comment.html}
+        '0': {name: punctuation.definition.comment.mvt}
       end: </mvt:comment>
       endCaptures:
-        '0': {name: punctuation.definition.comment.html}
-      name: comment.block.html
+        '0': {name: punctuation.definition.comment.mvt}
+      name: comment.block.mvt
 
     - comment: MVT Tags
       begin: (</?)((?i:mvt:item|mvt:assign|mvt:if|mvt:elseif|mvt:while|mvt:eval|mvt:foreach|mvt:else|mvt:do|mvt:call|mvt:callcontinue|mvt:callstop|mvt:foreachcontinue|mvt:foreachstop|mvt:whilecontinue|mvt:whilestop|mvt:exit)\b)
       beginCaptures:
-        '1': {name: meta.preprocessor.generic.mvt}
+        '1': {name: meta.preprocessor.definition.mvt}
         '2': {name: meta.preprocessor.generic.mvt}
       end: ((?:[ ]?/)?>)
       endCaptures:
-        '1': {name: meta.preprocessor.generic.mvt}
+        '1': {name: meta.preprocessor.definition.mvt}
       name: meta.preprocessor.generic.mvt
       patterns:
       - include: '#mvt-attributes'
