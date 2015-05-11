@@ -89,24 +89,24 @@ repository:
 
     ## Variables
     - comment: Local Variable
-      name: variable.other.local.mvt
+      name: variable.language.local.mvt
       match: (l\.)([A-Za-z_]+)([a-zA-Z0-9:_\[\]]*)
 
     - comment: Local Variable (NO L)
-      name: variable.other.local.mvt
+      name: variable.language.local.mvt
       match: ([A-Za-z_]+)([a-zA-Z0-9_\[\]]+(:)[a-zA-Z0-9:_\[\]]*)
 
     - comment: Global Variable
-      name: variable.other.global.mvt
+      name: variable.language.global.mvt
       match: (g\.)([A-Za-z_]+)([a-zA-Z0-9:_\[\]]*)
 
     - comment: System Variable
-      name: variable.other.system.mvt
+      name: variable.language.system.mvt
       match: (s\.)([A-Za-z_]+)([a-zA-Z0-9:_\[\]]*)
 
   mvt-variable-generic:
     comment: MVT Variable Generic (No l. g. s.)
-    name: variable.other.generic.mvt
+    name: variable.language.generic.mvt
     match: ([A-Za-z_]+)([a-zA-Z0-9:_\[\]]*)
 
   mvt-functions-assign:
@@ -135,19 +135,19 @@ repository:
   mvt-item-names:
     patterns:
     - comment: ReadyTheme Class
-      name: entity.name.type.class.mvt
+      name: support.class.mvt
       match: \b(?i:readytheme)\b
 
     - comment: ReadyTheme Class
-      name: entity.name.type.class.mvt
+      name: support.class.mvt
       match: \b(?i:customfields)\b
 
     - comment: Toolkit Class
-      name: entity.name.type.class.mvt
+      name: support.class.mvt
       match: \b(?i:toolkit)\b
 
     - comment: RyToolbelt Functions
-      name: entity.name.type.class.mvt
+      name: support.class.mvt
       match: \b(?i:ry_toolbelt)\b
 
   mvt-attributes:
