@@ -9,7 +9,7 @@
 		<string>htm</string>
 	</array>
 	<key>name</key>
-	<string>Miva Template Language (MVT)</string>
+	<string>MVT</string>
 	<key>patterns</key>
 	<array>
 		<dict>
