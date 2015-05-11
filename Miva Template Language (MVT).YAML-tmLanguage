@@ -56,7 +56,7 @@ repository:
     ## Operators
     - comment: Arithmetic Operators
       name: keyword.operator.arithmetic.mvt
-      match: (\b(POW|MOD|ROUND)\b)
+      match: (\b(?i:POW|MOD|ROUND)\b)
     - comment: Arithmetic Operators (Symbols)
       name: keyword.operator.arithmetic.mvt
       match: ((?<!\S)(\+|\-|\*|\/)\B)
@@ -66,15 +66,15 @@ repository:
 
     - comment: Comparison Operators
       name: keyword.operator.comparison.mvt
-      match: (\b(EQ|GT|GE|LT|NE|LE)\b)
+      match: (\b(?i:EQ|GT|GE|LT|NE|LE)\b)
 
     - comment: Logical Operators
       name: keyword.operator.logical.mvt
-      match: (\b(NOT|AND|OR|ISNULL)\b)
+      match: (\b(?i:NOT|AND|OR|ISNULL)\b)
 
     - comment: Text Operators
       name: keyword.operator.string.mvt
-      match: (\b(IN|CIN|EIN|ECIN|CRYPT)\b)
+      match: (\b(?i:IN|CIN|EIN|ECIN|CRYPT)\b)
     - comment: Text Operators (Symbols)
       name: keyword.operator.string.mvt
       match: ((?<!\S)(\$)\B)

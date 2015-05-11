@@ -537,7 +537,7 @@
 					<key>comment</key>
 					<string>Arithmetic Operators</string>
 					<key>match</key>
-					<string>(\b(POW|MOD|ROUND)\b)</string>
+					<string>(\b(?i:POW|MOD|ROUND)\b)</string>
 					<key>name</key>
 					<string>keyword.operator.arithmetic.mvt</string>
 				</dict>
@@ -561,7 +561,7 @@
 					<key>comment</key>
 					<string>Comparison Operators</string>
 					<key>match</key>
-					<string>(\b(EQ|GT|GE|LT|NE|LE)\b)</string>
+					<string>(\b(?i:EQ|GT|GE|LT|NE|LE)\b)</string>
 					<key>name</key>
 					<string>keyword.operator.comparison.mvt</string>
 				</dict>
@@ -569,7 +569,7 @@
 					<key>comment</key>
 					<string>Logical Operators</string>
 					<key>match</key>
-					<string>(\b(NOT|AND|OR|ISNULL)\b)</string>
+					<string>(\b(?i:NOT|AND|OR|ISNULL)\b)</string>
 					<key>name</key>
 					<string>keyword.operator.logical.mvt</string>
 				</dict>
@@ -577,7 +577,7 @@
 					<key>comment</key>
 					<string>Text Operators</string>
 					<key>match</key>
-					<string>(\b(IN|CIN|EIN|ECIN|CRYPT)\b)</string>
+					<string>(\b(?i:IN|CIN|EIN|ECIN|CRYPT)\b)</string>
 					<key>name</key>
 					<string>keyword.operator.string.mvt</string>
 				</dict>
