@@ -55,18 +55,28 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(&lt;/?)((?i:mvt:item|mvt:assign|mvt:if|mvt:elseif|mvt:while|mvt:eval|mvt:foreach|mvt:else|mvt:do|mvt:call|mvt:callcontinue|mvt:callstop|mvt:foreachcontinue|mvt:foreachstop|mvt:whilecontinue|mvt:whilestop|mvt:exit)\b)</string>
+					<string>(&lt;/?)(?i:(mvt)(:)(item|assign|if|elseif|while|eval|foreach|else|do|call|callcontinue|callstop|foreachcontinue|foreachstop|whilecontinue|whilestop|exit)\b)</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>meta.preprocessor.definition.mvt</string>
+							<string>punctuation.definition.tag.begin.mvt</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>meta.preprocessor.generic.mvt</string>
+							<string>storage.type.namespace.mvt meta.preprocessor.namespace.mvt</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.namespace.separator.mvt meta.preprocessor.namespace.separator.mvt</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.localname.mvt meta.preprocessor.localname.mvt</string>
 						</dict>
 					</dict>
 					<key>comment</key>
@@ -78,11 +88,11 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>meta.preprocessor.definition.mvt</string>
+							<string>punctuation.definition.tag.begin.mvt</string>
 						</dict>
 					</dict>
 					<key>name</key>
-					<string>meta.preprocessor.generic.mvt</string>
+					<string>meta.tag.block.any.mvt</string>
 					<key>patterns</key>
 					<array>
 						<dict>
