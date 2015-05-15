@@ -24,13 +24,13 @@ repository:
     - comment: MVT Tags
       begin: (</?)(?i:(mvt)(:)(item|assign|if|elseif|while|eval|foreach|else|do|call|callcontinue|callstop|foreachcontinue|foreachstop|whilecontinue|whilestop|exit)\b)
       beginCaptures:
-        '1': {name: punctuation.definition.tag.begin.mvt}
+        '1': {name: punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt}
         '2': {name: storage.type.namespace.mvt meta.preprocessor.namespace.mvt}
         '3': {name: storage.type.namespace.separator.mvt meta.preprocessor.namespace.separator.mvt}
         '4': {name: storage.type.localname.mvt meta.preprocessor.localname.mvt}
       end: ((?:[ ]?/)?>)
       endCaptures:
-        '1': {name: punctuation.definition.tag.begin.mvt}
+        '1': {name: punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt}
       name: meta.tag.block.any.mvt
       patterns:
       - include: '#mvt-attributes'

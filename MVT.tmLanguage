@@ -61,7 +61,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.tag.begin.mvt</string>
+							<string>punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt</string>
 						</dict>
 						<key>2</key>
 						<dict>
@@ -88,7 +88,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.tag.begin.mvt</string>
+							<string>punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt</string>
 						</dict>
 					</dict>
 					<key>name</key>
