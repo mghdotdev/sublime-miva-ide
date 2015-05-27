@@ -579,7 +579,7 @@
 					<key>comment</key>
 					<string>Logical Operators</string>
 					<key>match</key>
-					<string>(\b(?i:NOT|AND|OR|ISNULL)\b)</string>
+					<string>(\b(?i:NOT|AND|OR|ISNULL|NULL)\b)</string>
 					<key>name</key>
 					<string>keyword.operator.logical.mvt</string>
 				</dict>

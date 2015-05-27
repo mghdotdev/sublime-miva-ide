@@ -72,7 +72,7 @@ repository:
 
     - comment: Logical Operators
       name: keyword.operator.logical.mvt
-      match: (\b(?i:NOT|AND|OR|ISNULL)\b)
+      match: (\b(?i:NOT|AND|OR|ISNULL|NULL)\b)
 
     - comment: Text Operators
       name: keyword.operator.string.mvt
