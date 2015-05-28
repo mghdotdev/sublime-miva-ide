@@ -22,7 +22,7 @@ repository:
       name: comment.block.mvt
 
     - comment: MVT Tags
-      begin: (</?)(?i:(mvt)(:)(item|assign|if|elseif|while|eval|foreach|else|do|call|callcontinue|callstop|foreachcontinue|foreachstop|whilecontinue|whilestop|exit)\b)
+      begin: (</?)(?i:(mvt)(:)(item|assign|if|elseif|while|eval|foreach|else|do|call|callcontinue|callstop|foreachcontinue|foreachstop|whilecontinue|whilestop|exit|miva)\b)
       beginCaptures:
         '1': {name: punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt}
         '2': {name: storage.type.namespace.mvt meta.preprocessor.namespace.mvt}
@@ -243,6 +243,28 @@ repository:
 
     - comment: MVT:Call Attributes
       begin: (?i)(?<=method\=|action\=|content-type\=|fields\=|certpass\=|files\=|certtype\=|cerfile\=|timeout\=|headers\=)(\")
+      beginCaptures:
+        '0': {name: embedded.begin.mvt}
+      end: \"
+      endCaptures:
+        '0': {name: embedded.end.mvt}
+      name: source.mvt.embedded.html
+      patterns:
+      - include: '#mvt-source'
+
+      - comment: Output Attribute
+      begin: (?i)(?<=output\=)(\")
+      beginCaptures:
+        '0': {name: embedded.begin.mvt}
+      end: \"
+      endCaptures:
+        '0': {name: embedded.end.mvt}
+      name: source.mvt.embedded.html
+      patterns:
+      - include: '#mvt-source'
+
+      - comment: Compresswhitespace Attribute
+      begin: (?i)(?<=compresswhitespace\=)(\")
       beginCaptures:
         '0': {name: embedded.begin.mvt}
       end: \"

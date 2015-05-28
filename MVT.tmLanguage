@@ -55,7 +55,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(&lt;/?)(?i:(mvt)(:)(item|assign|if|elseif|while|eval|foreach|else|do|call|callcontinue|callstop|foreachcontinue|foreachstop|whilecontinue|whilestop|exit)\b)</string>
+					<string>(&lt;/?)(?i:(mvt)(:)(item|assign|if|elseif|while|eval|foreach|else|do|call|callcontinue|callstop|foreachcontinue|foreachstop|whilecontinue|whilestop|exit|miva)\b)</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -378,7 +378,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(?i)(?&lt;=method\=|action\=|content-type\=|fields\=|certpass\=|files\=|certtype\=|cerfile\=|timeout\=|headers\=)(\")</string>
+					<string>(?i)(?&lt;=compresswhitespace\=)(\")</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>0</key>
