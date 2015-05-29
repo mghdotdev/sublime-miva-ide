@@ -252,7 +252,7 @@ repository:
       patterns:
       - include: '#mvt-source'
 
-      - comment: Output Attribute
+    - comment: Output Attribute
       begin: (?i)(?<=output\=)(\")
       beginCaptures:
         '0': {name: embedded.begin.mvt}
@@ -263,7 +263,7 @@ repository:
       patterns:
       - include: '#mvt-source'
 
-      - comment: Compresswhitespace Attribute
+    - comment: Compresswhitespace Attribute
       begin: (?i)(?<=compresswhitespace\=)(\")
       beginCaptures:
         '0': {name: embedded.begin.mvt}
