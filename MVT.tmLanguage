@@ -378,7 +378,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(?i)(?&lt;=compresswhitespace\=)(\")</string>
+					<string>(?i)(?&lt;=method\=|action\=|content-type\=|fields\=|certpass\=|files\=|certtype\=|cerfile\=|timeout\=|headers\=)(\")</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>0</key>
@@ -389,6 +389,72 @@
 					</dict>
 					<key>comment</key>
 					<string>MVT:Call Attributes</string>
+					<key>end</key>
+					<string>\"</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>embedded.end.mvt</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>source.mvt.embedded.html</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#mvt-source</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(?i)(?&lt;=output\=)(\")</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>embedded.begin.mvt</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>Output Attribute</string>
+					<key>end</key>
+					<string>\"</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>embedded.end.mvt</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>source.mvt.embedded.html</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#mvt-source</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(?i)(?&lt;=compresswhitespace\=)(\")</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>embedded.begin.mvt</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>Compresswhitespace Attribute</string>
 					<key>end</key>
 					<string>\"</string>
 					<key>endCaptures</key>
