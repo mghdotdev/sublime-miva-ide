@@ -3,8 +3,9 @@ Miva Template Language (MVT) syntax plugin for Sublime Text 2/3.
 
 ##### Syntax Features
 * Proper `<mvt:comment>` highlighting.
-* Support for `<mvt:assign>` functions names.
-* Support for __toolkit__ and __toolbelt__ functions names.
+* Support for `<mvt:assign>` function names.
+* Support for `<mvt:do>` function names.
+* Support for __toolkit__ and __toolbelt__ function names.
 
 ---
 
