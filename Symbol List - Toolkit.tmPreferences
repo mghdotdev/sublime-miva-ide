@@ -3,11 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Symbol List: ID</string>
+	<string>Symbol List: Toolkit</string>
 	<key>scope</key>
 	<string>source.mvt support.function.toolkit.mvt</string>
 	<key>settings</key>
 	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
 		<key>symbolTransformation</key>
 		<string>s/^/Toolkit: /</string>
 	</dict>
