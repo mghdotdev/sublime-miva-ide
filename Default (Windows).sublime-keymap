@@ -1,0 +1,33 @@
+[
+	// MVT Comment
+	{
+		"keys": ["ctrl+/"],
+		"command": "toggle_mvt_comment",
+		"args": {
+			"block": true
+		}, 
+		"context": [
+			{
+				"key": "selector",
+				"operator": "equal",
+				"operand": "text.html.mvt"
+			}
+		]
+	},
+
+	// HTML Comment
+	{
+		"keys": ["ctrl+shift+/"],
+		"command": "toggle_comment",
+		"args": {
+			"block": true
+		},
+		"context": [
+			{
+				"key": "selector",
+				"operator": "equal",
+				"operand": "text.html.mvt"
+			}
+		]
+	}
+]

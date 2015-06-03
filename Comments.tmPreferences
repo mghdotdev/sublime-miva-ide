@@ -12,15 +12,27 @@
 		<array>
 			<dict>
 				<key>name</key>
-				<string>TM_COMMENT_START</string>
+				<string>TM_MVT_COMMENT_START</string>
 				<key>value</key>
 				<string>&lt;mvt:comment&gt;</string>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>TM_COMMENT_END</string>
+				<string>TM_MVT_COMMENT_END</string>
 				<key>value</key>
 				<string>&lt;/mvt:comment&gt;</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>TM_COMMENT_START</string>
+				<key>value</key>
+				<string>&lt;!-- </string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>TM_COMMENT_END</string>
+				<key>value</key>
+				<string> --&gt;</string>
 			</dict>
 		</array>
 	</dict>
