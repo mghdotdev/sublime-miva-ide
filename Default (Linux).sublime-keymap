@@ -10,7 +10,7 @@
 			{
 				"key": "selector",
 				"operator": "equal",
-				"operand": "text.html.mvt"
+				"operand": "text.html.mvt - source"
 			}
 		]
 	}
