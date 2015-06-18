@@ -22,4 +22,11 @@ Miva Template Language (MVT) syntax plugin for Sublime Text 2/3.
 
 ### Plugins that Work Well with Miva Template Language (MVT)
 * [DefaultFileType](https://github.com/spadgos/sublime-DefaultFileType) - This package sets the default file type of new files to be either the same as the current file, or a predefined default.
-* [Emmet](https://github.com/emmetio/emmet) - Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.
+
+Here is my `default_file_type.sublime-settings` file contents:
+```json
+{
+	"default_new_file_syntax": "Packages/Miva Template Language (MVT)/MVT.tmLanguage",
+	"use_current_file_syntax": false
+}
+```
