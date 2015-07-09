@@ -1,8 +1,6 @@
 # Miva Template Language (MVT)
 Miva Template Language (MVT) syntax plugin for Sublime Text 2/3.
 
-[![GitHub tag](https://img.shields.io/github/tag/strongloop/express.svg)]()
-
 ##### Syntax Features
 * Proper `<mvt:comment>` highlighting.
 * Support for `<mvt:assign>` function names.
