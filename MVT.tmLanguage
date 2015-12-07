@@ -698,7 +698,7 @@
 					<key>comment</key>
 					<string>Local Variable</string>
 					<key>match</key>
-					<string>(l\.)([A-Za-z_]+)([a-zA-Z0-9:_\.]*)</string>
+					<string>(l\.)([A-Za-z0-9_]+)([a-zA-Z0-9:_\.]*)</string>
 					<key>name</key>
 					<string>variable.language.local.mvt</string>
 				</dict>
@@ -706,7 +706,7 @@
 					<key>comment</key>
 					<string>Local Variable (NO L)</string>
 					<key>match</key>
-					<string>([A-Za-z_]+)([a-zA-Z0-9_\[\]]+(:)[a-zA-Z0-9:_\.]*)</string>
+					<string>([A-Za-z0-9_]+)([a-zA-Z0-9_\[\]]+(:)[a-zA-Z0-9:_\.]*)</string>
 					<key>name</key>
 					<string>variable.language.local.mvt</string>
 				</dict>
@@ -714,7 +714,7 @@
 					<key>comment</key>
 					<string>Global Variable</string>
 					<key>match</key>
-					<string>(g\.)([A-Za-z_]+)([a-zA-Z0-9:_\.]*)</string>
+					<string>(g\.)([A-Za-z0-9_]+)([a-zA-Z0-9:_\.]*)</string>
 					<key>name</key>
 					<string>variable.language.global.mvt</string>
 				</dict>
@@ -722,7 +722,7 @@
 					<key>comment</key>
 					<string>System Variable</string>
 					<key>match</key>
-					<string>(s\.)([A-Za-z_]+)([a-zA-Z0-9:_\.]*)</string>
+					<string>(s\.)([A-Za-z0-9_]+)([a-zA-Z0-9:_\.]*)</string>
 					<key>name</key>
 					<string>variable.language.system.mvt</string>
 				</dict>

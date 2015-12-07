@@ -92,19 +92,19 @@ repository:
     ## Variables
     - comment: Local Variable
       name: variable.language.local.mvt
-      match: (l\.)([A-Za-z_]+)([a-zA-Z0-9:_\.]*)
+      match: (l\.)([A-Za-z0-9_]+)([a-zA-Z0-9:_\.]*)
 
     - comment: Local Variable (NO L)
       name: variable.language.local.mvt
-      match: ([A-Za-z_]+)([a-zA-Z0-9_\[\]]+(:)[a-zA-Z0-9:_\.]*)
+      match: ([A-Za-z0-9_]+)([a-zA-Z0-9_\[\]]+(:)[a-zA-Z0-9:_\.]*)
 
     - comment: Global Variable
       name: variable.language.global.mvt
-      match: (g\.)([A-Za-z_]+)([a-zA-Z0-9:_\.]*)
+      match: (g\.)([A-Za-z0-9_]+)([a-zA-Z0-9:_\.]*)
 
     - comment: System Variable
       name: variable.language.system.mvt
-      match: (s\.)([A-Za-z_]+)([a-zA-Z0-9:_\.]*)
+      match: (s\.)([A-Za-z0-9_]+)([a-zA-Z0-9:_\.]*)
 
     - comment: Variable AFTER Array Bracket []
       name: variable.language.array-continue.mvt
