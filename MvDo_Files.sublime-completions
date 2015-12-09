@@ -1,5 +1,5 @@
 {
-	"scope": "source.mvt.attribute-value.file",
+	"scope": "meta.tag.inline.do.mvt source.mvt.attribute-value.file",
 
 	"completions":
 	[

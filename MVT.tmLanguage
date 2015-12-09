@@ -55,7 +55,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(&lt;/?)(?i:(mvt)(:)(item|assign|if|elseif|while|eval|foreach|else|do|call|callcontinue|callstop|foreachcontinue|foreachstop|whilecontinue|whilestop|exit|miva)\b)</string>
+					<string>(&lt;/?)(?i:(mvt)(:)(call|foreach|if|while)\b)</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -80,7 +80,7 @@
 						</dict>
 					</dict>
 					<key>comment</key>
-					<string>MVT Tags</string>
+					<string>MVT Tags - Block</string>
 					<key>end</key>
 					<string>((?:[ ]?/)?&gt;)</string>
 					<key>endCaptures</key>
@@ -88,11 +88,107 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt</string>
+							<string>punctuation.definition.tag.end.mvt meta.preprocessor.end.mvt</string>
 						</dict>
 					</dict>
 					<key>name</key>
 					<string>meta.tag.block.any.mvt</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#mvt-attributes</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(&lt;/?)(?i:(mvt)(:)(assign|callcontinue|callstop|else|elseif|eval|exit|foreachcontinue|foreachstop|item|miva|whilecontinue|whilestop)\b)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.namespace.mvt meta.preprocessor.namespace.mvt</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.namespace.separator.mvt meta.preprocessor.namespace.separator.mvt</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.localname.mvt meta.preprocessor.localname.mvt</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>MVT Tags - Inline</string>
+					<key>end</key>
+					<string>((?:[ ]?/)?&gt;)</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.tag.end.mvt meta.preprocessor.end.mvt</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>meta.tag.inline.any.mvt</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#mvt-attributes</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(&lt;/?)(?i:(mvt)(:)(do)\b)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.namespace.mvt meta.preprocessor.namespace.mvt</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.namespace.separator.mvt meta.preprocessor.namespace.separator.mvt</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.localname.mvt meta.preprocessor.localname.mvt</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>MVT Tags (mvt:do)</string>
+					<key>end</key>
+					<string>((?:[ ]?/)?&gt;)</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.tag.end.mvt meta.preprocessor.end.mvt</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>meta.tag.inline.do.mvt</string>
 					<key>patterns</key>
 					<array>
 						<dict>

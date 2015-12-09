@@ -1,5 +1,5 @@
 {
-	"scope": "source.mvt.attribute-value.expr, source.mvt.attribute-value.value",
+	"scope": "meta.tag.inline.inline.mvt source.mvt.attribute-value.expr, meta.tag.inline.inline.mvt source.mvt.attribute-value.value",
 
 	"completions":
 	[

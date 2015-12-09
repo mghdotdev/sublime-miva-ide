@@ -20,9 +20,9 @@ repository:
       endCaptures:
         '0': {name: punctuation.definition.comment.mvt}
       name: comment.block.mvt
-
-    - comment: MVT Tags
-      begin: (</?)(?i:(mvt)(:)(item|assign|if|elseif|while|eval|foreach|else|do|call|callcontinue|callstop|foreachcontinue|foreachstop|whilecontinue|whilestop|exit|miva)\b)
+      
+    - comment: MVT Tags - Block
+      begin: (</?)(?i:(mvt)(:)(call|foreach|if|while)\b)
       beginCaptures:
         '1': {name: punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt}
         '2': {name: storage.type.namespace.mvt meta.preprocessor.namespace.mvt}
@@ -30,8 +30,36 @@ repository:
         '4': {name: storage.type.localname.mvt meta.preprocessor.localname.mvt}
       end: ((?:[ ]?/)?>)
       endCaptures:
-        '1': {name: punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt}
+        '1': {name: punctuation.definition.tag.end.mvt meta.preprocessor.end.mvt}
       name: meta.tag.block.any.mvt
+      patterns:
+      - include: '#mvt-attributes'
+
+    - comment: MVT Tags - Inline
+      begin: (</?)(?i:(mvt)(:)(assign|callcontinue|callstop|else|elseif|eval|exit|foreachcontinue|foreachstop|item|miva|whilecontinue|whilestop)\b)
+      beginCaptures:
+        '1': {name: punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt}
+        '2': {name: storage.type.namespace.mvt meta.preprocessor.namespace.mvt}
+        '3': {name: storage.type.namespace.separator.mvt meta.preprocessor.namespace.separator.mvt}
+        '4': {name: storage.type.localname.mvt meta.preprocessor.localname.mvt}
+      end: ((?:[ ]?/)?>)
+      endCaptures:
+        '1': {name: punctuation.definition.tag.end.mvt meta.preprocessor.end.mvt}
+      name: meta.tag.inline.any.mvt
+      patterns:
+      - include: '#mvt-attributes'
+
+    - comment: MVT Tags (mvt:do)
+      begin: (</?)(?i:(mvt)(:)(do)\b)
+      beginCaptures:
+        '1': {name: punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt}
+        '2': {name: storage.type.namespace.mvt meta.preprocessor.namespace.mvt}
+        '3': {name: storage.type.namespace.separator.mvt meta.preprocessor.namespace.separator.mvt}
+        '4': {name: storage.type.localname.mvt meta.preprocessor.localname.mvt}
+      end: ((?:[ ]?/)?>)
+      endCaptures:
+        '1': {name: punctuation.definition.tag.end.mvt meta.preprocessor.end.mvt}
+      name: meta.tag.inline.do.mvt
       patterns:
       - include: '#mvt-attributes'
 
