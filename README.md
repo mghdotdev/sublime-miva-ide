@@ -30,6 +30,9 @@ Here is my `default_file_type.sublime-settings` file contents:
 	"use_current_file_syntax": false
 }
 ```
+
+----
+
 * [BracketHighlighter](https://github.com/facelessuser/BracketHighlighter) - Bracket and tag highlighter for Sublime Text
 
 Here is my `bh_core.sublime-settings` file contents:
@@ -83,4 +86,5 @@ Here is my `bh_tag.sublime-settings` file contents:
 		"source", "track", "wbr",
 		"mvt:else", "mvt:elseif"
 	]
-}```
+}
+```
