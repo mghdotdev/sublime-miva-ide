@@ -30,3 +30,60 @@ Here is my `default_file_type.sublime-settings` file contents:
 	"use_current_file_syntax": false
 }
 ```
+*[BracketHighlighter](https://github.com/facelessuser/BracketHighlighter) - Bracket and tag highlighter for Sublime Text
+
+Here is my `bh_core.sublime-settings` file contents:
+```json
+{
+	"user_brackets": [
+		{
+			"name": "mvt_angle",
+			"open": "(<)(?=[^?%]|$)",
+			"close": "(?:(?<=[^?%])|(?<=^))(>)",
+			"style": "angle",
+			"scope_exclude": [
+				"string",
+				"comment"
+			],
+			"language_filter": "whitelist",
+			"language_list": [
+				"MVT"
+			],
+			"plugin_library": "bh_modules.tags",
+			"enabled": true
+		}
+	]
+}
+```
+
+Here is my `bh_tag.sublime-settings` file contents:
+```json
+{
+	// Determine which style of tag-matching to use in which syntax
+	"tag_mode": {
+		"xhtml": ["XML"],
+		"html": [
+			"HTML",
+			"HTML 5",
+			"PHP",
+			"HTML (Jinja Templates)",
+			"HTML (Rails)",
+			"HTML (Twig)",
+			"HTML (Django)",
+			"laravel-blade",
+			"Handlebars",
+			"AngularJS",
+			"Java Server Pages (JSP)",
+			"MVT"
+		],
+		"cfml": ["HTML+CFML", "ColdFusion", "ColdFusionCFC"]
+	},
+
+	// Tags that never have a closing
+	"single_tags": [
+		"area", "base", "basefont", "br", "col", "embed", "frame", "hr",
+		"img", "input", "isindex", "keygen", "link", "meta", "param",
+		"source", "track", "wbr",
+		"mvt:else", "mvt:elseif"
+	]
+}```
