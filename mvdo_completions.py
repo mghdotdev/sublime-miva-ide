@@ -27,12 +27,13 @@ class MvDoCompletions(sublime_plugin.EventListener):
 		return self.get_completions(view, prefix, locations, mvdo_attribute)
 
 	def get_completions(self, view, prefix, locations, mvdo_attribute):
-		
 		completion_list = []
 		flags = 0
 
 		if (mvdo_attribute == 'file'):
 			completion_list = self.get_file_completions(view, locations[0], prefix)
+		elif (mvdo_attribute == 'value'):
+			completion_list = self.get_value_completions(view, locations[0], prefix)
 
 		return (completion_list, flags)
 
@@ -45,8 +46,30 @@ class MvDoCompletions(sublime_plugin.EventListener):
 		return data
 
 	def get_file_completions(self, view, locations, prefix):
-		file_completions = [(file['distro_path'] + '\tFile', re.escape(file['distro_path'])) for file in self.mvlsk_data]
+		file_completions = [ ( file['distro_path'] + '\tFile', file['distro_path'].replace('$', '\\$') ) for file in self.mvlsk_data ]
 		return set(file_completions)
 			
+	def get_value_completions(self, view, locations, prefix):
+		value_completions = []
 
+		for file in self.mvlsk_data:
+			for function in file['functions']:
+				parameters = self.build_function_parameters(function['parameters'])
+				value_completions.append( (function['name'] + '\tFunc', function['name'] + parameters) )
 
+		return value_completions
+
+	def build_function_parameters(self, parameters):
+		if (len(parameters) == 0):
+			return ''
+
+		parameters_map = []
+		count = 0
+		for parameter in parameters:
+			count += 1
+			if (count == len(parameters)):
+				count = 0
+			parameters_map.append( '${' + str(count) + ':' + parameter + '}' )
+
+		sep = ', '
+		return '( ' + sep.join(parameters_map) + ' )'
