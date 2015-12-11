@@ -1,4 +1,6 @@
 import sublime, sublime_plugin
+import json
+import re
 
 class MvDoCompletions(sublime_plugin.EventListener):
 	"""
@@ -7,7 +9,9 @@ class MvDoCompletions(sublime_plugin.EventListener):
 	| <mvt:do file="g.Module_Library_DB" value="Product_Load_ID(), Category_Load_ID() ..." />
 	"""
 	def __init__(self):
-		print( 'Hello World!' )
+		
+		mvlsk_path = sublime.packages_path() + '/mvdo_completions/mv-lsk.json'
+		self.mvlsk_data = self.read_mvlsk_json(mvlsk_path)
 
 	def on_query_completions(self, view, prefix, locations):
 		# Only trigger in an <mvt:do> Tag
@@ -24,7 +28,25 @@ class MvDoCompletions(sublime_plugin.EventListener):
 
 	def get_completions(self, view, prefix, locations, mvdo_attribute):
 		
-		completion_list = [ ('WTF\tFile', 'WTF') ]
+		completion_list = []
 		flags = 0
 
+		if (mvdo_attribute == 'file'):
+			completion_list = self.get_file_completions(view, locations[0], prefix)
+
 		return (completion_list, flags)
+
+	"""
+	Custom Methods
+	"""
+	def read_mvlsk_json(self, path):
+		with open( path ) as data_file:
+			data = json.load(data_file)
+		return data
+
+	def get_file_completions(self, view, locations, prefix):
+		file_completions = [(file['distro_path'] + '\tFile', re.escape(file['distro_path'])) for file in self.mvlsk_data]
+		return set(file_completions)
+			
+
+
