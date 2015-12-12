@@ -13,7 +13,6 @@ class MvDoCompletions(sublime_plugin.EventListener):
 	"""
 	def __init__(self):
 		self.mvlsk_data = self.read_mvlsk_json(__MVLSK_PATH__)
-		self.commit_completion_executed = False
 
 	def on_query_completions(self, view, prefix, locations):
 		# Only trigger in an <mvt:do> Tag
@@ -24,25 +23,26 @@ class MvDoCompletions(sublime_plugin.EventListener):
 		if (view.match_selector(locations[0], 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.file')):
 			mvdo_attribute = 'file'
 		elif (view.match_selector(locations[0], 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.value')):
+			prev_pt = max(0, locations[0] - 1)
+			is_variable = view.match_selector(prev_pt, 'variable.language')
+			if (is_variable):
+				return []
 			mvdo_attribute = 'value'
 		else:
 			return []
 		
 		return self.get_completions(view, prefix, locations, mvdo_attribute)
 
-	def on_text_command(self, view, command_name, args):
+	def post_text_command(self, view, command_name, args):
+		print(command_name, args)
 		if (command_name == 'commit_completion' or command_name == 'insert_best_completion'):
-			self.commit_completion_executed = True
-		else:
-			if (self.commit_completion_executed == True):
-				self.commit_completion_executed = False
-				for r in view.sel():
-					in_value_attribute = view.match_selector(r.begin(), 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.value')
-					if (in_value_attribute):
-						file_attribute_val = self.get_current_file_attribute_val(view, r.begin(), '')
-						if (file_attribute_val == ''):
-							value_attribute_val = self.get_current_value_attribute_val(view, r.begin(), '')
-							print(value_attribute_val)
+			for r in view.sel():
+				in_value_attribute = view.match_selector(r.begin(), 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.value')
+				if (in_value_attribute):
+					file_attribute_val = self.get_current_file_attribute_val(view, r.begin(), '')
+					if (file_attribute_val == ''):
+						value_attribute_val = self.get_current_value_attribute_val(view, r.begin(), '')
+						print(value_attribute_val)
 							
 
 	def get_completions(self, view, prefix, locations, mvdo_attribute):
@@ -54,7 +54,7 @@ class MvDoCompletions(sublime_plugin.EventListener):
 			file_attribute_val = self.get_current_file_attribute_val(view, locations[0], prefix)
 			completion_list = self.get_value_completions(view, locations[0], prefix, file_attribute_val)
 
-		return (completion_list, 0)
+		return (completion_list, sublime.INHIBIT_WORD_COMPLETIONS | sublime.INHIBIT_EXPLICIT_COMPLETIONS)
 
 
 	"""
@@ -91,8 +91,8 @@ class MvDoCompletions(sublime_plugin.EventListener):
 		count = 0
 		for parameter in parameters:
 			count += 1
-			# if (count == len(parameters)):
-			# 	count = 0
+			if (count == len(parameters)):
+				count = 0
 			parameters_map.append( '${' + str(count) + ':' + parameter + '}' )
 
 		sep = ', '
@@ -102,7 +102,7 @@ class MvDoCompletions(sublime_plugin.EventListener):
 	def get_current_file_attribute_val(self, view, pt, prefix):
 		
 		mvdo_tag_region = self.get_mvdo_tag_region(view, pt, prefix)
-		if (mvdo_tag_region == False):
+		if (mvdo_tag_region is False):
 			return ''
 
 		file_attribute_all_locations = view.find_by_selector( 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.file' )
@@ -111,13 +111,14 @@ class MvDoCompletions(sublime_plugin.EventListener):
 			if (mvdo_tag_region.contains(attribute_file_location)):
 				file_attribute_val = view.substr(attribute_file_location)
 
-		return file_attribute_val.replace('"', '')
+		file_attribute_val = file_attribute_val.replace('"', '')
+		return file_attribute_val
 
 
 	def get_current_value_attribute_val(self, view, pt, prefix):
 		
 		mvdo_tag_region = self.get_mvdo_tag_region(view, pt, prefix)
-		if (mvdo_tag_region == False):
+		if (mvdo_tag_region is False):
 			return ''
 
 		value_attribute_all_locations = view.find_by_selector( 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.value' )
@@ -126,7 +127,8 @@ class MvDoCompletions(sublime_plugin.EventListener):
 			if (mvdo_tag_region.contains(attribute_value_location)):
 				value_attribute_val = view.substr(attribute_value_location)
 
-		return value_attribute_val.replace('"', '')
+		value_attribute_val = value_attribute_val.replace('"', '')
+		return value_attribute_val
 
 
 	def get_mvdo_tag_region(self, view, pt, prefix):
@@ -157,7 +159,7 @@ class MvDoCompletions(sublime_plugin.EventListener):
 				break
 			i += 1
 
-		if (left_angle_pos == False or right_angle_pos == False):
+		if (left_angle_pos is False or right_angle_pos is False):
 			return False
 
 		return sublime.Region(left_angle_pos, right_angle_pos)
