@@ -1,5 +1,6 @@
 import sublime, sublime_plugin
 import json
+import re
 from os.path import dirname, realpath
 
 # Define Path to JSON Cache
@@ -13,6 +14,7 @@ class MvDoCompletions(sublime_plugin.EventListener):
 	"""
 	def __init__(self):
 		self.mvlsk_data = self.read_mvlsk_json(__MVLSK_PATH__)
+
 
 	def on_query_completions(self, view, prefix, locations):
 		# Only trigger in an <mvt:do> Tag
@@ -33,17 +35,24 @@ class MvDoCompletions(sublime_plugin.EventListener):
 		
 		return self.get_completions(view, prefix, locations, mvdo_attribute)
 
-	def post_text_command(self, view, command_name, args):
-		print(command_name, args)
+
+	def on_post_text_command(self, view, command_name, *args):
 		if (command_name == 'commit_completion' or command_name == 'insert_best_completion'):
 			for r in view.sel():
 				in_value_attribute = view.match_selector(r.begin(), 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.value')
 				if (in_value_attribute):
-					file_attribute_val = self.get_current_file_attribute_val(view, r.begin(), '')
-					if (file_attribute_val == ''):
-						value_attribute_val = self.get_current_value_attribute_val(view, r.begin(), '')
-						print(value_attribute_val)
-							
+					prev_pt = max(0, r.begin() - 1)
+					is_variable = view.match_selector(prev_pt, 'variable.language')
+					if (is_variable is False):
+						file_attribute_val = self.get_current_file_attribute_val(view, r.begin(), '')
+						if (file_attribute_val == ''):
+							value_attribute_val = self.get_current_value_attribute_val(view, r.begin(), '')
+							function_name = self.get_function_name(view, value_attribute_val)
+							if function_name is not False:
+								file_name = self.get_file_name(view, function_name)
+								if file_name is not False:
+									self.insert_file_name(view, r.begin(), file_name)
+
 
 	def get_completions(self, view, prefix, locations, mvdo_attribute):
 		completion_list = []
@@ -107,9 +116,9 @@ class MvDoCompletions(sublime_plugin.EventListener):
 
 		file_attribute_all_locations = view.find_by_selector( 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.file' )
 		file_attribute_val = ''
-		for attribute_file_location in file_attribute_all_locations:
-			if (mvdo_tag_region.contains(attribute_file_location)):
-				file_attribute_val = view.substr(attribute_file_location)
+		for file_attribute_location in file_attribute_all_locations:
+			if (mvdo_tag_region.contains(file_attribute_location)):
+				file_attribute_val = view.substr(file_attribute_location)
 
 		file_attribute_val = file_attribute_val.replace('"', '')
 		return file_attribute_val
@@ -163,3 +172,41 @@ class MvDoCompletions(sublime_plugin.EventListener):
 			return False
 
 		return sublime.Region(left_angle_pos, right_angle_pos)
+
+
+	def get_function_name(self, view, value_attribute_val):
+		match = re.match(r'([a-z0-9_]+)\s*?\(', value_attribute_val, re.I)
+		if match:
+			return match.group(1)
+		else:
+			return False
+
+
+	def get_file_name(self, view, function_name):
+		for file in self.mvlsk_data:
+			for function in file['functions']:
+				if function_name == function['name']:
+					return file['distro_path']
+
+
+	def insert_file_name(self, view, pt, file_name):
+		mvdo_tag_region = self.get_mvdo_tag_region(view, pt, '')
+		if (mvdo_tag_region is False):
+			return ''
+
+		file_attribute_all_locations = view.find_by_selector( 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.file' )
+		for file_attribute_location in file_attribute_all_locations:
+			if (mvdo_tag_region.contains(file_attribute_location)):
+				file_attribute_pt = file_attribute_location.begin() + 1
+				view.run_command('insert_file_name', {
+					"args": {
+						"file_attribute_pt": file_attribute_pt,
+						"file_name": file_name
+					}
+				})
+
+
+class InsertFileNameCommand(sublime_plugin.TextCommand):
+	def run(self, edit, args):
+		self.view.insert(edit, args['file_attribute_pt'], args['file_name'])
+
