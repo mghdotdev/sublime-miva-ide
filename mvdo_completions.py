@@ -94,7 +94,7 @@ class MvDoCompletions(sublime_plugin.EventListener):
 
 	def build_function_parameters(self, parameters):
 		if (len(parameters) == 0):
-			return ''
+			return '()'
 
 		parameters_map = []
 		count = 0
