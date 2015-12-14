@@ -1,0 +1,17 @@
+[
+	// MVT Comment
+	{
+		"keys": ["super+/"],
+		"command": "toggle_mvt_comment",
+		"args": {
+			"block": true
+		}, 
+		"context": [
+			{
+				"key": "selector",
+				"operator": "equal",
+				"operand": "text.html.mvt - source"
+			}
+		]
+	}
+]
