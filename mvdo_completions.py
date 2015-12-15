@@ -14,6 +14,7 @@ class MvDoCompletions(sublime_plugin.EventListener):
 	"""
 	def __init__(self):
 		self.mvlsk_data = self.read_mvlsk_json(__MVLSK_PATH__)
+		self.quick_panel_data = {}
 
 
 	def on_query_completions(self, view, prefix, locations):
@@ -51,8 +52,15 @@ class MvDoCompletions(sublime_plugin.EventListener):
 							if function_name is not False:
 								file_name = self.get_file_name(view, function_name)
 								if file_name is not False:
-									self.insert_file_name(view, r.begin(), file_name)
+									if type(file_name) is list:
+										self.quick_panel_data = { "view": view, "pt": r.begin(), "file_name": file_name }
+										view.window().show_quick_panel(file_name, self.choose_file_name, sublime.MONOSPACE_FONT)
+									elif type(file_name) is str:
+										self.insert_file_name(view, r.begin(), file_name)
 
+	def choose_file_name(self, index):
+		self.insert_file_name(self.quick_panel_data['view'], self.quick_panel_data['pt'], self.quick_panel_data['file_name'][index])
+		self.quick_panel_data = {}
 
 	def get_completions(self, view, prefix, locations, mvdo_attribute):
 		completion_list = []
@@ -89,7 +97,7 @@ class MvDoCompletions(sublime_plugin.EventListener):
 					parameters = self.build_function_parameters(function['parameters'])
 					value_completions.append( (function['name'] + '\tFunc', function['name'] + parameters) )
 
-		return value_completions
+		return set(value_completions)
 
 
 	def build_function_parameters(self, parameters):
@@ -183,10 +191,19 @@ class MvDoCompletions(sublime_plugin.EventListener):
 
 
 	def get_file_name(self, view, function_name):
+		files = []
 		for file in self.mvlsk_data:
 			for function in file['functions']:
 				if function_name == function['name']:
-					return file['distro_path']
+					files.append(file['distro_path'])
+		
+		files = set(files)
+		if (len(files) == 0):
+			return False
+		elif (len(files) == 1):
+			return next(iter(files))
+		else:
+			return list(files)
 
 
 	def insert_file_name(self, view, pt, file_name):
