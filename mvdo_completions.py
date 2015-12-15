@@ -58,9 +58,6 @@ class MvDoCompletions(sublime_plugin.EventListener):
 									elif type(file_name) is str:
 										self.insert_file_name(view, r.begin(), file_name)
 
-	def choose_file_name(self, index):
-		self.insert_file_name(self.quick_panel_data['view'], self.quick_panel_data['pt'], self.quick_panel_data['file_name'][index])
-		self.quick_panel_data = {}
 
 	def get_completions(self, view, prefix, locations, mvdo_attribute):
 		completion_list = []
@@ -204,6 +201,11 @@ class MvDoCompletions(sublime_plugin.EventListener):
 			return next(iter(files))
 		else:
 			return list(files)
+
+
+	def choose_file_name(self, index):
+		self.insert_file_name(self.quick_panel_data['view'], self.quick_panel_data['pt'], self.quick_panel_data['file_name'][index])
+		self.quick_panel_data = {}
 
 
 	def insert_file_name(self, view, pt, file_name):
