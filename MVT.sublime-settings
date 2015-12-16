@@ -1,4 +1,3 @@
 {
-	"auto_complete_triggers": [ {"selector": "text.html.mvt - source.mvt", "characters": "m"}, {"selector": "text.html", "characters": "<"} ],
-	"word_separators": "./\\()\"'-,.;<>~!@#$%^&*|+=[]{}`~?"
+	"auto_complete_triggers": [ {"selector": "text.html.mvt - source.mvt", "characters": "m"}, {"selector": "text.html", "characters": "<"} ]
 }
