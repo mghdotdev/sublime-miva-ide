@@ -6,5 +6,9 @@
 	{
 		"caption": "MVT: Entity → Variable",
 		"command": "mvt_entity_convert_to_variable"
+	},
+	{
+		"caption": "MVT: MvDO GoTo Definition",
+		"command": "goto_definition"
 	}
 ]
