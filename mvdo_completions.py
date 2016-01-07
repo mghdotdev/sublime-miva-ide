@@ -1,10 +1,11 @@
 import sublime, sublime_plugin
 import json
 import re
+import os
 from os.path import dirname, realpath
 
 # Define Path to JSON Cache
-__MVLSK_PATH__ = dirname(realpath(__file__)) + '/mv-lsk.json'
+__MVLSK_PATH__ = dirname(realpath(__file__)) + os.sep + 'mv-lsk.json'
 
 class MvDoCompletions(sublime_plugin.EventListener):
 	"""
