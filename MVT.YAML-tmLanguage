@@ -82,6 +82,8 @@ repository:
       endCaptures:
         '0': {name: punctuation.definition.string.end.mvt}
       name: string.quoted.single
+      patterns:
+      - include: '#string-content'
 
     ## Operators
     - comment: Arithmetic Operators
@@ -316,4 +318,11 @@ repository:
     comment: MVT Entities
     match: (&)(mvt|mvte|mvta)([a-zA-Z0-9:\-_\[\]]+)(;)
     name: constant.character.entity.mvt
+
+  string-content:
+    patterns:
+    - match: \\\s*\n
+      name: constant.character.escape.newline.js
+    - match: \\(x[\da-fA-F]{2}|u[\da-fA-F]{4}|.)
+      name: constant.character.escape.js
 ...
