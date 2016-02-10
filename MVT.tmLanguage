@@ -717,6 +717,13 @@
 					</dict>
 					<key>name</key>
 					<string>string.quoted.single</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#string-content</string>
+						</dict>
+					</array>
 				</dict>
 				<dict>
 					<key>comment</key>
@@ -840,6 +847,24 @@
 			<string>([A-Za-z_]+)([a-zA-Z0-9:_\.]*)</string>
 			<key>name</key>
 			<string>variable.language.generic.mvt</string>
+		</dict>
+		<key>string-content</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\\s*\n</string>
+					<key>name</key>
+					<string>constant.character.escape.newline.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\(x[\da-fA-F]{2}|u[\da-fA-F]{4}|.)</string>
+					<key>name</key>
+					<string>constant.character.escape.js</string>
+				</dict>
+			</array>
 		</dict>
 	</dict>
 	<key>scopeName</key>
