@@ -1,13 +1,13 @@
-import sublime, sublime_plugin, re
+import sublime, sublime_plugin, re, threading
 
-def variable_to_entity(str):
+def variable_to_entity(string_value):
 	# Define the RegEx for "local" and "global" variables
 	regex_local = '^l\.settings\:(.+?)$'
 	regex_global = '^g\.(.+?)$'
 
 	# Test the RegEx
-	local_match = re.match(regex_local, str)
-	global_match = re.match(regex_global, str)
+	local_match = re.match(regex_local, string_value)
+	global_match = re.match(regex_global, string_value)
 
 	# If a "local" variable is found, convert it to an entity
 	if local_match is not None:
@@ -34,14 +34,14 @@ def variable_to_entity(str):
 	return output
 
 
-def entity_to_variable(str):
+def entity_to_variable(string_value):
 	# Define the RegEx for "local" and "global" entities
 	regex_local = '^&mvt[a-z]?:(?!global:)(.+?);$'
 	regex_global = '^&mvt[a-z]?:global:(.+?);$'
 
 	# Test the RegEx
-	local_match = re.match(regex_local, str)
-	global_match = re.match(regex_global, str)
+	local_match = re.match(regex_local, string_value)
+	global_match = re.match(regex_global, string_value)
 
 	# If a "local" variable is found, convert it to an entity
 	if local_match is not None:
@@ -85,10 +85,10 @@ class MvtConvertAndCopy(sublime_plugin.TextCommand):
 		for selection in selections:
 			
 			# Get the selection's value and length
-			str	= self.view.substr(selection)
+			string_value	= self.view.substr(selection)
 
-			v2e_output = variable_to_entity(str)
-			e2v_output = entity_to_variable(str)
+			v2e_output = variable_to_entity(string_value)
+			e2v_output = entity_to_variable(string_value)
 
 			if (v2e_output is False) and (e2v_output is False):
 
@@ -98,14 +98,14 @@ class MvtConvertAndCopy(sublime_plugin.TextCommand):
 				# Output error message
 				sublime.error_message('No valid \'variable\' or \'entity\' available for conversion.')
 
+				return False
+
 			else:
 
 				if v2e_output is not False:
 					output = v2e_output
-					conversion_type = 'Variable'
 				elif e2v_output is not False:
 					output = e2v_output
-					conversion_type = 'Entity'
 
 				# Copy output to clipboard
 				previous_clipboard = sublime.get_clipboard()
@@ -115,8 +115,10 @@ class MvtConvertAndCopy(sublime_plugin.TextCommand):
 				else:
 					sublime.set_clipboard(previous_clipboard + '\n' + output)
 
-				# Status message display
-				# self.view.set_status('mvt_convert_and_copy', conversion_type + ' Converted and Copied')
+		# Status message display
+		status_key = 'mvt_convert_and_copy'
+		self.view.set_status(status_key, 'Converted and copied ' + str(len(sublime.get_clipboard())) + ' characters')
+		threading.Timer(3, self.view.erase_status, args=[status_key]).start()
 
 
 class MvtVariableConvertToEntityCommand(sublime_plugin.TextCommand):
@@ -133,10 +135,10 @@ class MvtVariableConvertToEntityCommand(sublime_plugin.TextCommand):
 		for selection in selections:
 			
 			# Get the selection's value and length
-			str	= self.view.substr(selection)
+			string_value	= self.view.substr(selection)
 
 			# Run conversion function
-			output = variable_to_entity(str)
+			output = variable_to_entity(string_value)
 
 			if output is False:
 				
@@ -163,10 +165,10 @@ class MvtEntityConvertToVariableCommand(sublime_plugin.TextCommand):
 		for selection in selections:
 
 			# Get the selection's value and length
-			str	= self.view.substr(selection)
+			string_value	= self.view.substr(selection)
 			
 			# Run conversion function
-			output = entity_to_variable(str)
+			output = entity_to_variable(string_value)
 
 			if output is False:
 				
@@ -192,10 +194,10 @@ class MvtToggleConversion(sublime_plugin.TextCommand):
 		for selection in selections:
 			
 			# Get the selection's value and length
-			str	= self.view.substr(selection)
+			string_value	= self.view.substr(selection)
 
-			v2e_output = variable_to_entity(str)
-			e2v_output = entity_to_variable(str)
+			v2e_output = variable_to_entity(string_value)
+			e2v_output = entity_to_variable(string_value)
 
 			if (v2e_output is False) and (e2v_output is False):
 
