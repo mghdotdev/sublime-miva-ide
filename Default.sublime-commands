@@ -1,4 +1,12 @@
-[
+[	
+	{
+		"caption": "MVT: Convert and Copy",
+		"command": "mvt_convert_and_copy"
+	},
+	{
+		"caption": "MVT: Toggle Conversion",
+		"command": "mvt_toggle_conversion"
+	},
 	{
 		"caption": "MVT: Variable → Entity",
 		"command": "mvt_variable_convert_to_entity"
@@ -8,7 +16,7 @@
 		"command": "mvt_entity_convert_to_variable"
 	},
 	{
-		"caption": "MVT: MvDO GoTo Definition",
+		"caption": "MVT: LSK Goto Definition",
 		"command": "goto_definition"
 	}
 ]
