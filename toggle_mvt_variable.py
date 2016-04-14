@@ -1,5 +1,9 @@
 import sublime, sublime_plugin, re, threading
 
+# Global Variables
+mvt_copy_status_key = 'mvt_convert_and_copy'
+mvt_error_status_key = 'mvt_variable_entity_error'
+
 def variable_to_entity(string_value):
 	# Define the RegEx for "local" and "global" variables
 	regex_local = '^l\.settings\:(.+?)$'
@@ -85,7 +89,7 @@ class MvtConvertAndCopy(sublime_plugin.TextCommand):
 		for selection in selections:
 			
 			# Get the selection's value and length
-			string_value	= self.view.substr(selection)
+			string_value = self.view.substr(selection)
 
 			v2e_output = variable_to_entity(string_value)
 			e2v_output = entity_to_variable(string_value)
@@ -96,7 +100,8 @@ class MvtConvertAndCopy(sublime_plugin.TextCommand):
 				sublime.set_clipboard(original_clipboard)
 				
 				# Output error message
-				sublime.error_message('No valid \'variable\' or \'entity\' available for conversion.')
+				self.view.set_status(mvt_error_status_key, 'No valid variable or entity available for conversion')
+				threading.Timer(3, self.view.erase_status, args=[mvt_error_status_key]).start()
 
 				return False
 
@@ -116,9 +121,8 @@ class MvtConvertAndCopy(sublime_plugin.TextCommand):
 					sublime.set_clipboard(previous_clipboard + '\n' + output)
 
 		# Status message display
-		status_key = 'mvt_convert_and_copy'
-		self.view.set_status(status_key, 'Converted and copied ' + str(len(sublime.get_clipboard())) + ' characters')
-		threading.Timer(3, self.view.erase_status, args=[status_key]).start()
+		self.view.set_status(mvt_copy_status_key, 'Converted and copied ' + str(len(sublime.get_clipboard())) + ' characters')
+		threading.Timer(3, self.view.erase_status, args=[mvt_copy_status_key]).start()
 
 
 class MvtVariableConvertToEntityCommand(sublime_plugin.TextCommand):
@@ -135,7 +139,7 @@ class MvtVariableConvertToEntityCommand(sublime_plugin.TextCommand):
 		for selection in selections:
 			
 			# Get the selection's value and length
-			string_value	= self.view.substr(selection)
+			string_value = self.view.substr(selection)
 
 			# Run conversion function
 			output = variable_to_entity(string_value)
@@ -143,7 +147,8 @@ class MvtVariableConvertToEntityCommand(sublime_plugin.TextCommand):
 			if output is False:
 				
 				# Output error message
-				sublime.error_message('No valid \'variable\' available for conversion.')
+				self.view.set_status(mvt_error_status_key, 'No valid variable available for conversion')
+				threading.Timer(3, self.view.erase_status, args=[mvt_error_status_key]).start()
 
 			else:
 
@@ -165,7 +170,7 @@ class MvtEntityConvertToVariableCommand(sublime_plugin.TextCommand):
 		for selection in selections:
 
 			# Get the selection's value and length
-			string_value	= self.view.substr(selection)
+			string_value = self.view.substr(selection)
 			
 			# Run conversion function
 			output = entity_to_variable(string_value)
@@ -173,7 +178,8 @@ class MvtEntityConvertToVariableCommand(sublime_plugin.TextCommand):
 			if output is False:
 				
 				# Output error message
-				sublime.error_message('No valid \'entity\' available for conversion.')
+				self.view.set_status(mvt_error_status_key, 'No valid entity available for conversion')
+				threading.Timer(3, self.view.erase_status, args=[mvt_error_status_key]).start()
 
 			else:
 
@@ -194,18 +200,16 @@ class MvtToggleConversion(sublime_plugin.TextCommand):
 		for selection in selections:
 			
 			# Get the selection's value and length
-			string_value	= self.view.substr(selection)
+			string_value = self.view.substr(selection)
 
 			v2e_output = variable_to_entity(string_value)
 			e2v_output = entity_to_variable(string_value)
 
 			if (v2e_output is False) and (e2v_output is False):
-
-				print(v2e_output)
-				print(e2v_output)
 				
 				# Output error message
-				sublime.error_message('No valid \'variable\' or \'entity\' available for conversion.')
+				self.view.set_status(mvt_error_status_key, 'No valid variable or entity available for conversion')
+				threading.Timer(3, self.view.erase_status, args=[mvt_error_status_key]).start()
 
 			else:
 
@@ -216,3 +220,4 @@ class MvtToggleConversion(sublime_plugin.TextCommand):
 
 				## Replace the selection with the generated Conversion
 				self.view.replace(edit, selection, output)
+
