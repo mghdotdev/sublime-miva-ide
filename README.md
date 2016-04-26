@@ -62,6 +62,7 @@ Here is my `bh_core.sublime-settings` file contents:
 Here is my `bh_tag.sublime-settings` file contents:
 ```json
 {
+	// Determine which style of tag-matching to use in which syntax
 	"tag_mode": {
 		"xhtml": ["XML"],
 		"html": [
@@ -80,11 +81,12 @@ Here is my `bh_tag.sublime-settings` file contents:
 		],
 		"cfml": ["HTML+CFML", "ColdFusion", "ColdFusionCFC"]
 	},
-	"single_tags": [
-		"area", "base", "basefont", "br", "col", "embed", "frame", "hr",
-		"img", "input", "isindex", "keygen", "link", "meta", "param",
-		"source", "track", "wbr",
-		"mvt:else", "mvt:elseif"
-	]
+
+	// Tags that never have a closing.  You can use 'null' if it does not require a pattern.
+	"single_tag_patterns": {
+		"xhtml": null,
+		"html": "area|base|basefont|br|col|embed|frame|hr|img|input|isindex|keygen|link|meta|param|source|track|wbr|mvt:else|mvt:elseif",
+		"cfml": "area|base|basefont|br|col|embed|frame|hr|img|input|isindex|keygen|link|meta|param|source|track|wbr"
+	}
 }
 ```
