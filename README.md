@@ -87,6 +87,13 @@ Here is my `bh_tag.sublime-settings` file contents:
 		"xhtml": null,
 		"html": "area|base|basefont|br|col|embed|frame|hr|img|input|isindex|keygen|link|meta|param|source|track|wbr|mvt:else|mvt:elseif",
 		"cfml": "area|base|basefont|br|col|embed|frame|hr|img|input|isindex|keygen|link|meta|param|source|track|wbr"
+	},
+
+	// Self closing HTML tags. You can use 'null' if it does not require a pattern.
+	"self_closing_patterns": {
+		"xhtml": null,
+		"html": "colgroup|dd|dt|li|options|p|td|tfoot|th|thead|tr|mvt:assign|mvt:callcontinue|mvt:callstop|mvt:eval|mvt:exit|mvt:foreachcontinue|mvt:foreachstop|mvt:item|mvt:miva|mvt:whilecontinue|mvt:whilestop",
+		"cfml": "cf.+|colgroup|dd|dt|li|options|p|td|tfoot|th|thead|tr"
 	}
 }
 ```
