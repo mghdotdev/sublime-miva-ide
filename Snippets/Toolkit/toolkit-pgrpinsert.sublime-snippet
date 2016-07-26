@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="pgrpinsert|${1:maxgrp}|${0:Chairman}" />
+]]></content>
+	<tabTrigger>tk-pgrpinsert</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

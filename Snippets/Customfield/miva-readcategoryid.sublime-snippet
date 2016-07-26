@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[<mvt:item name="customfields" param="Read_Category_ID( ${1:1}, '${2:custom_field_code}', ${4:l.settings:category:customfield_values:customfields:$2} )" />
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvt:read_category_id</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Customfield</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

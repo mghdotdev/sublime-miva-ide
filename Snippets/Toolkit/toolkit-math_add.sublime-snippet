@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="math_add|${1:sum}|${2:l.all_settings:product:price}|${0:l.all_settings:product:cost}" />
+]]></content>
+	<tabTrigger>tk-math_add</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<mvt:eval expr="${1:g.value}" />
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvt:eval</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

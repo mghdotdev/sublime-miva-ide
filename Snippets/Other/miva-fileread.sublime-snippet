@@ -1,0 +1,42 @@
+<snippet>
+	<content><![CDATA[
+<mvt:assign name="g.file_read" value="file_read('/credit.csv','data', g.data)" />
+
+  <mvt:if expr=" g.file_read NE -1 ">
+    The file was read!
+  <mvt:else>
+    There was an error reading the file
+  </mvt:if>
+ 
+  <mvt:assign name="g.counter" value="1" />
+  <mvt:assign name="l.settings:line" value="gettoken( g.data, asciichar(10), g.counter )" />
+
+  <mvt:while expr="NOT ISNULL l.settings:line">
+ 
+      <mvt:if expr="'bheyde' CIN l.settings:line">
+
+      <mvt:assign name="l.settings:credit:login"  value="gettoken( l.settings:line, asciichar(44), 1 ) " />
+      <mvt:assign name="l.settings:credit:name"   value="gettoken( l.settings:line, asciichar(44), 2 ) " />
+      <mvt:assign name="l.settings:credit:amount" value="gettoken( l.settings:line, asciichar(44), 3 ) " />
+      
+      Login:  &mvt:credit:login;<br>
+      Name:   &mvt:credit:name;<br>
+      amount: &mvt:credit:amount;<br>
+  
+ 
+    </mvt:if>
+ 
+     
+      <mvt:assign name="g.counter" value="g.counter + 1" />
+      <mvt:assign name="l.settings:line" value="gettoken( g.data, asciichar(10), g.counter )" />
+ 
+               
+  </mvt:while>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvt:fileread</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Other</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

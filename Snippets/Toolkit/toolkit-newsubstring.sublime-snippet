@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="newsubstring|${1:new_desc}|${2:l.all_settings:product:descrip},${3:1},${0:200}" />
+]]></content>
+	<tabTrigger>tk-newsubstring</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

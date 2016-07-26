@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+<mvt:comment> Start Testing Conditional </mvt:comment>
+<mvt:if expr="g.customer:login EQ '${1:test}'">
+
+
+
+
+${2}
+
+
+
+
+${3:<mvt:else>}
+${0}
+</mvt:if>
+<mvt:comment> / end Testing Conditional </mvt:comment>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvt:testuser</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Debug</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

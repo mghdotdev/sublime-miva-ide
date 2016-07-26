@@ -1,0 +1,13 @@
+<!-- OLD SNIPPET... USE `mvt:debug` -->
+<snippet>
+	<content><![CDATA[
+<mvt:assign name="g.var" value="miva_array_serialize(${1:array})" />
+<!-- @@ &mvt:global:var; -->
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvt:var_dump</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Debug</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

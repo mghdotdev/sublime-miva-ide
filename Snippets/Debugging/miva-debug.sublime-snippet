@@ -1,0 +1,17 @@
+<!-- REPLACES `mvt:var_dump` -->
+<snippet>
+	<content><![CDATA[
+<mvt:assign name="g.mvt_debug" value="miva_array_serialize( ${1:variable} )" />
+${2:<!--
+@@${1/(l\.(settings:?)?|g\.|s\.)([a-zA-Z0-9:_\.\[\]]*)/$3/g}
+===${1/./=/g}}
+&mvt:global:mvt_debug;
+${3:-->}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvt:debug</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Debug</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

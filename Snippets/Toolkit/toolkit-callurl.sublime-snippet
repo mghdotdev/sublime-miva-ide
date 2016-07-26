@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="callurl|${1:sample}|${2:http://www.mydomain.com/subscribe.php}|${3:POST}|${4:sublist},${5:ship_lname},${0:ship_email}" />
+]]></content>
+	<tabTrigger>tk-callurl</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

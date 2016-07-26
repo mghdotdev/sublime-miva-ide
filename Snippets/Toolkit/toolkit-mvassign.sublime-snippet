@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="mvassign|${1:word}|${0:substring(l.all_settings:product:descrip,1,200)}" />
+]]></content>
+	<tabTrigger>tk-mvassign</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

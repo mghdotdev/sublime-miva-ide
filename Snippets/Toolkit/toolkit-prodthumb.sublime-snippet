@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="prodthumb|${1:imgurl}|${0:l.all_settings:item:code}" />
+]]></content>
+	<tabTrigger>tk-prodthumb</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

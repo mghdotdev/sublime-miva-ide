@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="custom|${1:studio}|${2:l.all_settings:item:product_id}|${0:company}" />
+]]></content>
+	<tabTrigger>tk-custom</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>
