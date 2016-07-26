@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="attr|${1:acount}|${0:l.all_settings:product:id}" />
+]]></content>
+	<tabTrigger>tk-attr</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

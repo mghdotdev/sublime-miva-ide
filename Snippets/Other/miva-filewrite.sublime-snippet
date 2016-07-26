@@ -1,0 +1,42 @@
+<snippet>
+	<content><![CDATA[
+<mvt:assign name="g.filename" 	value="'Export.csv'" />
+<mvt:assign name="g.filepath" 	value="'/test/'" />
+<mvt:assign name="g.newline" 	value="asciichar(10)" />
+
+<mvt:assign name="g.headerrow" 	value="'Product_Code,Product_Name,Product_Price' $ g.new_line" />
+
+<mvt:assign name="g.file_exists" value="sexists(g.filepath $ g.filename)" />
+
+<mvt:if expr="g.file_exists EQ 1">
+
+	<mvt:assign name="g.file_deleted" value="sdelete(g.filepath $ g.filename)" />
+
+	<mvt:if expr="g.file_deleted EQ 1">
+		<mvt:assign name="g.file_created" value="file_create(g.filepath $ g.filename,'script', g.headerrow)" />
+	</mvt:if>
+
+<mvt:else>
+
+	<mvt:assign name="g.file_created" value="file_create(g.filepath $ g.filename,'script', g.headerrow)" />
+
+</mvt:if>
+
+
+<mvt:if expr="g.file_deleted EQ 1">
+	The File Was Deleted <br>
+</mvt:if>
+
+<mvt:if expr="g.file_created NE -1">
+	The File Was Created <br>
+<mvt:else>
+	There was an error <br>
+</mvt:if>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvt:filewrite</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Other</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

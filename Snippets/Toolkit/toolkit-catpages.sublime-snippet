@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="catpages|${0:l.all_settings:category:id}" />
+]]></content>
+	<tabTrigger>tk-catpages</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

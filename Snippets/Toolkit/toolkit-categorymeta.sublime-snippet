@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+	<mvt:item name="toolkit" param="categorymeta|${1:CODE}|${0:l.all_settings:category:code}" />
+]]></content>
+	<tabTrigger>tk-categorymeta</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

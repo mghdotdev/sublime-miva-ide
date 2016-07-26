@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="quick|${1:pcount}|${2:${3:1AA00100,}${4:${5:1S_00002,}${6:${7:PB_00001,}${8:${9:1S_00004,}${0:LCS00002}}}}}" />
+]]></content>
+	<tabTrigger>tk-quick</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

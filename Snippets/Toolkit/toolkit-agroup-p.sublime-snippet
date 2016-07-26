@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="agroup-p|${1:aprdcount}|${0:g.Product_Code}" />
+]]></content>
+	<tabTrigger>tk-agroup-p</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

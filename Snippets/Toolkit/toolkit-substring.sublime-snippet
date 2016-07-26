@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="substring|${1:l.all_settings:product:descrip},${2:1},${0:20}" />
+]]></content>
+	<tabTrigger>tk-substring</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

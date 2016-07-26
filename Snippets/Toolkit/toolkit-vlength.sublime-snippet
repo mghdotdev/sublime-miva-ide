@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="vlength|${1:name_length}|${0:l.all_settings:product:name}" />
+]]></content>
+	<tabTrigger>tk-vlength</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

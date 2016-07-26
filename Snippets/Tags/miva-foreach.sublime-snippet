@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+<mvt:foreach iterator="${1}" array="${2}">
+	${0}
+</mvt:foreach>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvt:foreach</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

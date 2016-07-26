@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="vacreate|${1:cast}|${2:l.all_settings:product:customfield_values:customfields:actors}|${0:,}" />
+]]></content>
+	<tabTrigger>tk-vacreate</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

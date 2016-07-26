@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="catimage|${1:bigimage}|${0:l.all_settings:parent_category:code}" />
+]]></content>
+	<tabTrigger>tk-catimage</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<mvt:assign name="g.new_string" value="glosub(${1:g.string}, ${2:'Miva Merchant'} , ${3:'Miva'})" />
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvt:glosub</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Other</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="customfields" param="Read_Basket( '${1:basket_field_code}', ${2:g.variable} )" />
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvt:read_basket</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Customfield</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>

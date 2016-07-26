@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<mvt:item name="toolkit" param="math_divide|${1:result}|${2:l.all_settings:product:cost}|${0:l.all_settings:product:price}" />
+]]></content>
+	<tabTrigger>tk-math_divide</tabTrigger>
+	<description>Toolkit</description>
+	<scope>text.html.mvt - source.mvt - string</scope>
+</snippet>
