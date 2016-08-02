@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-<mvt:item name="customfields" param="Read_Category_Code( ${1:'category_code'}, '${2:custom_field_code}', ${4:l.settings:category:customfield_values:customfields:$2} )" />
+<mvt:item name="customfields" param="Read_Category_Code( ${1:'category_code'}, '${2:custom_field_code}', ${4:l.settings:${3:category}:customfield_values:customfields:$2} )" />
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>mvt:read_category_code</tabTrigger>
