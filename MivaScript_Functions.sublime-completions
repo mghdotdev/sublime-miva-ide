@@ -219,6 +219,23 @@
 		{ "trigger": "xml_parse_section_init", 			"contents": "xml_parse_section_init( ${1:filepath}, ${2:location}, ${3:level} )" },
 		{ "trigger": "xml_parse_section_setstate", 		"contents": "xml_parse_section_setstate( ${1:source var} )" },
 		{ "trigger": "xml_parse_set_colon_replacement", "contents": "xml_parse_set_colon_replacement( ${1:colon} )" },
-		{ "trigger": "xml_parse_var", 					"contents": "xml_parse_var( ${1:var var}, ${2:output var} )" }
+		{ "trigger": "xml_parse_var", 					"contents": "xml_parse_var( ${1:var var}, ${2:output var} )" },
+
+		{ "trigger": "miva_setprocessname", 			"contents": "miva_setprocessname( ${1:name} )" },
+		{ "trigger": "miva_async_sleep", 			 	"contents": "miva_async_sleep( ${1:until}, ${2:semfile}, ${3:semlocation} )" },
+		{ "trigger": "miva_csv_encode", 				"contents": "miva_csv_encode( ${1:text}, ${2:delimiter} )" },
+		{ "trigger": "miva_html_strip", 				"contents": "miva_html_strip( ${1:text}, ${2:allowed_tags} )" },
+		{ "trigger": "miva_cdata_encode", 				"contents": "miva_cdata_encode( ${1:text} )" },
+		{ "trigger": "file_touch", 						"contents": "file_touch( ${1:file}, ${2:location} )" },
+		{ "trigger": "miva_struct_merge", 				"contents": "miva_struct_merge( ${1:source var}, ${2:dest var} )" },
+		{ "trigger": "miva_struct_merge_ref", 			"contents": "miva_struct_merge_ref( ${1:source var}, ${2:dest var} )" },
+		{ "trigger": "indexofl", 						"contents": "indexofl( ${1:needle}, ${2:haystack var}, ${3:offset} )" },
+		{ "trigger": "indexofli", 						"contents": "indexofli( ${1:needle}, ${2:haystack var}, ${3:offset} )" },
+		{ "trigger": "miva_array_filter", 				"contents": "miva_array_filter( ${1:array var}, ${2:offset}, ${3:element var}, ${4:filter_expression}, ${5:output var} )" },
+		{ "trigger": "miva_array_filter_ref", 			"contents": "miva_array_filter_ref( ${1:array var}, ${2:offset}, ${3:element var}, ${4:filter_expression}, ${5:output var} )" },
+		{ "trigger": "miva_ieee754_normalize", 			"contents": "miva_ieee754_normalize( ${1:significant_digits}, ${2:value} )" },
+		{ "trigger": "rsa_load_publickey_engine", 		"contents": "rsa_load_publickey_engine( ${1:engine}, ${2:key_id}, ${3:rsa var} )" },
+		{ "trigger": "rsa_load_privatekey_engine", 		"contents": "rsa_load_privatekey_engine( ${1:engine}, ${2:key_id}, ${3:rsa var} )" },
+		{ "trigger": "crypto_rand_set_rand_engine", 	"contents": "crypto_rand_set_rand_engine( ${1:engine} )" }
 	]
 }
