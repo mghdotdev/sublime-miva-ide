@@ -21,11 +21,14 @@ Miva Template Language (MVT) syntax plugin for Sublime Text 2/3.
 * rsa_load_privatekey_engine
 * crypto_rand_set_rand_engine
 
+---
+
 ##### Syntax Features
 * Proper `<mvt:comment>` highlighting.
 * Support for `<mvt:assign>` function names.
 * Support for `<mvt:do>` function names.
 * Support for __toolkit__ and __toolbelt__ function names.
+* Robust autocomplete for Mivascript and Miva Merchant functions.
 
 ##### Package Features
 * Adds Toggle Comment support for `<mvt:comment>` tags and HTML style block comments.
