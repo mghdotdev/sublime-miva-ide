@@ -1,7 +1,25 @@
 # Miva Template Language (MVT)
 Miva Template Language (MVT) syntax plugin for Sublime Text 2/3.
 
-## UPDATED FOR 9.0005!
+## UPDATED FOR 9.0006!
+## UPDATED FOR ENGINE 5.24!
+### Functions Added in 5.24:
+* miva_setprocessname
+* miva_async_sleep
+* miva_csv_encode
+* miva_html_strip
+* miva_cdata_encode
+* file_touch
+* miva_struct_merge
+* miva_struct_merge_ref
+* indexofl
+* indexofli
+* miva_array_filter
+* miva_array_filter_ref
+* miva_ieee754_normalize
+* rsa_load_publickey_engine
+* rsa_load_privatekey_engine
+* crypto_rand_set_rand_engine
 
 ##### Syntax Features
 * Proper `<mvt:comment>` highlighting.
