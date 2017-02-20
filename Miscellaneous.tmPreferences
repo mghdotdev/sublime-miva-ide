@@ -44,39 +44,5 @@
 		<key>unIndentedLinePattern</key>
 		<string>(&lt;(mvt:comment)[^&gt;]*?&gt;)</string>
 	</dict>
-	<!-- <dict>
-		<key>comment</key>
-		<string>
-		/*
-		 * Don't indent:
-		 *  &lt;?, &lt;/, &lt;!
-		 *  &lt;whatever&gt;&lt;/whatever&gt;
-		 *  &lt;whatever /&gt;
-		 *  &lt;% %&gt;
-		 *  &lt;!-- --&gt;
-		 *  &lt;%-- --%&gt;
-		 *
-		 * Do indent:
-		 *  &lt;whatever&gt;
-		 *  &lt;%
-		 *  &lt;!--
-		 *  &lt;%--
-		 *
-		 * Decrease indent for:
-		 *  &lt;/whatever&gt;
-		 *  &lt;else/elseif
-		 */
-		</string>
-
-		<key>increaseIndentPattern</key>
-		<string>^\s*&lt;((?!mvt:else|mvt:elseif|mvt:item|mvt:miva|mvt:eval|mvt:do|mvt:exit|mvt:foreachstop|mvt:foreachcontinue|mvt:whilestop|mvt:whilecontinue|mvt:callstop|mvt:callcontinue|area|base|br|col|frame|hr|html|img|input|link|meta|param)([^/])(?!.+?(/&gt;|&lt;/.+?&gt;)))</string>
-
-		<key>decreaseIndentPattern</key>
-		<string>^\s*(&lt;(mvt:else)[^&gt;]*?&gt;)|(&lt;/[^&gt;]+&gt;)</string>
-
-		<key>batchIncreaseIndentPattern</key>
-		<string>^\s*(&lt;(mvt:else)[^&gt;]*?&gt;)</string>
-
-	</dict> -->
 </dict>
 </plist>
