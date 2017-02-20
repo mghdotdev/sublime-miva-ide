@@ -4,7 +4,7 @@
 	<key>name</key>
 	<string>Miscellaneous</string>
 	<key>scope</key>
-	<string>text.html.mvt - text.html.mvt comment.block.mvt</string>
+	<string>text.html.mvt</string>
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
@@ -41,8 +41,6 @@
 		</string>
 		<key>bracketIndentNextLinePattern</key>
 		<string>&lt;!DOCTYPE(?!.*&gt;)</string>
-		<key>unIndentedLinePattern</key>
-		<string>(&lt;(mvt:comment)[^&gt;]*?&gt;)</string>
 	</dict>
 </dict>
 </plist>
