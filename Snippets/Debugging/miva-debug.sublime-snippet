@@ -1,7 +1,7 @@
 <!-- REPLACES `mvt:var_dump` -->
 <snippet>
 	<content><![CDATA[
-<mvt:assign name="g.mvt_debug" value="miva_array_serialize( ${1:variable} )" />
+<mvt:assign name="g.mvt_debug" value="glosub( miva_array_serialize( ${1:variable} ), ',', asciichar( 10 ) )" />
 ${2:<!--
 @@${1/(l\.(settings:?)?|g\.|s\.)([a-zA-Z0-9:_\.\[\]]*)/$3/g}
 ===${1/./=/g}}
