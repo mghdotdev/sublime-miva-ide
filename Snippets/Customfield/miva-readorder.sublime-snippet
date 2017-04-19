@@ -3,7 +3,7 @@
 <mvt:item name="customfields" param="Read_Order( ${1:666}, '${2:custom_field_code}', ${3:l.settings:customfields} )" />
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>mvt:write_order</tabTrigger>
+	<tabTrigger>mvt:read_order</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Customfield</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
