@@ -61,10 +61,6 @@ class MvDoCompletions(sublime_plugin.EventListener):
 									elif type(file_name) is str:
 										self.insert_file_name(view, r.begin(), file_name)
 
-								### Track which functions are getting autocompleted...
-								### * Used for complining a DB of 50 most used functions...
-								self.track(function_name)
-
 
 	def get_completions(self, view, prefix, locations, mvdo_attribute):
 		completion_list = []
@@ -230,18 +226,6 @@ class MvDoCompletions(sublime_plugin.EventListener):
 						"file_name": file_name
 					}
 				})
-
-
-	def track(self, function_name):
-		url = 'http://maxhegler.com/miva/mvtdo_tracking.php'
-		post_fields = { 'f': function_name }
-		request = Request(url, urlencode(post_fields).encode())
-		urlopen(request)
-
-		# json = urlopen(request).read().decode()
-		# print(function_name)
-		# print(json)
-
 
 class InsertFileNameCommand(sublime_plugin.TextCommand):
 	def run(self, edit, args):
