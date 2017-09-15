@@ -1,0 +1,63 @@
+[
+	// ================ All ================ //
+	{
+		"keys": ["super+alt+/"],
+		"command": "toggle_comment",
+		"args": {
+			"block": false
+		}, 
+		"context": [
+			{
+				"key": "selector",
+				"operator": "equal",
+				"operand": "text.mv - source, text.html.mvt - source"
+			}
+		]
+	},
+
+	// ================ Miva Script ================ //
+	// Comment
+	{
+		"keys": ["super+/"],
+		"command": "toggle_mv_comment",
+		"args": {
+			"block": false
+		}, 
+		"context": [
+			{
+				"key": "selector",
+				"operator": "equal",
+				"operand": "text.mv - source"
+			}
+		]
+	},
+
+	// ================ MVT ================ //
+	// Comment
+	{
+		"keys": ["super+/"],
+		"command": "toggle_mvt_comment",
+		"args": {
+			"block": false
+		}, 
+		"context": [
+			{
+				"key": "selector",
+				"operator": "equal",
+				"operand": "text.html.mvt - source"
+			}
+		]
+	},
+	// Convert and Copy
+	{
+		"keys": ["super+shift+c"],
+		"command": "mvt_convert_and_copy",
+		"context": [
+			{
+				"key": "selector",
+				"operator": "equal",
+				"operand": "text.html.mvt"
+			}
+		]
+	}
+]

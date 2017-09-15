@@ -1,4 +1,13 @@
 [	
+	// ==================== All ==================== //
+	{
+		"caption": "Miva: LSK Goto Definition",
+		"command": "goto_definition"
+	},
+	
+	// ==================== Miva Script ==================== //
+	
+	// ==================== MVT ==================== //
 	{
 		"caption": "MVT: Convert and Copy",
 		"command": "mvt_convert_and_copy"
@@ -14,9 +23,5 @@
 	{
 		"caption": "MVT: Entity → Variable",
 		"command": "mvt_entity_convert_to_variable"
-	},
-	{
-		"caption": "MVT: LSK Goto Definition",
-		"command": "goto_definition"
 	}
 ]
