@@ -131,7 +131,7 @@ contexts:
         - include: tag-stuff
 
   tag-preprocessor:
-    - match: (?i)(<\/?)(MvASYNCHRONOUS|MvASSEMBLY|MvCOMMERCE)\b
+    - match: (?i)(<\/?)(MvASYNCHRONOUS|MvASSEMBLY|MvCOMMERCE|MvCAPTURE)\b
       captures:
         1: punctuation.definition.tag.begin.mv
         2: meta.tag.other.mv entity.name.tag.other.mv meta.preprocessor.mv

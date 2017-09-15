@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+<MvASSEMBLY>
+	${2:<MvCOMMENT>
+	| ** New in 5.18 **
+	| MvASSEMBLY allows MivaScript assembly code to be interleaved with traditional MivaScript.
+	| The content of the MvASSEMBLY tag is passed unmodified to the MivaScript assembler.
+	</MvCOMMENT>}
+	$1
+</MvASSEMBLY>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MvASSEMBLY</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Assembly</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

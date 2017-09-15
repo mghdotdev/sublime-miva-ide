@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+<MvASSIGNARRAY NAME = "${1:\{ ${2:expression | [string] literal} \}}" VALUE = "${3:\{ ${4:expression | [mixed] literal} \}}">
+	${5:<MvDIMENSION INDEX = "${6:[numeric] literal}">}
+	${7:<MvMEMBER NAME = "${8:[string] literal}">}
+</MvASSIGNARRAY>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MvASSIGNARRAY</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Assign Array</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

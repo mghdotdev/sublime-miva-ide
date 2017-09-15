@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+<MvCALL ACTION = "${1:\{ ${2:expression | [string] literal} \}}" METHOD = "${3:get|post|head|xml|raw|options|put|delete|trace|connect|patch|link|unlink}${3/(g$)|(po$)|(h$)|(x$)|(r$)|(o$)|(pu$)|(d$)|(t$)|(c$)|(pa$)|(l$)|(u$)|.*/?1:et:?2:st:?3:ead:?4:ml:?5:aw:?6:ptions:?7:t:?8:elete:?9:race:?10:onnect:?11:tch:?12:ink:?13:nlink/}">
+	$4
+</MvCALL>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MvCALL</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Call</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<MvELSEIF EXPR = "{ ${1:variable-name} }">
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MvELSEIF</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Else If</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

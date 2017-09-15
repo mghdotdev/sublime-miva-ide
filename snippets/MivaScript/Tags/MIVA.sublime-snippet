@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+<MIVA STANDARDOUTPUTLEVEL = "${1:html, text, compresswhitespace}"
+	  ${2:ERROROUTPUTLEVEL = "${3:runtime | null string}${3/(r$)|.*/?1:untime/}"}
+	  ${4:ERRORMESSAGE = "${5:[string] literal}"}
+	  ${6:MvTAGNAME_ERROR = "${7:fatal | nonfatal, display | nodisplay}${7/(f$)|(non$)|(nod$)|.*/?1:atal:?2:fatal, display:?3:isplay/}"}>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MIVA</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Miva</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>
