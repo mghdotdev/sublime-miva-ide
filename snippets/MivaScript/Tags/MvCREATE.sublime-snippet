@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+<MvCREATE NAME = "${1:\{ ${2:expression | [string] literal} \}}"
+		  DATABASE = "${3:\{ ${4:expression | [string] literal} \}}"
+		  FIELDS = "${5:\{ ${6:expression | variable list} \}}"
+		  TYPE = "${7:xbase3 | user defined}${7/(x$)|.*/?1:base3/}">
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MvCREATE</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Create</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

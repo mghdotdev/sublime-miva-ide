@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<MvASSIGN NAME = "$1" VALUE = "${3:\{ ${4:expression | [mixed] literal} \}}">
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MvASSIGN</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Assign</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

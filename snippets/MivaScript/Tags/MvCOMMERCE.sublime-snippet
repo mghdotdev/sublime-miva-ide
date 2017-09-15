@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+<MvCOMMERCE>
+	${2:<MvCOMMENT>
+	| Provides communications between a Miva Script application and an external commerce library.
+	| It will loop until it no longer receives data, or until it is explicitly halted with the <MvCOMMERCESTOP> tag.
+	</MvCOMMENT>}
+	$1
+</MvCOMMERCE>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MvCOMMERCE</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Commerce</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

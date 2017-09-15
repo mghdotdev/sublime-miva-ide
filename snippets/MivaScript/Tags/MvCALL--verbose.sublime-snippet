@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+<MvCALL ACTION = "${1:\{ ${2:expression | [string] literal} \}}"
+		METHOD = "${3:get|post|head|xml|raw|options|put|delete|trace|connect|patch|link|unlink}${3/(g$)|(po$)|(h$)|(x$)|(r$)|(o$)|(pu$)|(d$)|(t$)|(c$)|(pa$)|(l$)|(u$)|.*/?1:et:?2:st:?3:ead:?4:ml:?5:aw:?6:ptions:?7:t:?8:elete:?9:race:?10:onnect:?11:tch:?12:ink:?13:nlink/}"
+		${4:CONTENT-TYPE = "${5:\{ ${6:expression | [string] literal} \}}"}
+		${7:FIELDS = "${8:\{ ${9:expression | variable list} \}}"}
+		${10:CERTFILE = "${11:\{ ${12:expression | [string] literal} \}}"}
+		${13:CERTTYPE = "${14:\{ ${15:expression | [string] literal} \}}"}
+		${16:CERTPASS = "${17:\{ ${18:expression | [string] literal} \}}"}
+		${19:CERTVALUE = "${20:\{ ${21:expression | [string] literal} \}}"}
+		${22:TIMEOUT = "${23:\{ ${24:expression | [string] literal} \}}"}
+		${25:HEADERS = "${26:\{ ${27:expression | [string] literal} \}}"}
+>
+	$28
+</MvCALL>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MvCALL--v</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Call (Verbose)</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

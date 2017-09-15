@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<MvCALLSTOP>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MvCALLSTOP</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Call Stop</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

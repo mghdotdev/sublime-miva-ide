@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+<MvDBCOMMAND NAME = "${1:\{ ${2:expression | [string] literal} \}}"
+		  COMMAND = "${3:\{ ${4:expression | [string] command-name} \}}"
+		  ${5:PARAMETER = "${6:optional}"}>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MvDBCOMMAND</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - DB Command</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>
