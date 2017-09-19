@@ -7,7 +7,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 # Define Path to JSON Cache
-__MVLSK_PATH__ = dirname(realpath(__file__)) + os.sep + '../functions-merchant.json'
+__FUNCTIONS_MERCHANT_PATH__ = dirname(realpath(__file__)) + os.sep + '/functions-merchant.json'
 
 class MvtDoCompletions(sublime_plugin.EventListener):
 	"""
@@ -16,7 +16,7 @@ class MvtDoCompletions(sublime_plugin.EventListener):
 	| <mvt:do file="g.Module_Library_DB" value="Product_Load_ID(), Category_Load_ID() ..." />
 	"""
 	def __init__(self):
-		self.mvlsk_data = self.read_mvlsk_json(__MVLSK_PATH__)
+		self.functions_merchant_data = self.read_functions_merchant_json(__FUNCTIONS_MERCHANT_PATH__)
 		self.quick_panel_data = {}
 
 
@@ -77,21 +77,21 @@ class MvtDoCompletions(sublime_plugin.EventListener):
 	"""
 	Custom Methods
 	"""
-	def read_mvlsk_json(self, path):
+	def read_functions_merchant_json(self, path):
 		with open( path ) as data_file:
 			data = json.load(data_file)
 		return data
 
 
 	def get_file_completions(self, view, pt, prefix):
-		file_completions = [ ( file['distro_path'] + '\tFile', file['distro_path'].replace('$', '\\$') ) for file in self.mvlsk_data ]
+		file_completions = [ ( file['distro_path'] + '\tFile', file['distro_path'].replace('$', '\\$') ) for file in self.functions_merchant_data ]
 		return set(file_completions)
 
 
 	def get_value_completions(self, view, pt, prefix, file_attribute_val):
 		value_completions = []
 
-		for file in self.mvlsk_data:
+		for file in self.functions_merchant_data:
 			if (file_attribute_val == file['distro_path'] or file_attribute_val == ''):
 				for function in file['functions']:
 					parameters = self.build_function_parameters(function['parameters'])
@@ -192,7 +192,7 @@ class MvtDoCompletions(sublime_plugin.EventListener):
 
 	def get_file_name(self, view, function_name):
 		files = []
-		for file in self.mvlsk_data:
+		for file in self.functions_merchant_data:
 			for function in file['functions']:
 				if function_name == function['name']:
 					files.append(file['distro_path'])
