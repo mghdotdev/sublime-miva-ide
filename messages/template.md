@@ -2,7 +2,7 @@
 
 ### NOTE
 If you have any settings relying on the path of the MVT.tmLanguage file you will need to update it.
-The new path will be:
+The new path is:
 
 ```
 Packages/Miva IDE/MVT.tmLanguage
@@ -10,8 +10,8 @@ Packages/Miva IDE/MVT.tmLanguage
 
 ---
 
-### Changlog:
-*
+### Changlog for vX.X.X:
+
 
 ---
 
