@@ -1,11 +1,11 @@
 <snippet>
 	<content><![CDATA[
-<MvDELETE NAME = "${1:\{ ${2:expression | [string] literal } \}}" ${3:VIEW = "${4:\{ ${5:expression | [string] literal } \}}"}>
+<MvFUNCTIONRETURN VALUE = "${_XXX:\{ ${_XXX:expression | [mixed] literal} \}}">
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>mvdelete</tabTrigger>
+	<tabTrigger>mvfunctionreturn</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
-	<description>Tag - Delete</description>
+	<description>Tag - Function Return</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.mv - source.mv - string</scope>
 </snippet>

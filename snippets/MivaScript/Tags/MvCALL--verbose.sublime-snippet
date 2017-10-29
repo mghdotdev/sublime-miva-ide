@@ -15,7 +15,7 @@
 </MvCALL>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvCALL--v</tabTrigger>
+	<tabTrigger>mvcall--v</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Call (Verbose)</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

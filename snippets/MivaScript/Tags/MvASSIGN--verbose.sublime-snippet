@@ -1,12 +1,9 @@
 <snippet>
 	<content><![CDATA[
-<MvASSIGN NAME = "${1:\{ ${2:expression | variable-name} \}}"
-		  VALUE = "${3:\{ ${4:expression | [mixed] literal} \}}"
-		  ${5:INDEX = "${6:\{ ${7:expression | [numeric] literal} \}}"}
-		  ${8:MEMBER = "${9:\{ ${10:expression | [string] literal} \}}"}>
+<MvASSIGN NAME = "${1:\{ ${2:expression | variable name} \}}" VALUE = "${3:\{ ${4:expression | [mixed] literal} \}}" ${5: INDEX = "${6:\{ ${7:expression | [numeric] literal} \}}"} ${8: MEMBER = "${9:\{ ${10:expression | [string] literal} \}}"}>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvASSIGN--v</tabTrigger>
+	<tabTrigger>mvassign--v</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Assign (Verbose)</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

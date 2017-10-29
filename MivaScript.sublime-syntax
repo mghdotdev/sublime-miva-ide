@@ -207,7 +207,7 @@ contexts:
       push:
         - meta_content_scope: source.mv
         - match: '{{identifier}}'
-          scope: variable.parameter.function.mv
+          scope: variable.parameter.function.mv string.quoted.double.mv
         - match: ','
           scope: punctuation.separator.parameter.function.mv
         - match: '\"'

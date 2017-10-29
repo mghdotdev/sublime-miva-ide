@@ -1,11 +1,13 @@
 <snippet>
 	<content><![CDATA[
-<MvDELETE NAME = "${1:\{ ${2:expression | [string] literal } \}}" ${3:VIEW = "${4:\{ ${5:expression | [string] literal } \}}"}>
+<MvFUNCTION NAME = "${1:function name}" PARAMETERS = "${2:variable list}" STANDARDOUTPUTLEVEL = "${3:html, text, compresswhitespace}"${4: ERROROUTPUTLEVEL = ""}>
+	$5
+</MvFUNCTION>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>mvdelete</tabTrigger>
+	<tabTrigger>mvfunction</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
-	<description>Tag - Delete</description>
+	<description>Tag - Function</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.mv - source.mv - string</scope>
 </snippet>

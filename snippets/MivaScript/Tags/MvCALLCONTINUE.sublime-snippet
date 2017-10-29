@@ -3,7 +3,7 @@
 <MvCALLCONTINUE>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvCALLCONTINUE</tabTrigger>
+	<tabTrigger>mvcallcontinue</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Call Continue</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

@@ -1,11 +1,11 @@
 <snippet>
 	<content><![CDATA[
-<MvDELETE NAME = "${1:\{ ${2:expression | [string] literal } \}}" ${3:VIEW = "${4:\{ ${5:expression | [string] literal } \}}"}>
+<MvEXPORT FILE = "${1:\{ ${2:expression | [string] literal} \}}" FIELDS = "${3:\{ ${4:expression | variable list} \}}" DELIMITER = "${5:\{ ${6:expression | [string] literal} \}}">
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>mvdelete</tabTrigger>
+	<tabTrigger>mvexport</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
-	<description>Tag - Delete</description>
+	<description>Tag - Export</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.mv - source.mv - string</scope>
 </snippet>

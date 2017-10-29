@@ -1,4 +1,11 @@
 NAME = "${_XXX:\{ ${_XXX:expression | [string] literal} \}}"
+
+"${_XXX:\{ ${_XXX:expression | variable name} \}}"
+
+"{ ${_XXX:expression} }"
+
+"${_XXX:variable name}"
+
 VALUE = "${_XXX:\{ ${_XXX:expression | [mixed] literal} \}}"
 VIEW = "${_XXX:\{ ${_XXX:expression | [string] literal} \}}"
 ACTION = "${_XXX:\{ ${_XXX:expression | [string] literal} \}}"

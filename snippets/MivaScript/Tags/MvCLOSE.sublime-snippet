@@ -3,7 +3,7 @@
 <MvCLOSE NAME = "${1:\{ ${2:expression | database alias} \}}">
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvCLOSE</tabTrigger>
+	<tabTrigger>mvclose</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Close</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

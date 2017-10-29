@@ -3,7 +3,7 @@
 <MvDIMENSION INDEX = "${1:\{ ${2:expression | [numeric] literal } \}}">
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvDIMENSION</tabTrigger>
+	<tabTrigger>mvdimension</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Dimension</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
