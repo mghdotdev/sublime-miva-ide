@@ -4,7 +4,7 @@
 	<key>name</key>
 	<string>Miscellaneous</string>
 	<key>scope</key>
-	<string>text.html.mvt</string>
+	<string>text.mvt</string>
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>

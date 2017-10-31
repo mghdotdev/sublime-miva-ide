@@ -4,7 +4,7 @@
 	<key>name</key>
 	<string>Symbol List: &lt;mvt:assign&gt;</string>
 	<key>scope</key>
-	<string>text.html.mvt meta.tag.inline.any.mvt source.mvt.embedded.html source.mvt.attribute-value.value</string>
+	<string>text.mvt meta.tag.inline.any.mvt source.mvt.embedded.html source.mvt.attribute-value.value</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>

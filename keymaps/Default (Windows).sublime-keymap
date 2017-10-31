@@ -10,7 +10,7 @@
 			{
 				"key": "selector",
 				"operator": "equal",
-				"operand": "text.mv - source, text.html.mvt - source"
+				"operand": "text.mv - source, text.mvt - source"
 			}
 		]
 	},
@@ -44,7 +44,7 @@
 			{
 				"key": "selector",
 				"operator": "equal",
-				"operand": "text.html.mvt - source"
+				"operand": "text.mvt - source"
 			}
 		]
 	},
@@ -56,7 +56,7 @@
 			{
 				"key": "selector",
 				"operator": "equal",
-				"operand": "text.html.mvt"
+				"operand": "text.mvt"
 			}
 		]
 	}
