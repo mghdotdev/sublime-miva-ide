@@ -1,7 +1,6 @@
 {
 	"auto_complete_triggers": [
 		{"selector": "text.mvt - source.mvt", "characters": "m"},
-		{"selector": "text.mvt - source.mvt", "characters": "t"},
-		{"selector": "text.html", "characters": "<"}
+		{"selector": "text.mvt - source.mvt", "characters": "t"}
 	]
 }
