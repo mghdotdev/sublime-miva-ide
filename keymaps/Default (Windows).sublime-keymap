@@ -27,7 +27,7 @@
 			{
 				"key": "selector",
 				"operator": "equal",
-				"operand": "text.mv - source"
+				"operand": "text.mv"
 			}
 		]
 	},
@@ -44,7 +44,7 @@
 			{
 				"key": "selector",
 				"operator": "equal",
-				"operand": "text.mvt - source"
+				"operand": "text.mvt"
 			}
 		]
 	},
