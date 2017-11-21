@@ -1,11 +1,11 @@
 <snippet>
 	<content><![CDATA[
-<MvCAPTURE VARIABLE = "${1:\{ ${2:expression | variable-name} \}}" ${3:STANDARDOUTPUTLEVEL = "${4:html, text, compresswhitespace}"}>
+<MvCAPTURE VARIABLE = "${1:\{ ${2:expression | variable name} \}}" ${3:STANDARDOUTPUTLEVEL = "${4:html, text, compresswhitespace}"}>
 	$5
 </MvCAPTURE>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvCAPTURE</tabTrigger>
+	<tabTrigger>mvcapture</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Capture</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

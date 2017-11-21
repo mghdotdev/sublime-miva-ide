@@ -2,15 +2,15 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Symbol List: &lt;mvt:assign&gt;</string>
+	<string>Symbol List: Merchant</string>
 	<key>scope</key>
-	<string>text.html.mvt meta.tag.inline.any.mvt source.mvt.embedded.html source.mvt.attribute-value.value</string>
+	<string>meta.function.merchant.declaration.mvt</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>
 		<integer>1</integer>
 		<key>symbolTransformation</key>
-		<string>s/^(?:")(.*?)(?:")/&lt;mvt:assign&gt; → $1/</string>
+		<string>s/^/Merchant → $1/</string>
 	</dict>
 </dict>
 </plist>

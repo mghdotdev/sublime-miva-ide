@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+<MvFUNCTION NAME = "${1:function name}" PARAMETERS = "${2:variable list}" STANDARDOUTPUTLEVEL = "${3:html, text, compresswhitespace}"${4: ERROROUTPUTLEVEL = ""}>
+	$5
+</MvFUNCTION>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvfunction</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Function</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

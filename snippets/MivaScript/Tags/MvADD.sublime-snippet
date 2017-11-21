@@ -3,7 +3,7 @@
 <MvADD NAME = "${1:\{ ${2:expression | [string] literal} \}}" VIEW = "${3:\{ ${4:expression | [string] literal} \}}">
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvADD</tabTrigger>
+	<tabTrigger>mvadd</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Add</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

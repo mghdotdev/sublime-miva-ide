@@ -4,5 +4,5 @@
 ]]></content>
 	<tabTrigger>tk-lasturl</tabTrigger>
 	<description>Toolkit</description>
-	<scope>text.html.mvt - source.mvt - string</scope>
+	<scope>text.mvt - source.mvt - string</scope>
 </snippet>

@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+<MvFOREACH ITERATOR = "${1:\{ ${2:expression | variable name} \}}" ARRAY = "${3:\{ ${4:expression | variable name} \}}"${5: INDEX = "${6:\{ ${7:expression | variable name} \}}"}${8: FIRST = "\{ ${9:expression} \}"}${10: NEXT = "\{ ${11:expression} \}"}${12: LAST = "\{ ${13:expression} \}"}${14: COUNT = "\{ ${15:expression} \}"}>
+	$16
+</MvFOREACH>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvforeach--v</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - ForEach (Verbose)</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

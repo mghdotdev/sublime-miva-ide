@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<MvFUNCTIONRETURN VALUE = "${_XXX:\{ ${_XXX:expression | [mixed] literal} \}}">
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvfunctionreturn</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Function Return</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

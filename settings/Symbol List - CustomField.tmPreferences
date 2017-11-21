@@ -4,13 +4,13 @@
 	<key>name</key>
 	<string>Symbol List: Customfield</string>
 	<key>scope</key>
-	<string>source.mvt support.function.customfield.mvt</string>
+	<string>meta.function.customfields.declaration.mvt</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>
 		<integer>1</integer>
 		<key>symbolTransformation</key>
-		<string>s/^/Customfield: /</string>
+		<string>s/^/Customfield → $1/</string>
 	</dict>
 </dict>
 </plist>

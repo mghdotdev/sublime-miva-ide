@@ -1,9 +1,9 @@
 <snippet>
 	<content><![CDATA[
-<MvDO FILE = "{ $3 }" NAME = "$2" VALUE = "{ $1 }">
+<MvDO FILE = "{ $3 }" NAME = "${2:l.return}" VALUE = "{ ${1:function} }">
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvDO</tabTrigger>
+	<tabTrigger>mvdo</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Do</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

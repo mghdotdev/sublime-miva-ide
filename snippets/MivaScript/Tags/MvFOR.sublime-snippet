@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+<MvFOR EXPR = "\{ ${1:expression} \}">
+	$2
+</MvFOR>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvfor</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - For</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

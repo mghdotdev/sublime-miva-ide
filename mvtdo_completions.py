@@ -22,13 +22,13 @@ class MvtDoCompletions(sublime_plugin.EventListener):
 
 	def on_query_completions(self, view, prefix, locations):
 		# Only trigger in an <mvt:do> Tag
-		if not view.match_selector(locations[0], 'text.html.mvt meta.tag.inline.do.mvt'):
+		if not view.match_selector(locations[0], 'text.mvt text.html.basic meta.tag.inline.do.mvt'):
 			return []
 
 		# determine what <mvt:do> attribute you're in
-		if (view.match_selector(locations[0], 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.file')):
+		if (view.match_selector(locations[0], 'text.mvt text.html.basic meta.tag.inline.do.mvt attribute-value.file.mvt')):
 			mvtdo_attribute = 'file'
-		elif (view.match_selector(locations[0], 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.value')):
+		elif (view.match_selector(locations[0], 'text.mvt text.html.basic meta.tag.inline.do.mvt attribute-value.value.mvt')):
 			prev_pt = max(0, locations[0] - 1)
 			is_variable = view.match_selector(prev_pt, 'variable.language')
 			if (is_variable):
@@ -43,7 +43,7 @@ class MvtDoCompletions(sublime_plugin.EventListener):
 	def on_post_text_command(self, view, command_name, *args):
 		if (command_name == 'commit_completion' or command_name == 'insert_best_completion'):
 			for r in view.sel():
-				in_value_attribute = view.match_selector(r.begin(), 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.value')
+				in_value_attribute = view.match_selector(r.begin(), 'text.mvt text.html.basic meta.tag.inline.do.mvt attribute-value.value.mvt')
 				if (in_value_attribute):
 					prev_pt = max(0, r.begin() - 1)
 					is_variable = view.match_selector(prev_pt, 'variable.language')
@@ -122,7 +122,7 @@ class MvtDoCompletions(sublime_plugin.EventListener):
 		if (mvtdo_tag_region is False):
 			return ''
 
-		file_attribute_all_locations = view.find_by_selector( 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.file' )
+		file_attribute_all_locations = view.find_by_selector( 'text.mvt text.html.basic meta.tag.inline.do.mvt attribute-value.file.mvt' )
 		file_attribute_val = ''
 		for file_attribute_location in file_attribute_all_locations:
 			if (mvtdo_tag_region.contains(file_attribute_location)):
@@ -138,7 +138,7 @@ class MvtDoCompletions(sublime_plugin.EventListener):
 		if (mvtdo_tag_region is False):
 			return ''
 
-		value_attribute_all_locations = view.find_by_selector( 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.value' )
+		value_attribute_all_locations = view.find_by_selector( 'text.mvt text.html.basic meta.tag.inline.do.mvt attribute-value.value.mvt' )
 		value_attribute_val = ''
 		for attribute_value_location in value_attribute_all_locations:
 			if (mvtdo_tag_region.contains(attribute_value_location)):
@@ -216,7 +216,7 @@ class MvtDoCompletions(sublime_plugin.EventListener):
 		if (mvtdo_tag_region is False):
 			return ''
 
-		file_attribute_all_locations = view.find_by_selector( 'text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.file' )
+		file_attribute_all_locations = view.find_by_selector( 'text.mvt text.html.basic meta.tag.inline.do.mvt attribute-value.file.mvt' )
 		for file_attribute_location in file_attribute_all_locations:
 			if (mvtdo_tag_region.contains(file_attribute_location)):
 				file_attribute_pt = file_attribute_location.begin() + 1

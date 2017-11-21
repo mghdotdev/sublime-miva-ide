@@ -13,5 +13,5 @@ ${3:-->}
 	<!-- Optional: Description to show in the menu -->
 	<description>Debug</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>text.html.mvt - source.mvt - string</scope>
+	<scope>text.mvt - source.mvt - string</scope>
 </snippet>

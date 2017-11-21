@@ -1,11 +1,9 @@
 <snippet>
 	<content><![CDATA[
-<MvDO FILE = "${1:\{ ${2:expression | [string] literal} \}}"
-	  NAME = "${3:\{ ${4:expression | [mixed] literal} \}}"
-	  VALUE = "{ $5 }">
+<MvDO FILE = "${1:\{ ${2:expression | [string] literal} \}}" NAME = "${3:\{ ${4:expression | [mixed] literal} \}}" VALUE = "{ $5 }">
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvDO--v</tabTrigger>
+	<tabTrigger>mvdo--v</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Do (Verbose)</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

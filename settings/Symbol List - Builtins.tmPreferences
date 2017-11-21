@@ -2,15 +2,15 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Symbol List: &lt;mvt:do&gt;</string>
+	<string>Symbol List: Builtin</string>
 	<key>scope</key>
-	<string>text.html.mvt meta.tag.inline.do.mvt source.mvt.embedded.html source.mvt.attribute-value.value</string>
+	<string>meta.function.builtin.declaration.mvt</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>
 		<integer>1</integer>
 		<key>symbolTransformation</key>
-		<string>s/^(?:")(.*?)(?:")/&lt;mvt:do&gt; → $1/</string>
+		<string>s/^/Builtin → $1/</string>
 	</dict>
 </dict>
 </plist>

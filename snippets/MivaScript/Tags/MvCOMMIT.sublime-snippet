@@ -3,7 +3,7 @@
 <MvCOMMIT NAME = "${1:\{ ${2:expression | literal} \}}">
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvCOMMIT</tabTrigger>
+	<tabTrigger>mvcommit</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Commit</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

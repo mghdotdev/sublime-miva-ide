@@ -3,7 +3,7 @@
 <MvELSE>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvELSE</tabTrigger>
+	<tabTrigger>mvelse</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Else</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

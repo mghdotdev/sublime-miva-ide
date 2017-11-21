@@ -5,5 +5,5 @@
 	<tabTrigger>tk-agroup-c</tabTrigger>
 	<description>Toolkit</description>
 	<description>Toolkit</description>
-	<scope>text.html.mvt - source.mvt - string</scope>
+	<scope>text.mvt - source.mvt - string</scope>
 </snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<MvFILTER NAME = "${1:\{ ${2:expression | [string] literal} \}}" FILTER_TYPE = "${3:\{ ${4:expression | variable} \}}" FILTER = "\{ ${5:expression} \}"> 
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MvFILTER</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Filter</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

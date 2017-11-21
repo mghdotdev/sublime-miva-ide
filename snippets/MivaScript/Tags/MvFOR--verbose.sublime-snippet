@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+<MvFOR ${1:INDEX = "${2:\{ ${3:expression | [string] literal} \}}"} ${4:COUNT = "\{ ${5:expression} \}"} ${6:FIRST = "\{ ${7:expression} \}"} ${8:NEXT = "\{ ${9:expression} \}"} ${10:LAST = "\{ ${11:expression} \}"} ${12:EXPR = "\{ ${13:expression} \}"}>
+	$14
+</MvFOR>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvfor--v</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - For (Verbose)</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

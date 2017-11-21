@@ -5,7 +5,7 @@
 </MvCALL>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>MvCALL</tabTrigger>
+	<tabTrigger>mvcall</tabTrigger>
 	<!-- Optional: Description to show in the menu -->
 	<description>Tag - Call</description>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

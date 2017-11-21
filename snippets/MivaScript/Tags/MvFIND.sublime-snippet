@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<MvFIND NAME = "${1:\{ ${2:expression | [string] literal} \}}" VALUE = "${3:\{ ${4:expression | [string] literal} \}}"${5: VIEW = "${6:\{ ${7:expression | [string] literal} \}}"}${8: EXACT}>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvfind</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Find</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mv - source.mv - string</scope>
+</snippet>

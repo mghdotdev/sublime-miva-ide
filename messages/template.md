@@ -5,7 +5,7 @@ If you have any settings relying on the path of the MVT.tmLanguage file you will
 The new path is:
 
 ```
-Packages/Miva IDE/MVT.tmLanguage
+Packages/Miva IDE/MVT.sublime-syntax
 ```
 
 ---
