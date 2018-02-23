@@ -1,12 +1,12 @@
 # Connector Module Tasks:
 - [ ] Create module UI
-	- [ ] Provide and generate an api key
-	- [ ] Output the URL to .mvc file
+	- [x] Provide and generate an api key
+	- [x] Output the URL to .mvc file
 	- [ ] Provide instructions on how to configure sublime settings to pull data
 	- [ ] Allow user to limit which endpoints are accessible (radio interface)
 	- [ ] Create a popup interface which allows the administrator to view connection logs 
-- [ ] Create a Settings database table
-- [ ] Create a Logging database table
+- [x] Create a Settings database table
+- [x] Create a Logging database table
 - [ ] Hook into the User Access module feature
 - [ ] Create a JSON API
 	- [ ] Handle authentication

@@ -636,7 +636,7 @@ contexts:
     - include: source-functions-customfields
     - include: source-functions-toolkit
     - include: source-functions-toolbelt
-    - include: source-functions-waitlist
+    - include: source-functions-tgwaitlist
     - include: source-functions-tgreviews
 
   source-functions-readytheme:

@@ -17,6 +17,9 @@ contexts:
         - match: (?i)<MvCOMMENT>
           push: comments
         
+        # Expressions
+        # - include: expression
+
         # Tags
         - include: text-tags
 
@@ -31,13 +34,9 @@ contexts:
 
 
   # =-======================== Text ========================-= #
-  tag-stuff:
-    - include: text-attributes
-    - include: text-string-double-quoted
-    - include: text-unquoted-numbers
-
   text-tags:
     - include: tag-function
+    - include: tag-do
     - include: tag-conditional
     - include: tag-loop
     - include: tag-flow
@@ -76,6 +75,19 @@ contexts:
           pop: true
         - include: text-function-parameters
         - include: text-function-name
+        - include: tag-stuff
+
+  tag-do:
+    - match: (?i)(<\/?)(MvDO)\b
+      captures:
+        1: punctuation.definition.tag.begin.mv
+        2: meta.tag.do.mv entity.name.tag.do.mv
+      push:
+        - meta_scope: meta.tag.inline.do.mv
+        - match: (>)
+          captures:
+            1: punctuation.definition.tag.end.mv
+          pop: true
         - include: tag-stuff
 
   tag-conditional:
@@ -169,6 +181,11 @@ contexts:
           pop: true
         - include: tag-stuff
   
+  # =-======== Tag Stuff ========-= #
+  tag-stuff:
+    - include: text-attributes
+    - include: text-string-double-quoted
+    - include: text-unquoted-numbers
 
   # =-======== Attributes - Text ========-= #
   text-attributes:
@@ -188,6 +205,15 @@ contexts:
         3: constant.numeric.mv
         4: punctuation.definition.tag.end.mv
       pop: true
+
+  text-attribute-value:
+    - match: '(?i)(?<=[^=])\b(value)\s*(=?)\s*(\")([^\"]*)(\")'
+      captures:
+        1: entity.other.attribute-name.mv
+        2: punctuation.separator.key-value.mv
+        3: string.quoted.double.mv punctuation.definition.string.begin.mv
+        4: string.quoted.double.mv meta.function.mv entity.name.function.mv
+        5: string.quoted.double.mv punctuation.definition.string.end.mv
 
   text-function-name:
     - match: '(?i)(?<=[^=])\b(NAME)\s*(=?)\s*(\")([^\"]*)(\")'
@@ -274,6 +300,10 @@ contexts:
     # Logical Operators
     - match: (\b(?i:NOT|AND|OR|ISNULL)\b)
       scope: keyword.operator.logical.mv
+
+    # Bitwise Operators
+    - match: (\b(?i:BITAND|BITOR|BITXOR|BITOC|BITSL|BITSR)\b)
+      scope: keyword.operator.bitwise.mv
 
     # Text Operators
     - match: (\b(?i:IN|CIN|EIN|ECIN|CRYPT)\b)
