@@ -744,11 +744,7 @@ contexts:
     # NULL
     - match: \b(?i:NULL)\b
       scope: constant.language.null.mvt
-    # POSX
-    - match: \b(POS)[0-9]+\b
-      scope: constant.language.posx.mvt
   
-
   # =-======== Numbers - Source ========-= #
   source-numbers:
     - match: \b(([0-9]+(\.[0-9]+)?))\b
@@ -784,6 +780,10 @@ contexts:
             2: variable.language.member.mvt
         - match: \b
           pop: true
+
+    # POSX
+    - match: \b(?i:POS)[0-9]+\b
+      scope: variable.language.posx.mvt
 
   # =-======== Strings - Source ========-= #
   source-string-single:
