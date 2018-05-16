@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-<MvCLOSEVIEW VALUE = "${1:\{ ${2:expression | [string] literal} \}}" ${3:NAME = "${4:\{ ${5:expression | database alias} \}}"}>
+<MvCLOSEVIEW ${1:NAME = "${2:\{ ${3:expression | database alias} \}}"} VIEW = "${4:\{ ${5:expression | [string] literal} \}}">
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>mvcloseview</tabTrigger>
