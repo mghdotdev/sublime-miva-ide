@@ -754,17 +754,45 @@ contexts:
   # =-======== Variables - Source ========-= #
   source-variables:
     # Variables Base
-    - match: '\b(l|g|s|local|global|system)(\.)'
+    - match: '\b(g|global)(\.)'
       captures:
-        1: variable.language.namespace.mvt
-        2: variable.language.separator.mvt
+        1: variable.language.global.namespace.mvt
+        2: variable.language.global.separator.mvt
       push:
         - match: '({{identifier}})'
-          scope: variable.language.name.mvt
+          scope: variable.language.global.name.mvt
         - match: '(:?)({{identifier}})'
           captures:
-            1: variable.language.separator.mvt
-            2: variable.language.member.mvt
+            1: variable.language.global.separator.mvt
+            2: variable.language.global.member.mvt
+        - match: \b
+          pop: true
+
+    - match: '\b(l|local)(\.)'
+      captures:
+        1: variable.language.local.namespace.mvt
+        2: variable.language.local.separator.mvt
+      push:
+        - match: '({{identifier}})'
+          scope: variable.language.local.name.mvt
+        - match: '(:?)({{identifier}})'
+          captures:
+            1: variable.language.local.separator.mvt
+            2: variable.language.local.member.mvt
+        - match: \b
+          pop: true
+
+    - match: '\b(s|system)(\.)'
+      captures:
+        1: variable.language.system.namespace.mvt
+        2: variable.language.system.separator.mvt
+      push:
+        - match: '({{identifier}})'
+          scope: variable.language.system.name.mvt
+        - match: '(:?)({{identifier}})'
+          captures:
+            1: variable.language.system.separator.mvt
+            2: variable.language.system.member.mvt
         - match: \b
           pop: true
 
