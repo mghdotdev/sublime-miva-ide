@@ -1,6 +1,7 @@
 {
 	"auto_complete_triggers": [
 		{"selector": "text.mv - source.mv", "characters": "m"},
+		{"selector": "text.mv - source.mv", "characters": "v"},
 		{"selector": "source.mv.expr", "characters": "."}
 	]
 }
