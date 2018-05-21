@@ -3,8 +3,6 @@ import json
 import re
 import os
 from os.path import dirname, realpath
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
 
 # Define Path to JSON Cache
 __FUNCTIONS_MERCHANT_PATH__ = dirname(realpath(__file__)) + os.sep + '/functions-merchant.json'
@@ -16,7 +14,7 @@ class MvtDoCompletions(sublime_plugin.EventListener):
 	| <mvt:do file="g.Module_Library_DB" value="Product_Load_ID(), Category_Load_ID() ..." />
 	"""
 	def __init__(self):
-		self.functions_merchant_data = self.read_functions_merchant_json(__FUNCTIONS_MERCHANT_PATH__)
+		self.functions_merchant_data = self.read_data_file(__FUNCTIONS_MERCHANT_PATH__)
 		self.quick_panel_data = {}
 
 
@@ -77,7 +75,7 @@ class MvtDoCompletions(sublime_plugin.EventListener):
 	"""
 	Custom Methods
 	"""
-	def read_functions_merchant_json(self, path):
+	def read_data_file(self, path):
 		with open( path ) as data_file:
 			data = json.load(data_file)
 		return data
