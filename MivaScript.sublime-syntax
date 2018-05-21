@@ -333,17 +333,45 @@ contexts:
   # =-======== Variables - Source ========-= #
   source-variables:
     # Variables Base
-    - match: '\b(l|g|s|local|global|system)(\.)'
+    - match: '\b(g|global)(\.)'
       captures:
-        1: variable.language.namespace.mv
-        2: variable.language.separator.mv
+        1: variable.language.global.namespace.mv
+        2: variable.language.global.separator.mv
       push:
         - match: '({{identifier}})'
-          scope: variable.language.name.mv
+          scope: variable.language.global.name.mv
         - match: '(:?)({{identifier}})'
           captures:
-            1: variable.language.separator.mv
-            2: variable.language.member.mv
+            1: variable.language.global.separator.mv
+            2: variable.language.global.member.mv
+        - match: \b
+          pop: true
+
+    - match: '\b(s|system)(\.)'
+      captures:
+        1: variable.language.system.namespace.mv
+        2: variable.language.system.separator.mv
+      push:
+        - match: '({{identifier}})'
+          scope: variable.language.system.name.mv
+        - match: '(:?)({{identifier}})'
+          captures:
+            1: variable.language.system.separator.mv
+            2: variable.language.system.member.mv
+        - match: \b
+          pop: true
+
+    - match: '\b(l|local)(\.)'
+      captures:
+        1: variable.language.local.namespace.mv
+        2: variable.language.local.separator.mv
+      push:
+        - match: '({{identifier}})'
+          scope: variable.language.local.name.mv
+        - match: '(:?)({{identifier}})'
+          captures:
+            1: variable.language.local.separator.mv
+            2: variable.language.local.member.mv
         - match: \b
           pop: true
 

@@ -1,6 +1,5 @@
 {
 	"scope": "text.mvt, source.mv.expr",
-
 	"completions":
 	[
 		{ "trigger": "abs", 							"contents": "abs( ${1:number} )" },

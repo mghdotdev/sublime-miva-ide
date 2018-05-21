@@ -2,6 +2,7 @@
 	"auto_complete_triggers": [
 		{"selector": "text.mvt - source.mvt", "characters": "m"},
 		{"selector": "text.mvt - source.mvt", "characters": "v"},
-		{"selector": "text.mvt - source.mvt", "characters": "t"}
+		{"selector": "text.mvt - source.mvt", "characters": "t"},
+		{"selector": "source.mvt", "characters": "."}
 	]
 }
