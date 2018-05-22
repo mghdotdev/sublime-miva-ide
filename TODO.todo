@@ -1,0 +1,1 @@
+* Add scope for declared variables... use that scope to build a completions list.
