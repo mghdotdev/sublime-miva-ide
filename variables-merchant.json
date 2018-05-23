@@ -1,5 +1,5 @@
 {
-	"Global": [
+	"global": [
 		"admin_open_store",
 		"admin_user_administrator",
 		"admin_user_create",
@@ -161,7 +161,7 @@
 		"domain:version",
 		"domain:zip",
 		"emaillist_path",
-		"error"
+		"error",
 		"error_code",
 		"error_db_eof",
 		"error_message",
@@ -709,9 +709,9 @@
 		"user:totp_key",
 		"user:wwdescrip",
 		"utf8",
-		"version_path",
+		"version_path"
 	],
-	"System": [
+	"system": [
 		"apitype",
 		"arg1",
 		"arg2",
