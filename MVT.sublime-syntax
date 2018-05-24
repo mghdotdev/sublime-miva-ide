@@ -563,7 +563,7 @@ contexts:
         2: punctuation.separator.key-value.mvt
         3: attribute-value.name.mvt source.mvt punctuation.definition.string.begin.mvt
       push:
-        - meta_content_scope: attribute-value.name.mvt source.mvt variable.declaration.mvt
+        - meta_content_scope: attribute-value.name.mvt source.mvt assign.declaration.mvt
         - match: (")
           captures:
             0: attribute-value.name.mvt source.mvt punctuation.definition.string.end.mvt
