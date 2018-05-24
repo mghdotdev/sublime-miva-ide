@@ -16,6 +16,8 @@ class MivaVariableCompletions( sublime_plugin.EventListener ):
 
 	def on_query_completions( self, view, prefix, locations ):
 		prev_pt = max( 0, locations[0] - 1 )
+		dyn_lookup = False
+
 		if ( not ((view.match_selector( locations[0], 'source.mvt' ) or view.match_selector( locations[0], 'source.mv.expr' )) and view.match_selector( prev_pt, 'variable.language' )) ):
 			return None
 
@@ -28,7 +30,7 @@ class MivaVariableCompletions( sublime_plugin.EventListener ):
 			variable_scope = 'local'
 			dyn_lookup = True
 		else:
-			variable_scope = ''
+			return None
 
 		return ( self.get_completions( view, variable_scope, dyn_lookup ), sublime.INHIBIT_WORD_COMPLETIONS | sublime.INHIBIT_EXPLICIT_COMPLETIONS )
 
