@@ -139,6 +139,7 @@
 		{ "trigger": "miva_hex_encode", 				"contents": "miva_hex_encode( ${1:data} )" },
 		{ "trigger": "miva_html_strip", 				"contents": "miva_html_strip( ${1:text}, ${2:allowed_tags} )" },
 		{ "trigger": "miva_ieee754_normalize", 			"contents": "miva_ieee754_normalize( ${1:significant_digits}, ${2:value} )" },
+		{ "trigger": "miva_joinstring", 				"contents": "miva_joinstring( ${1:input var}, ${2:join_with}, ${3:flags} )" },
 		{ "trigger": "miva_json_decode", 				"contents": "miva_json_decode( ${1:data}, ${2:output var} )" },
 		{ "trigger": "miva_json_decode_last_error", 	"contents": "miva_json_decode_last_error()" },
 		{ "trigger": "miva_lockfile", 					"contents": "miva_lockfile( ${1:path}, ${2:location} )" },
