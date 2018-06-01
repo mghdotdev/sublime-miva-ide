@@ -8,39 +8,27 @@
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
-		<string>(?x)
-		^\s*
-		(&lt;(mvt:else)[^&gt;]*?&gt;)
-		|
-		&lt;\?(php)?\s+(else(if)?|end(if|for(each)?|while))
-		</string>
-		<key>batchDecreaseIndentPattern</key>
-		<string>(?x)
-		^\s*
-		(&lt;/(?!html)
-		  [A-Za-z0-9:-]+\b[^&gt;]*&gt;
-		|--&gt;
-		|&lt;\?(php)?\s+(else(if)?|end(if|for(each)?|while))
-		|\}
-		)
-		</string>
+		<string><![CDATA[(?x)
+			^\s*+                                                                                   # the beginning of the line followed by any amount of whitespace
+			(
+			    [^<>]*+<\/(?!html)[A-Za-z0-9:-]+\b[^>]*>                                           # optionally, anything that's not an angle bracket, followed by any valid HTML close tag except "html"
+			|   (<!\[endif\])?-->                                                                   # closing comment punctuation, optionally preceded by an end "comment selector"
+			|   \}                                                                                  # a closing curly brace
+			|	.*?(?=\s*<mvt\:else)
+			)
+		]]></string>
 		<key>increaseIndentPattern</key>
-		<string>(?x)
-		^\s*
-		(&lt;(mvt:else)[^&gt;]*?&gt;)
-		|
-		(&lt;\?php\s*\b(if|else|elseif|for|foreach|while)\b.*:(?!.*end\1))
-		</string>
-		<key>batchIncreaseIndentPattern</key>
-		<string>(?x)
-		^\s*
-		&lt;(?!\?|mvt:else|mvt:elseif|mvt:item|mvt:miva|mvt:eval|mvt:do|mvt:exit|mvt:foreachstop|mvt:foreachcontinue|mvt:whilestop|mvt:whilecontinue|mvt:callstop|mvt:callcontinue|area|base|br|col|frame|hr|html|img|input|link|meta|param|[^&gt;]*/&gt;)([A-Za-z0-9:-]+)(?=\s|&gt;)\b[^&gt;]*&gt;(?!.*&lt;/\1&gt;)
-		|&lt;!--(?!.*--&gt;)
-		|&lt;\?php.+?\b(if|else(?:if)?|for(?:each)?|while)\b.*:(?!.*end\1)
-		|\{[^}"']*$
-		</string>
+		<string><![CDATA[(?x)
+			^\s*+                                                                                    # the beginning of the line followed by any amount of whitespace
+			(
+			    \{[^}"']*$                                                                           # open curly braces that don't have close braces or string punctuation after them
+			|   <!--(?!.*-->)                                                                        # comments that don't close themselves on the same line
+			|   .*<(?!\?|(?i:area|base|br|col|frame|hr|html|img|input|link|meta|param)\b|[^>]*\/>)   # skip self closing tags (tags that end with />, as well as known self closing tags)
+			        (?<html_tag>[A-Za-z0-9:-]+)(?=\s|>)\b[^>]*>(?!.*<\/\k<html_tag>\s*>)             # a valid non-self-closing HTML tag that doesn't close itself on the same line
+			)
+		]]></string>
 		<key>bracketIndentNextLinePattern</key>
-		<string>&lt;!DOCTYPE(?!.*&gt;)</string>
+		<string><![CDATA[<!DOCTYPE(?!.*>)]]></string>
 	</dict>
 </dict>
 </plist>
