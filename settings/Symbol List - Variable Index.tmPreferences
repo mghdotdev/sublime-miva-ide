@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol Index: Variable Definition</string>
+	<key>scope</key>
+	<string>source.mvt assign.declaration.mvt variable.language.local.name.member.mvt, source.mvt assign.declaration.mvt variable.language.global.name.member.mvt, source.mvt assign.declaration.mvt variable.language.system.name.member.mvt</string>
+	<key>settings</key>
+	<dict>
+		<key>showInIndexedSymbolList</key>
+		<integer>1</integer>
+		<key>symbolIndexTransformation</key>
+		<string>//$1/</string>
+	</dict>
+</dict>
+</plist>
