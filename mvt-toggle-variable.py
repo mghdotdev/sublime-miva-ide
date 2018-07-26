@@ -4,7 +4,7 @@ import sublime, sublime_plugin, re, threading
 mvt_copy_status_key = 'mvt_convert_and_copy'
 mvt_error_status_key = 'mvt_variable_entity_error'
 
-def variable_to_entity(string_value):
+def variable_to_entity(string_value, mvt_entity_encoding):
 	# Define the RegEx for "local" and "global" variables
 	regex_local = '^l\.settings\:(.+?)$'
 	regex_global = '^g\.(.+?)$'
@@ -21,7 +21,7 @@ def variable_to_entity(string_value):
 		varname_len = len(varname)
 
 		# Generate Entity String
-		output = '&mvt:%s;' % (varname)
+		output = '&mvt' + mvt_entity_encoding + ':%s;' % (varname)
 
 	elif global_match is not None:
 
@@ -80,6 +80,9 @@ class MvtConvertAndCopy(sublime_plugin.TextCommand):
 		# @param {Regionset} self
 		# @param {Edit} edit
 
+		mvt_entity_encoding = self.view.settings().get('mvt_entity_encoding', 'e')
+		mvt_entity_encoding = sublime.active_window().active_view().settings().get('mvt_entity_encoding', mvt_entity_encoding)
+
 		# Save previous clipboard value / reset clipboard
 		original_clipboard = sublime.get_clipboard()
 		sublime.set_clipboard('')
@@ -91,7 +94,7 @@ class MvtConvertAndCopy(sublime_plugin.TextCommand):
 			# Get the selection's value and length
 			string_value = self.view.substr(selection)
 
-			v2e_output = variable_to_entity(string_value)
+			v2e_output = variable_to_entity(string_value, mvt_entity_encoding)
 			e2v_output = entity_to_variable(string_value)
 
 			if (v2e_output is False) and (e2v_output is False):
@@ -134,6 +137,9 @@ class MvtVariableConvertToEntityCommand(sublime_plugin.TextCommand):
 		# @param {Regionset} self
 		# @param {Edit} edit
 
+		mvt_entity_encoding = self.view.settings().get('mvt_entity_encoding', 'e')
+		mvt_entity_encoding = sublime.active_window().active_view().settings().get('mvt_entity_encoding', mvt_entity_encoding)
+
 		selections = self.view.sel()
 
 		for selection in selections:
@@ -142,7 +148,7 @@ class MvtVariableConvertToEntityCommand(sublime_plugin.TextCommand):
 			string_value = self.view.substr(selection)
 
 			# Run conversion function
-			output = variable_to_entity(string_value)
+			output = variable_to_entity(string_value, mvt_entity_encoding)
 
 			if output is False:
 				
@@ -195,6 +201,9 @@ class MvtToggleConversion(sublime_plugin.TextCommand):
 		# @param {Regionset} self
 		# @param {Edit} edit
 
+		mvt_entity_encoding = self.view.settings().get('mvt_entity_encoding', 'e')
+		mvt_entity_encoding = sublime.active_window().active_view().settings().get('mvt_entity_encoding', mvt_entity_encoding)
+
 		selections = self.view.sel()
 
 		for selection in selections:
@@ -202,7 +211,7 @@ class MvtToggleConversion(sublime_plugin.TextCommand):
 			# Get the selection's value and length
 			string_value = self.view.substr(selection)
 
-			v2e_output = variable_to_entity(string_value)
+			v2e_output = variable_to_entity(string_value, mvt_entity_encoding)
 			e2v_output = entity_to_variable(string_value)
 
 			if (v2e_output is False) and (e2v_output is False):
