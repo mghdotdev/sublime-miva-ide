@@ -1,0 +1,24 @@
+/*
+
+  ====================[ Miva IDE Settings ]====================
+  * Copy settings from this file into your "User" mirror file.
+  * Settings can be overwritten at the project level.
+
+*/
+{
+  /*
+    @MVT
+      Used to set the encoding style for the 'Convert & Copy', 'Variable → Entity'
+      and 'Toggle Conversion' commands.
+    
+    DefaultValue: "e"
+    PossibleValues:
+    -  "e"
+    -  "a"
+    -  "j"
+    -  "s"
+    -  ""
+
+  */
+  "mvt_entity_encoding": "e"
+}
