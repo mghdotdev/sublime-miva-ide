@@ -1,0 +1,31 @@
+[
+	{
+		"caption": "Preferences",
+		"mnemonic": "n",
+		"id": "preferences",
+		"children":
+		[
+			{
+				"caption": "Package Settings",
+				"mnemonic": "P",
+				"id": "package-settings",
+				"children":
+				[
+					{
+						"caption": "Miva IDE",
+						"children":
+						[
+							{
+								"caption": "Settings",
+								"command": "edit_settings",
+								"args": {
+									"base_file": "${packages}/Miva IDE/Miva_IDE.sublime-settings"
+								}
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
