@@ -43,6 +43,7 @@ contexts:
     - include: tag-include
     - include: tag-preprocessor
     - include: tag-miva
+    - include: tag-assign
     - include: tag-other
 
 
@@ -133,7 +134,7 @@ contexts:
     - match: (?i)(<)(MvFOR|MvFOREACH|MvWHILE)\b
       captures:
         1: punctuation.definition.tag.begin.mv
-        2: meta.for.mv keyword.control.loop.mv
+        2: meta.loop.mv keyword.control.loop.mv
       push:
         - meta_scope: meta.tag.block.loop.mv
         - match: (>)
@@ -146,7 +147,7 @@ contexts:
     - match: (?i)(<\/?)(MvASYNCHRONOUS|MvASSEMBLY|MvCOMMERCE|MvCAPTURE)\b
       captures:
         1: punctuation.definition.tag.begin.mv
-        2: meta.tag.other.mv entity.name.tag.other.mv meta.preprocessor.mv
+        2: meta.tag.preprocessor.mv entity.name.tag.preprocessor.mv meta.preprocessor.mv
       push:
         - meta_scope: meta.tag.block.preprocessor.mv
         - match: (>)
@@ -159,9 +160,22 @@ contexts:
     - match: (?i)(<\/?)(MIVA)\b
       captures:
         1: punctuation.definition.tag.begin.mv
-        2: meta.tag.other.mv entity.name.tag.other.mv meta.preprocessor.mv
+        2: meta.tag.miva.mv entity.name.tag.miva.mv meta.preprocessor.mv
       push:
         - meta_scope: meta.tag.block.miva.mv
+        - match: (>)
+          captures:
+            1: punctuation.definition.tag.end.mv
+          pop: true
+        - include: tag-stuff
+
+  tag-assign:
+    - match: (?i)(<\/?)(MvASSIGN)\b
+      captures:
+        1: punctuation.definition.tag.begin.mv
+        2: meta.tag.assign.mv entity.name.tag.assign.mv
+      push:
+        - meta_scope: meta.tag.block.assign.mv
         - match: (>)
           captures:
             1: punctuation.definition.tag.end.mv
