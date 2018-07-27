@@ -19,7 +19,17 @@
 								"caption": "Settings",
 								"command": "edit_settings",
 								"args": {
-									"base_file": "${packages}/Miva IDE/Miva_IDE.sublime-settings"
+									"base_file": "${packages}/Miva IDE/settings/Miva_IDE.sublime-settings",
+									"default": "{\n\t$0\n}"
+								}
+							},
+							{ "caption": "-" },
+							{
+								"caption": "Key Bindings",
+								"command": "edit_settings",
+								"args": {
+									"base_file": "${packages}/Miva IDE/keymaps/Default ($platform).sublime-keymap",
+									"default": "[\n\t$0\n]"
 								}
 							}
 						]
