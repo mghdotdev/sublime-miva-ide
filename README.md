@@ -2,11 +2,7 @@
 
 ## UPDATED FOR ENGINE 5.31!
 ### Functions Added:
-* min
-* max
-* file_overwrite
-* evp_pkey_free
-* miva_variable_type
+* miva_joinstring
 
 # Miva IDE
 A comprehensive syntax, autocompletion, and snippet package for Miva Script & MVT. This package will assist developers working within the Miva environment. Either module development with Miva Script, or site development with MVT.
