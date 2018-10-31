@@ -1,6 +1,6 @@
-## UPDATED FOR Miva 9.08.00!
+## UPDATED FOR Miva 9.12.00!
 
-## UPDATED FOR ENGINE 5.28!
+## UPDATED FOR ENGINE 5.31!
 ### Functions Added:
 * min
 * max

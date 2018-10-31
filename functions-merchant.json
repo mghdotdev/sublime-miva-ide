@@ -548,6 +548,848 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ 'download.mvc'",
+		"functions": [
+			{
+				"name": "Download",
+				"parameters": []
+			},
+			{
+				"name": "DigitalDownload",
+				"parameters": []
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ 'json.mvc'",
+		"functions": [
+			{
+				"name": "JSON_Initialize_Session",
+				"parameters": []
+			},
+			{
+				"name": "JSON",
+				"parameters": []
+			},
+			{
+				"name": "JSON_API",
+				"parameters": []
+			},
+			{
+				"name": "JSON_API_Operation",
+				"parameters": [
+					"operation var"
+				]
+			},
+			{
+				"name": "JSON_API_Iteration",
+				"parameters": [
+					"iteration var"
+				]
+			},
+			{
+				"name": "JSON_API_Function",
+				"parameters": []
+			},
+			{
+				"name": "JSON_ValidateAdminSession",
+				"parameters": []
+			},
+			{
+				"name": "JSON_UpdateAdministrativeSession",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Logout",
+				"parameters": []
+			},
+			{
+				"name": "JSON_FileUpload_Error",
+				"parameters": [
+					"error_code",
+					"error_message"
+				]
+			},
+			{
+				"name": "JSON_Response_Error",
+				"parameters": [
+					"error_code",
+					"error_message"
+				]
+			},
+			{
+				"name": "JSON_Response_FieldError",
+				"parameters": [
+					"error_field",
+					"error_message"
+				]
+			},
+			{
+				"name": "JSON_Input_Error",
+				"parameters": [
+					"error_field",
+					"error_message"
+				]
+			},
+			{
+				"name": "JSON_Response_InputErrors",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Response_ListProcessed_Success",
+				"parameters": [
+					"processed"
+				]
+			},
+			{
+				"name": "JSON_Response_ListProcessed_Errors",
+				"parameters": [
+					"processed",
+					"errors var"
+				]
+			},
+			{
+				"name": "JSON_Response_ListProcessed_Error",
+				"parameters": [
+					"identifier",
+					"error_code",
+					"error_message",
+					"errors var"
+				]
+			},
+			{
+				"name": "JSON_Response_FieldErrorWithList_Start",
+				"parameters": [
+					"error_field",
+					"error_message"
+				]
+			},
+			{
+				"name": "JSON_Response_FieldErrorWithList_End",
+				"parameters": []
+			},
+			{
+				"name": "JSON_HTML_Error",
+				"parameters": [
+					"error_code",
+					"error_message"
+				]
+			},
+			{
+				"name": "JSON_Response_Success",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Response_Access_Denied",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Response_Start",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Response_End",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Store_Open",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Is_Store_Open",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Array_String",
+				"parameters": [
+					"delimited",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Array_Integer",
+				"parameters": [
+					"delimited",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Array_Rounded",
+				"parameters": [
+					"delimited",
+					"output var",
+					"digits"
+				]
+			},
+			{
+				"name": "JSON_Array_Coalesce_String",
+				"parameters": [
+					"delimited",
+					"output var",
+					"member"
+				]
+			},
+			{
+				"name": "JSON_Array_Coalesce_Integer",
+				"parameters": [
+					"delimited",
+					"output var",
+					"member"
+				]
+			},
+			{
+				"name": "JSON_Array_Coalesce_Rounded",
+				"parameters": [
+					"delimited",
+					"output var",
+					"member",
+					"digits"
+				]
+			},
+			{
+				"name": "JSON_Passphrase_Index",
+				"parameters": [
+					"raw_key_ids var",
+					"raw_passphrases var",
+					"index var"
+				]
+			},
+			{
+				"name": "JSON_ArrayElement_Start",
+				"parameters": [
+					"count var"
+				]
+			},
+			{
+				"name": "JSON_ArrayElement_End",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Output",
+				"parameters": [
+					"value var"
+				]
+			},
+			{
+				"name": "JSON_Clear_Parameters",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Input_Copy",
+				"parameters": [
+					"struct var",
+					"member"
+				]
+			},
+			{
+				"name": "JSON_Input_Retrieve_Raw",
+				"parameters": [
+					"param",
+					"value var"
+				]
+			},
+			{
+				"name": "JSON_Input_Retrieve",
+				"parameters": [
+					"param",
+					"value var"
+				]
+			},
+			{
+				"name": "JSON_Input_Exists",
+				"parameters": [
+					"param"
+				]
+			},
+			{
+				"name": "JSON_Input_Filter",
+				"parameters": [
+					"required",
+					"param",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Input_Text",
+				"parameters": [
+					"required",
+					"param",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Input_Code",
+				"parameters": [
+					"required",
+					"param",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Input_Number",
+				"parameters": [
+					"required",
+					"param",
+					"output var",
+					"scale",
+					"precision"
+				]
+			},
+			{
+				"name": "JSON_Input_Boolean",
+				"parameters": [
+					"required",
+					"param",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Input_List",
+				"parameters": [
+					"required",
+					"param",
+					"output var",
+					"param_values",
+					"result_values"
+				]
+			},
+			{
+				"name": "JSON_Input_Text_Array",
+				"parameters": [
+					"required",
+					"param",
+					"output var",
+					"output_count var"
+				]
+			},
+			{
+				"name": "JSON_Input_Number_Array",
+				"parameters": [
+					"required",
+					"param",
+					"output var",
+					"output_count var",
+					"scale",
+					"precision"
+				]
+			},
+			{
+				"name": "JSON_Input_Array",
+				"parameters": [
+					"param",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Input_Element_Retrieve_Raw",
+				"parameters": [
+					"element var",
+					"param",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Input_Element_Retrieve",
+				"parameters": [
+					"element var",
+					"param",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Input_Element_Text",
+				"parameters": [
+					"element var",
+					"required",
+					"param",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Input_Element_Code",
+				"parameters": [
+					"element var",
+					"required",
+					"param",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Input_Element_Number",
+				"parameters": [
+					"element var",
+					"required",
+					"param",
+					"output var",
+					"scale",
+					"precision"
+				]
+			},
+			{
+				"name": "JSON_Input_Element_Number_Array",
+				"parameters": [
+					"element var",
+					"required",
+					"param",
+					"output var",
+					"output_count var",
+					"scale",
+					"precision"
+				]
+			},
+			{
+				"name": "JSON_Input_Element_Boolean",
+				"parameters": [
+					"element var",
+					"required",
+					"param",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Input_Element_List",
+				"parameters": [
+					"element var",
+					"required",
+					"param",
+					"output var",
+					"param_values",
+					"result_values"
+				]
+			},
+			{
+				"name": "JSON_Input_Element_Array",
+				"parameters": [
+					"parent var",
+					"param",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Input_Element_Error",
+				"parameters": [
+					"element var",
+					"error_field",
+					"error_message"
+				]
+			},
+			{
+				"name": "JSON_Response_Element_FieldError",
+				"parameters": [
+					"element var",
+					"error_field",
+					"error_message"
+				]
+			},
+			{
+				"name": "JSON_Decode",
+				"parameters": [
+					"string"
+				]
+			},
+			{
+				"name": "JSON_Decode_ISO_8859_1",
+				"parameters": [
+					"string var"
+				]
+			},
+			{
+				"name": "JSON_Encode",
+				"parameters": [
+					"string"
+				]
+			},
+			{
+				"name": "JSON_Encode_ISO_8859_1",
+				"parameters": [
+					"string var"
+				]
+			},
+			{
+				"name": "JSON_Encode_UTF8",
+				"parameters": [
+					"string var"
+				]
+			},
+			{
+				"name": "JSON_Hex_Byte",
+				"parameters": [
+					"byte"
+				]
+			},
+			{
+				"name": "JSON_Boolean",
+				"parameters": [
+					"value"
+				]
+			},
+			{
+				"name": "JSON_Filter_Structify",
+				"parameters": [
+					"filterlist var"
+				]
+			},
+			{
+				"name": "JSON_Filter_Structify_Search",
+				"parameters": [
+					"filter_value var",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_Filter_Contains_Search_Field",
+				"parameters": [
+					"filterlist var",
+					"field",
+					"search_value var"
+				]
+			},
+			{
+				"name": "JSON_Search_Filter_Contains_Field",
+				"parameters": [
+					"search_filter var",
+					"field",
+					"search_value var"
+				]
+			},
+			{
+				"name": "JSON_Filter",
+				"parameters": [
+					"query var",
+					"filterlist var",
+					"correlationlist"
+				]
+			},
+			{
+				"name": "JSON_Filter_Callback",
+				"parameters": [
+					"query var",
+					"filterlist var",
+					"correlationlist",
+					"callback_filename",
+					"callback_filter",
+					"callback_search",
+					"data var"
+				]
+			},
+			{
+				"name": "JSON_Filter_Callback_With_CustomFields",
+				"parameters": [
+					"query var",
+					"filterlist var",
+					"correlationlist",
+					"callback_filename",
+					"callback_filter",
+					"callback_search",
+					"callback_search_customfields",
+					"data var"
+				]
+			},
+			{
+				"name": "JSON_Search_Filter",
+				"parameters": [
+					"query var",
+					"field_count",
+					"search_filter var",
+					"correlationlist",
+					"callback_filename",
+					"callback_search",
+					"callback_search_field_count var"
+				]
+			},
+			{
+				"name": "JSON_Search_Filter_Clause",
+				"parameters": [
+					"query var",
+					"outer_joining_clause",
+					"inner_joining_clause",
+					"field_count",
+					"search_filter var",
+					"correlationlist",
+					"callback_filename",
+					"callback_search",
+					"callback_search_field_count var"
+				]
+			},
+			{
+				"name": "JSON_Search_Filter_Clause_With_CustomFields",
+				"parameters": [
+					"query var",
+					"outer_joining_clause",
+					"inner_joining_clause",
+					"field_count",
+					"search_filter var",
+					"correlationlist",
+					"callback_filename",
+					"callback_search",
+					"callback_search_customfields",
+					"callback_search_field_count var",
+					"data var"
+				]
+			},
+			{
+				"name": "JSON_Search_Filter_CommaSeparatedList",
+				"parameters": [
+					"query var",
+					"correlation",
+					"filter_name",
+					"filter_operator",
+					"filter_value"
+				]
+			},
+			{
+				"name": "JSON_CustomFields_Initialize",
+				"parameters": [
+					"fields var",
+					"field_count",
+					"displayable_custom_fields var",
+					"module_feature_code",
+					"customfield_state var"
+				]
+			},
+			{
+				"name": "JSON_Output_CustomField_Value",
+				"parameters": [
+					"field_type",
+					"type_data",
+					"value"
+				]
+			},
+			{
+				"name": "JSON_OrderBy",
+				"parameters": [
+					"query var",
+					"sort",
+					"list",
+					"default_sort"
+				]
+			},
+			{
+				"name": "JSON_OrderBy_Callback_With_CustomFields",
+				"parameters": [
+					"query var",
+					"sort",
+					"list",
+					"default_sort",
+					"callback_filename",
+					"callback_orderby_customfields"
+				]
+			},
+			{
+				"name": "JSON_Query_Callback_Handle_CustomField",
+				"parameters": [
+					"query var",
+					"callback_filename",
+					"callback_query_customfields",
+					"module_code",
+					"customfield_code"
+				]
+			},
+			{
+				"name": "JSON_Query_Callback_With_CustomFields",
+				"parameters": [
+					"query var",
+					"filterlist var",
+					"callback_filename",
+					"callback_query_customfields"
+				]
+			},
+			{
+				"name": "JSON_SQL_Query_Index_With_CustomFields",
+				"parameters": [
+					"query var",
+					"loaded_record var",
+					"index var",
+					"correlation_data",
+					"callback_filename",
+					"callback_function"
+				]
+			},
+			{
+				"name": "JSON_Filter_MivaScript",
+				"parameters": [
+					"expression var",
+					"filterlist var",
+					"variablelist"
+				]
+			},
+			{
+				"name": "JSON_Search_Filter_MivaScript",
+				"parameters": [
+					"expression var",
+					"field_count",
+					"filterlist var",
+					"variablelist"
+				]
+			},
+			{
+				"name": "JSON_Search_Filter_MivaScript_CommaSeparatedList",
+				"parameters": [
+					"expression var",
+					"variable",
+					"filter_name",
+					"filter_operator",
+					"filter_value"
+				]
+			},
+			{
+				"name": "Miva_ValidateFileUpload",
+				"parameters": [
+					"field",
+					"filename",
+					"content_type"
+				]
+			},
+			{
+				"name": "Miva_ProcessFileUpload",
+				"parameters": [
+					"field",
+					"filename",
+					"status",
+					"tempfile",
+					"content_type",
+					"size"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ 'merchant.mvc'",
+		"functions": [
+			{
+				"name": "Merchant",
+				"parameters": []
+			},
+			{
+				"name": "Merchant_Actions",
+				"parameters": []
+			},
+			{
+				"name": "Merchant_Screens",
+				"parameters": []
+			},
+			{
+				"name": "MaintenanceMode_StoreClosed",
+				"parameters": []
+			},
+			{
+				"name": "MaintenanceMode_DisallowNewBaskets",
+				"parameters": []
+			},
+			{
+				"name": "Error_Store_Closed",
+				"parameters": []
+			},
+			{
+				"name": "Action_AddProductToBasket",
+				"parameters": []
+			},
+			{
+				"name": "Action_AddMultipleProductsToBasket",
+				"parameters": []
+			},
+			{
+				"name": "Action_UpdateQuantity",
+				"parameters": []
+			},
+			{
+				"name": "Action_UpdateGroupQuantity",
+				"parameters": []
+			},
+			{
+				"name": "Action_RemoveProductFromBasket",
+				"parameters": []
+			},
+			{
+				"name": "Action_RemoveGroupFromBasket",
+				"parameters": []
+			},
+			{
+				"name": "Order_Validate",
+				"parameters": [
+					"tax_module var"
+				]
+			},
+			{
+				"name": "Action_Save_OrderInformation",
+				"parameters": []
+			},
+			{
+				"name": "Action_Save_OrderInformation_Update_CustomerAddress_Shipping",
+				"parameters": [
+					"ship_id",
+					"bill_id",
+					"std_fields var",
+					"address_ship var"
+				]
+			},
+			{
+				"name": "Action_Save_OrderInformation_Update_CustomerAddress_Billing",
+				"parameters": [
+					"ship_id",
+					"bill_id",
+					"std_fields var",
+					"address_bill var"
+				]
+			},
+			{
+				"name": "Action_Save_OrderInformation_Update_Customer_Shipping_FromCustomerAddress",
+				"parameters": [
+					"customer var",
+					"address var",
+					"std_fields var"
+				]
+			},
+			{
+				"name": "Action_Save_OrderInformation_Update_Customer_Billing_FromCustomerAddress",
+				"parameters": [
+					"customer var",
+					"address var",
+					"std_fields var"
+				]
+			},
+			{
+				"name": "Action_CalculateTax",
+				"parameters": []
+			},
+			{
+				"name": "Action_CalculateShipping",
+				"parameters": []
+			},
+			{
+				"name": "Action_PaymentManipulateShipping",
+				"parameters": []
+			},
+			{
+				"name": "Action_AuthorizePayment",
+				"parameters": []
+			},
+			{
+				"name": "Action_AuthorizePayment_LowLevel",
+				"parameters": []
+			},
+			{
+				"name": "UIException",
+				"parameters": [
+					"code"
+				]
+			},
+			{
+				"name": "v56_Address_Compatibility",
+				"parameters": []
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ 'uri.mvc'",
+		"functions": [
+			{
+				"name": "URI",
+				"parameters": []
+			}
+		]
+	},
+	{
 		"distro_path": "g.Module_Root $ 'uri.mvc'",
 		"functions": [
 			{
@@ -1698,6 +2540,13 @@
 		"distro_path": "g.Module_JSON",
 		"functions": [
 			{
+				"name": "JSON_Module_Validate",
+				"parameters": [
+					"module_code",
+					"module var"
+				]
+			},
+			{
 				"name": "JSON_Module_Upload_ValidateFileUpload",
 				"parameters": [
 					"field",
@@ -1718,6 +2567,10 @@
 			},
 			{
 				"name": "JSON_Module_JSON",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Module_JSON_API",
 				"parameters": []
 			},
 			{
@@ -1750,6 +2603,12 @@
 				"parameters": [
 					"order var",
 					"ondemandcolumns var"
+				]
+			},
+			{
+				"name": "JSON_Order_Load",
+				"parameters": [
+					"order var"
 				]
 			},
 			{
@@ -1880,6 +2739,12 @@
 				"parameters": []
 			},
 			{
+				"name": "JSON_OrderCharge",
+				"parameters": [
+					"ordercharge var"
+				]
+			},
+			{
 				"name": "JSON_OrderChargeList",
 				"parameters": [
 					"query",
@@ -1897,6 +2762,84 @@
 			{
 				"name": "JSON_Order_Create_Empty",
 				"parameters": []
+			},
+			{
+				"name": "JSON_Order_Create",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Order_Create_LowLevel",
+				"parameters": [
+					"order var",
+					"shipping_module var",
+					"shipping_module_data",
+					"calculatecharges",
+					"triggerfulfillmentmodules",
+					"orderitems var",
+					"orderitem_count var",
+					"ordercharges var",
+					"ordercharge_count var"
+				]
+			},
+			{
+				"name": "JSON_Order_Items",
+				"parameters": [
+					"order var",
+					"orderitems var",
+					"orderitem_count var"
+				]
+			},
+			{
+				"name": "JSON_Order_Products",
+				"parameters": [
+					"order var",
+					"orderitems var",
+					"orderitem_count var"
+				]
+			},
+			{
+				"name": "JSON_Order_Charges",
+				"parameters": [
+					"order var",
+					"ordercharges var",
+					"ordercharge_count var"
+				]
+			},
+			{
+				"name": "JSON_Order_CustomFields",
+				"parameters": [
+					"order var"
+				]
+			},
+			{
+				"name": "JSON_Order_CalculateCharges",
+				"parameters": [
+					"order var",
+					"ship_module_code",
+					"ship_module_data",
+					"ordercharges var",
+					"ordercharge_count var"
+				]
+			},
+			{
+				"name": "JSON_Order_CalculateCharges_LowLevel",
+				"parameters": [
+					"order var",
+					"ship_module",
+					"ship_module_data",
+					"basketcharges var",
+					"basketcharge_count var"
+				]
+			},
+			{
+				"name": "JSON_Order_Create_CustomerInformation_SetField",
+				"parameters": [
+					"order var",
+					"customer var",
+					"input_name",
+					"member_name",
+					"default_value"
+				]
 			},
 			{
 				"name": "JSON_Order_Delete",
@@ -1952,14 +2895,6 @@
 			},
 			{
 				"name": "JSON_OrderTabList_Load",
-				"parameters": []
-			},
-			{
-				"name": "JSON_OrderTab_Content_Load",
-				"parameters": []
-			},
-			{
-				"name": "JSON_OrderTab_Update",
 				"parameters": []
 			},
 			{
@@ -2066,6 +3001,15 @@
 				]
 			},
 			{
+				"name": "JSON_Order_CustomFields_With_Query",
+				"parameters": [
+					"query var",
+					"customfield_state var",
+					"order_id",
+					"view"
+				]
+			},
+			{
 				"name": "JSON_OrderCustomFieldList_Load",
 				"parameters": []
 			},
@@ -2078,6 +3022,12 @@
 	{
 		"distro_path": "g.Module_JSON",
 		"functions": [
+			{
+				"name": "JSON_OrderPayment",
+				"parameters": [
+					"orderpayment var"
+				]
+			},
 			{
 				"name": "JSON_OrderPaymentList_Load",
 				"parameters": []
@@ -2242,6 +3192,12 @@
 				"parameters": []
 			},
 			{
+				"name": "JSON_ProductImageData",
+				"parameters": [
+					"productimagedata var"
+				]
+			},
+			{
 				"name": "JSON_ProductImageList_Load_Product",
 				"parameters": []
 			},
@@ -2345,12 +3301,28 @@
 				]
 			},
 			{
+				"name": "JSON_Product_CustomFields_With_Query",
+				"parameters": [
+					"query var",
+					"customfield_state var",
+					"product_id",
+					"view"
+				]
+			},
+			{
 				"name": "JSON_ProductCustomFieldList_Load",
 				"parameters": []
 			},
 			{
 				"name": "JSON_Product_Load",
 				"parameters": [
+					"product var"
+				]
+			},
+			{
+				"name": "JSON_Product_Load_Element",
+				"parameters": [
+					"input_element var",
 					"product var"
 				]
 			},
@@ -2484,9 +3456,9 @@
 				"parameters": [
 					"query var",
 					"field_count var",
-					"filter_name",
-					"filter_operator",
-					"filter_value",
+					"search_field",
+					"search_operator",
+					"search_value",
 					"data var"
 				]
 			},
@@ -2496,6 +3468,10 @@
 			},
 			{
 				"name": "JSON_ProductList_Delete",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Product_Insert",
 				"parameters": []
 			},
 			{
@@ -2543,9 +3519,9 @@
 				"parameters": [
 					"query var",
 					"field_count var",
-					"filter_name",
-					"filter_operator",
-					"filter_value",
+					"search_field",
+					"search_operator",
+					"search_value",
 					"data var"
 				]
 			},
@@ -2671,6 +3647,12 @@
 	{
 		"distro_path": "g.Module_JSON",
 		"functions": [
+			{
+				"name": "JSON_OrderReturn",
+				"parameters": [
+					"orderreturn var"
+				]
+			},
 			{
 				"name": "JSON_OrderReturnList",
 				"parameters": [
@@ -2883,16 +3865,29 @@
 			{
 				"name": "JSON_OrderShipment",
 				"parameters": [
-					"include_order",
-					"method"
+					"ordershipment var"
 				]
 			},
 			{
-				"name": "JSON_OrderShipmentList",
+				"name": "JSON_OrderShipment_Load",
 				"parameters": [
-					"count",
-					"include_order"
+					"ordershipment var"
 				]
+			},
+			{
+				"name": "JSON_OrderShipment_OnDemandColumns",
+				"parameters": [
+					"ordershipment var",
+					"ondemandcolumns var"
+				]
+			},
+			{
+				"name": "JSON_ShipmentList_Filters",
+				"parameters": []
+			},
+			{
+				"name": "JSON_ShipmentList_OrderBy",
+				"parameters": []
 			},
 			{
 				"name": "JSON_OrderShipmentIndex_Load_ID",
@@ -2901,6 +3896,50 @@
 			{
 				"name": "JSON_OrderShipmentList_Load_Query",
 				"parameters": []
+			},
+			{
+				"name": "JSON_OrderShipmentList_Load_Query_Filter",
+				"parameters": [
+					"query var",
+					"field_count var",
+					"filter_name",
+					"filter_value",
+					"data var"
+				]
+			},
+			{
+				"name": "JSON_OrderShipmentList_Load_Query_Advanced_Filter",
+				"parameters": [
+					"query var",
+					"field_count",
+					"filter_name",
+					"filter_operator",
+					"filter_value",
+					"data var"
+				]
+			},
+			{
+				"name": "JSON_OrderShipment_CustomFields_Query",
+				"parameters": [
+					"query var",
+					"module var",
+					"code"
+				]
+			},
+			{
+				"name": "JSON_OrderShipment_Join_Orders",
+				"parameters": [
+					"query var"
+				]
+			},
+			{
+				"name": "JSON_OrderShipmentList_Joins",
+				"parameters": [
+					"filter var",
+					"sort var",
+					"ondemandcolumns var",
+					"joins var"
+				]
 			},
 			{
 				"name": "JSON_OrderShipmentList_Load_Order",
@@ -3065,6 +4104,10 @@
 				"parameters": []
 			},
 			{
+				"name": "JSON_StoreList_Load_All",
+				"parameters": []
+			},
+			{
 				"name": "JSON_StoreList_Load_Query",
 				"parameters": []
 			},
@@ -3142,15 +4185,6 @@
 			},
 			{
 				"name": "JSON_UserPreference_Delete_CurrentUser_Key",
-				"parameters": []
-			}
-		]
-	},
-	{
-		"distro_path": "g.Module_Root $ '/lib/config.mvc'",
-		"functions": [
-			{
-				"name": "Initialize_Globals",
 				"parameters": []
 			}
 		]
@@ -3339,6 +4373,64 @@
 				]
 			},
 			{
+				"name": "TOTP_Verify",
+				"parameters": [
+					"k",
+					"window",
+					"step",
+					"start",
+					"digits",
+					"x"
+				]
+			},
+			{
+				"name": "YubiCloud_Verify",
+				"parameters": [
+					"id",
+					"key",
+					"url",
+					"timeout",
+					"sl",
+					"otp"
+				]
+			},
+			{
+				"name": "YubiCloud_Hash",
+				"parameters": [
+					"params var",
+					"key"
+				]
+			},
+			{
+				"name": "WebAuthn_Challenge_Generate",
+				"parameters": []
+			},
+			{
+				"name": "WebAuthn_Verify_Registration",
+				"parameters": [
+					"id",
+					"pubkey_der var",
+					"signcount var",
+					"expected_challenge",
+					"require_uv",
+					"attestation_data",
+					"json_clientdata"
+				]
+			},
+			{
+				"name": "WebAuthn_Verify_Assertion",
+				"parameters": [
+					"id",
+					"pubkey_der",
+					"signcount var",
+					"expected_challenge",
+					"require_uv",
+					"authenticator_data",
+					"json_clientdata",
+					"signature"
+				]
+			},
+			{
 				"name": "Runtime_Password_Encrypted",
 				"parameters": [
 					"password"
@@ -3378,320 +4470,10 @@
 					"plaintext",
 					"encrypted var"
 				]
-			}
-		]
-	},
-	{
-		"distro_path": "g.Module_Library_DBAPI",
-		"functions": [
-			{
-				"name": "DB_Open",
-				"parameters": [
-					"file",
-					"username",
-					"password"
-				]
 			},
 			{
-				"name": "DB_Close",
+				"name": "Random_Int31",
 				"parameters": []
-			},
-			{
-				"name": "DB_Open_PrivateKey",
-				"parameters": [
-					"file",
-					"username",
-					"password"
-				]
-			},
-			{
-				"name": "DB_Close_PrivateKey",
-				"parameters": []
-			},
-			{
-				"name": "DB_Apply_Flags",
-				"parameters": [
-					"name",
-					"flags"
-				]
-			},
-			{
-				"name": "DB_Type_CHAR",
-				"parameters": [
-					"length"
-				]
-			},
-			{
-				"name": "DB_Type_BOOL",
-				"parameters": []
-			},
-			{
-				"name": "DB_Type_MEMO",
-				"parameters": []
-			},
-			{
-				"name": "DB_Type_NUMBER",
-				"parameters": [
-					"precision",
-					"scale"
-				]
-			},
-			{
-				"name": "DB_Type_DOUBLE",
-				"parameters": []
-			},
-			{
-				"name": "DB_Lock_Table",
-				"parameters": [
-					"primary_table",
-					"additional_tables"
-				]
-			},
-			{
-				"name": "DB_Unlock_Table",
-				"parameters": [
-					"primary_table"
-				]
-			},
-			{
-				"name": "Pack",
-				"parameters": []
-			},
-			{
-				"name": "DB_Index_DESC",
-				"parameters": []
-			},
-			{
-				"name": "DB_Compare_CaseSensitive",
-				"parameters": [
-					"value"
-				]
-			},
-			{
-				"name": "DB_Compare_UPPER",
-				"parameters": [
-					"value"
-				]
-			},
-			{
-				"name": "DB_Compare_TimeT",
-				"parameters": [
-					"value"
-				]
-			},
-			{
-				"name": "DB_Max_NUMBER",
-				"parameters": [
-					"precision",
-					"scale"
-				]
-			},
-			{
-				"name": "DB_Error_IsIndexDuplicate",
-				"parameters": [
-					"error"
-				]
-			},
-			{
-				"name": "DB_OPENVIEW_Range",
-				"parameters": [
-					"db",
-					"view",
-					"query",
-					"fields",
-					"offset",
-					"count"
-				]
-			},
-			{
-				"name": "DB_Drop_Index",
-				"parameters": [
-					"table",
-					"index"
-				]
-			},
-			{
-				"name": "DB_Index_Exists",
-				"parameters": [
-					"table",
-					"index",
-					"exists var"
-				]
-			},
-			{
-				"name": "DB_Escape_Identifier",
-				"parameters": [
-					"keyword"
-				]
-			},
-			{
-				"name": "DB_FULLTEXT_Supported",
-				"parameters": []
-			},
-			{
-				"name": "DB_Create_FULLTEXT_Index",
-				"parameters": [
-					"table",
-					"index",
-					"columns"
-				]
-			}
-		]
-	},
-	{
-		"distro_path": "g.Module_Library_Native_DBAPI",
-		"functions": [
-			{
-				"name": "DB_Open",
-				"parameters": [
-					"database",
-					"username",
-					"password"
-				]
-			},
-			{
-				"name": "DB_Close",
-				"parameters": []
-			},
-			{
-				"name": "DB_Open_PrivateKey",
-				"parameters": [
-					"database",
-					"username",
-					"password"
-				]
-			},
-			{
-				"name": "DB_Close_PrivateKey",
-				"parameters": []
-			},
-			{
-				"name": "DB_Apply_Flags",
-				"parameters": [
-					"name",
-					"flags"
-				]
-			},
-			{
-				"name": "DB_Type_CHAR",
-				"parameters": [
-					"length"
-				]
-			},
-			{
-				"name": "DB_Type_BOOL",
-				"parameters": []
-			},
-			{
-				"name": "DB_Type_MEMO",
-				"parameters": []
-			},
-			{
-				"name": "DB_Type_NUMBER",
-				"parameters": [
-					"precision",
-					"scale"
-				]
-			},
-			{
-				"name": "DB_Type_DOUBLE",
-				"parameters": []
-			},
-			{
-				"name": "DB_Lock_Table",
-				"parameters": [
-					"primary_table",
-					"additional_tables"
-				]
-			},
-			{
-				"name": "DB_Unlock_Table",
-				"parameters": [
-					"primary_table"
-				]
-			},
-			{
-				"name": "Pack",
-				"parameters": []
-			},
-			{
-				"name": "DB_Index_DESC",
-				"parameters": []
-			},
-			{
-				"name": "DB_Compare_CaseSensitive",
-				"parameters": [
-					"value"
-				]
-			},
-			{
-				"name": "DB_Compare_UPPER",
-				"parameters": [
-					"value"
-				]
-			},
-			{
-				"name": "DB_Compare_TimeT",
-				"parameters": [
-					"value"
-				]
-			},
-			{
-				"name": "DB_Max_NUMBER",
-				"parameters": [
-					"precision",
-					"scale"
-				]
-			},
-			{
-				"name": "DB_Error_IsIndexDuplicate",
-				"parameters": [
-					"error"
-				]
-			},
-			{
-				"name": "DB_OPENVIEW_Range",
-				"parameters": [
-					"db",
-					"view",
-					"query",
-					"fields",
-					"offset",
-					"count"
-				]
-			},
-			{
-				"name": "DB_Drop_Index",
-				"parameters": [
-					"table",
-					"index"
-				]
-			},
-			{
-				"name": "DB_Index_Exists",
-				"parameters": [
-					"table",
-					"index",
-					"exists var"
-				]
-			},
-			{
-				"name": "DB_Escape_Identifier",
-				"parameters": [
-					"keyword"
-				]
-			},
-			{
-				"name": "DB_FULLTEXT_Supported",
-				"parameters": []
-			},
-			{
-				"name": "DB_Create_FULLTEXT_Index",
-				"parameters": [
-					"table",
-					"index",
-					"columns"
-				]
 			}
 		]
 	},
@@ -3759,6 +4541,329 @@
 					"username",
 					"password",
 					"flags"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/lib/config.mvc'",
+		"functions": [
+			{
+				"name": "Initialize_Globals",
+				"parameters": []
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/lib/dbapi_mivasql.mvc'",
+		"functions": [
+			{
+				"name": "DB_Open",
+				"parameters": [
+					"file",
+					"username",
+					"password"
+				]
+			},
+			{
+				"name": "DB_Close",
+				"parameters": []
+			},
+			{
+				"name": "DB_Open_PrivateKey",
+				"parameters": [
+					"file",
+					"username",
+					"password"
+				]
+			},
+			{
+				"name": "DB_Close_PrivateKey",
+				"parameters": []
+			},
+			{
+				"name": "DB_Apply_Flags",
+				"parameters": [
+					"name",
+					"flags"
+				]
+			},
+			{
+				"name": "DB_Type_CHAR",
+				"parameters": [
+					"length"
+				]
+			},
+			{
+				"name": "DB_Type_BOOL",
+				"parameters": []
+			},
+			{
+				"name": "DB_Type_MEMO",
+				"parameters": []
+			},
+			{
+				"name": "DB_Type_NUMBER",
+				"parameters": [
+					"precision",
+					"scale"
+				]
+			},
+			{
+				"name": "DB_Type_DOUBLE",
+				"parameters": []
+			},
+			{
+				"name": "DB_Lock_Table",
+				"parameters": [
+					"primary_table",
+					"additional_tables"
+				]
+			},
+			{
+				"name": "DB_Unlock_Table",
+				"parameters": [
+					"primary_table"
+				]
+			},
+			{
+				"name": "Pack",
+				"parameters": []
+			},
+			{
+				"name": "DB_Index_DESC",
+				"parameters": []
+			},
+			{
+				"name": "DB_Compare_CaseSensitive",
+				"parameters": [
+					"value"
+				]
+			},
+			{
+				"name": "DB_Compare_UPPER",
+				"parameters": [
+					"value"
+				]
+			},
+			{
+				"name": "DB_Compare_TimeT",
+				"parameters": [
+					"value"
+				]
+			},
+			{
+				"name": "DB_Max_NUMBER",
+				"parameters": [
+					"precision",
+					"scale"
+				]
+			},
+			{
+				"name": "DB_Error_IsIndexDuplicate",
+				"parameters": [
+					"error"
+				]
+			},
+			{
+				"name": "DB_OPENVIEW_Range",
+				"parameters": [
+					"db",
+					"view",
+					"query",
+					"fields",
+					"offset",
+					"count"
+				]
+			},
+			{
+				"name": "DB_Drop_Index",
+				"parameters": [
+					"table",
+					"index"
+				]
+			},
+			{
+				"name": "DB_Index_Exists",
+				"parameters": [
+					"table",
+					"index",
+					"exists var"
+				]
+			},
+			{
+				"name": "DB_Escape_Identifier",
+				"parameters": [
+					"keyword"
+				]
+			},
+			{
+				"name": "DB_FULLTEXT_Supported",
+				"parameters": []
+			},
+			{
+				"name": "DB_Create_FULLTEXT_Index",
+				"parameters": [
+					"table",
+					"index",
+					"columns"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/lib/dbapi_mysql.mvc'",
+		"functions": [
+			{
+				"name": "DB_Open",
+				"parameters": [
+					"database",
+					"username",
+					"password"
+				]
+			},
+			{
+				"name": "DB_Close",
+				"parameters": []
+			},
+			{
+				"name": "DB_Open_PrivateKey",
+				"parameters": [
+					"database",
+					"username",
+					"password"
+				]
+			},
+			{
+				"name": "DB_Close_PrivateKey",
+				"parameters": []
+			},
+			{
+				"name": "DB_Apply_Flags",
+				"parameters": [
+					"name",
+					"flags"
+				]
+			},
+			{
+				"name": "DB_Type_CHAR",
+				"parameters": [
+					"length"
+				]
+			},
+			{
+				"name": "DB_Type_BOOL",
+				"parameters": []
+			},
+			{
+				"name": "DB_Type_MEMO",
+				"parameters": []
+			},
+			{
+				"name": "DB_Type_NUMBER",
+				"parameters": [
+					"precision",
+					"scale"
+				]
+			},
+			{
+				"name": "DB_Type_DOUBLE",
+				"parameters": []
+			},
+			{
+				"name": "DB_Lock_Table",
+				"parameters": [
+					"primary_table",
+					"additional_tables"
+				]
+			},
+			{
+				"name": "DB_Unlock_Table",
+				"parameters": [
+					"primary_table"
+				]
+			},
+			{
+				"name": "Pack",
+				"parameters": []
+			},
+			{
+				"name": "DB_Index_DESC",
+				"parameters": []
+			},
+			{
+				"name": "DB_Compare_CaseSensitive",
+				"parameters": [
+					"value"
+				]
+			},
+			{
+				"name": "DB_Compare_UPPER",
+				"parameters": [
+					"value"
+				]
+			},
+			{
+				"name": "DB_Compare_TimeT",
+				"parameters": [
+					"value"
+				]
+			},
+			{
+				"name": "DB_Max_NUMBER",
+				"parameters": [
+					"precision",
+					"scale"
+				]
+			},
+			{
+				"name": "DB_Error_IsIndexDuplicate",
+				"parameters": [
+					"error"
+				]
+			},
+			{
+				"name": "DB_OPENVIEW_Range",
+				"parameters": [
+					"db",
+					"view",
+					"query",
+					"fields",
+					"offset",
+					"count"
+				]
+			},
+			{
+				"name": "DB_Drop_Index",
+				"parameters": [
+					"table",
+					"index"
+				]
+			},
+			{
+				"name": "DB_Index_Exists",
+				"parameters": [
+					"table",
+					"index",
+					"exists var"
+				]
+			},
+			{
+				"name": "DB_Escape_Identifier",
+				"parameters": [
+					"keyword"
+				]
+			},
+			{
+				"name": "DB_FULLTEXT_Supported",
+				"parameters": []
+			},
+			{
+				"name": "DB_Create_FULLTEXT_Index",
+				"parameters": [
+					"table",
+					"index",
+					"columns"
 				]
 			}
 		]
@@ -3951,6 +5056,14 @@
 			},
 			{
 				"name": "DrawOption",
+				"parameters": [
+					"value",
+					"default",
+					"text"
+				]
+			},
+			{
+				"name": "DrawOption_Encode",
 				"parameters": [
 					"value",
 					"default",
@@ -4577,6 +5690,21 @@
 				]
 			},
 			{
+				"name": "Image_Type_From_Header",
+				"parameters": [
+					"filepath",
+					"location",
+					"type var"
+				]
+			},
+			{
+				"name": "Image_Type_From_Extension",
+				"parameters": [
+					"filepath",
+					"type var"
+				]
+			},
+			{
 				"name": "Image_Type",
 				"parameters": [
 					"filepath",
@@ -4614,6 +5742,26 @@
 					"gd_image var",
 					"type",
 					"buffer var"
+				]
+			},
+			{
+				"name": "Image_Dimensions_From_Header",
+				"parameters": [
+					"filepath",
+					"location",
+					"type",
+					"width var",
+					"height var"
+				]
+			},
+			{
+				"name": "Image_Dimensions_From_GD",
+				"parameters": [
+					"filepath",
+					"location",
+					"type",
+					"width var",
+					"height var"
 				]
 			},
 			{
@@ -4792,6 +5940,12 @@
 			},
 			{
 				"name": "OrderCustomFieldList_Load",
+				"parameters": [
+					"customfields var"
+				]
+			},
+			{
+				"name": "BoxCustomFieldList_Load",
 				"parameters": [
 					"customfields var"
 				]
@@ -5023,16 +6177,16 @@
 				]
 			},
 			{
+				"name": "Base32_Validate",
+				"parameters": [
+					"encoded"
+				]
+			},
+			{
 				"name": "IEEE754_Normalize",
 				"parameters": [
 					"significant_digits",
 					"value"
-				]
-			},
-			{
-				"name": "Parameter_Exists",
-				"parameters": [
-					"parameter"
 				]
 			},
 			{
@@ -5066,6 +6220,22 @@
 				"name": "OrdinalNumber",
 				"parameters": [
 					"n"
+				]
+			},
+			{
+				"name": "CBOR_Decode",
+				"parameters": [
+					"input var",
+					"output var"
+				]
+			},
+			{
+				"name": "CBOR_Decode_Value",
+				"parameters": [
+					"input var",
+					"input_pos var",
+					"input_len var",
+					"output var"
 				]
 			}
 		]
@@ -5160,7 +6330,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_AFF_DB",
+		"distro_path": "g.Module_Feature_MMLSK-AFF_DB",
 		"functions": [
 			{
 				"name": "AFF_Create_Data_Files",
@@ -5572,7 +6742,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_AGR_DB",
+		"distro_path": "g.Module_Feature_MMLSK-AGR_DB",
 		"functions": [
 			{
 				"name": "AGR_Store_Create",
@@ -6010,7 +7180,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_ATT_DB",
+		"distro_path": "g.Module_Feature_MMLSK-ATT_DB",
 		"functions": [
 			{
 				"name": "ATT_Create_Data_Files",
@@ -6325,10 +7495,16 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_ATT_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-ATT_JSON",
 		"functions": [
 			{
 				"name": "JSON_AttributeTemplate",
+				"parameters": [
+					"attributetemplate var"
+				]
+			},
+			{
+				"name": "JSON_AttributeTemplate_Load",
 				"parameters": [
 					"attributetemplate var"
 				]
@@ -6431,7 +7607,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_CUS_DB",
+		"distro_path": "g.Module_Feature_MMLSK-CUS_DB",
 		"functions": [
 			{
 				"name": "CUS_Create_Data_Files",
@@ -7059,7 +8235,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_CUS_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-CUS_JSON",
 		"functions": [
 			{
 				"name": "JSON_Customer",
@@ -7084,6 +8260,15 @@
 			{
 				"name": "JSON_Customer_CustomFields_With_View",
 				"parameters": [
+					"customfield_state var",
+					"cust_id",
+					"view"
+				]
+			},
+			{
+				"name": "JSON_Customer_CustomFields_With_Query",
+				"parameters": [
+					"query var",
 					"customfield_state var",
 					"cust_id",
 					"view"
@@ -7300,7 +8485,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_CUS_RT",
+		"distro_path": "g.Module_Feature_MMLSK-CUS_RT",
 		"functions": [
 			{
 				"name": "Customer_Validate",
@@ -7386,7 +8571,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_CUS_UT",
+		"distro_path": "g.Module_Feature_MMLSK-CUS_UT",
 		"functions": [
 			{
 				"name": "Customer_Password_Encrypted",
@@ -7452,7 +8637,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_DDL_DB",
+		"distro_path": "g.Module_Feature_MMLSK-DDL_DB",
 		"functions": [
 			{
 				"name": "DDL_Store_Create",
@@ -7709,7 +8894,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_DDL_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-DDL_JSON",
 		"functions": [
 			{
 				"name": "JSON_DigitalDownload",
@@ -7777,7 +8962,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_DDL_RT",
+		"distro_path": "g.Module_Feature_MMLSK-DDL_RT",
 		"functions": [
 			{
 				"name": "DigitalDownload_DownloadFile",
@@ -7786,7 +8971,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_DDL_UT",
+		"distro_path": "g.Module_Feature_MMLSK-DDL_UT",
 		"functions": [
 			{
 				"name": "DigitalDownload_Redirect",
@@ -7992,7 +9177,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_FCT_DB",
+		"distro_path": "g.Module_Feature_MMLSK-FCT_DB",
 		"functions": [
 			{
 				"name": "FCT_Store_Create",
@@ -8197,7 +9382,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_FCT_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-FCT_JSON",
 		"functions": [
 			{
 				"name": "FacetRulesList_Sort_Callback",
@@ -8258,7 +9443,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_FCT_UT",
+		"distro_path": "g.Module_Feature_MMLSK-FCT_UT",
 		"functions": [
 			{
 				"name": "FacetList_Load_All_Cached",
@@ -8327,7 +9512,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_GFT_DB",
+		"distro_path": "g.Module_Feature_MMLSK-GFT_DB",
 		"functions": [
 			{
 				"name": "GFT_Store_Create",
@@ -8471,7 +9656,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_GFT_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-GFT_JSON",
 		"functions": [
 			{
 				"name": "JSON_GiftCertificate",
@@ -8520,7 +9705,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_GFT_RT",
+		"distro_path": "g.Module_Feature_MMLSK-GFT_RT",
 		"functions": [
 			{
 				"name": "Action_RedeemGiftCertificate",
@@ -8535,7 +9720,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_GFT_UT",
+		"distro_path": "g.Module_Feature_MMLSK-GFT_UT",
 		"functions": [
 			{
 				"name": "GiftCertificate_Generate_Code",
@@ -8563,7 +9748,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_INV_DB",
+		"distro_path": "g.Module_Feature_MMLSK-INV_DB",
 		"functions": [
 			{
 				"name": "INV_Create_Data_Files",
@@ -8708,7 +9893,16 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_INV_RT",
+		"distro_path": "g.Module_Feature_MMLSK-INV_JSON",
+		"functions": [
+			{
+				"name": "JSON_InventoryProductSettings_Update",
+				"parameters": []
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Feature_MMLSK-INV_RT",
 		"functions": [
 			{
 				"name": "Runtime_Product_InventoryFields_Read",
@@ -8849,7 +10043,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_PAY_DB",
+		"distro_path": "g.Module_Feature_MMLSK-PAY_DB",
 		"functions": [
 			{
 				"name": "PAY_Store_Create",
@@ -9375,7 +10569,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_PAY_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-PAY_JSON",
 		"functions": [
 			{
 				"name": "JSON_PaymentModule_Capabilities",
@@ -9472,6 +10666,10 @@
 				"parameters": []
 			},
 			{
+				"name": "JSON_CustomerPaymentCard_Register",
+				"parameters": []
+			},
+			{
 				"name": "JSON_CustomerPaymentCard_Update",
 				"parameters": []
 			},
@@ -9508,7 +10706,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_PAY_UT",
+		"distro_path": "g.Module_Feature_MMLSK-PAY_UT",
 		"functions": [
 			{
 				"name": "PaymentMethodList_Load_Order_Authorize",
@@ -9974,7 +11172,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_PGR_DB",
+		"distro_path": "g.Module_Feature_MMLSK-PGR_DB",
 		"functions": [
 			{
 				"name": "PGR_Store_Create",
@@ -10802,6 +12000,12 @@
 				]
 			},
 			{
+				"name": "BasketDiscountTotal_Read",
+				"parameters": [
+					"basketdiscounttotal var"
+				]
+			},
+			{
 				"name": "BasketDiscountTotal_Insert",
 				"parameters": [
 					"basketdiscounttotal var"
@@ -10811,6 +12015,43 @@
 				"name": "BasketDiscountTotal_Delete_All_Basket",
 				"parameters": [
 					"basket_id"
+				]
+			},
+			{
+				"name": "BasketDiscountTotal_Update_Persistent",
+				"parameters": [
+					"basket_id",
+					"pgrp_id",
+					"persist"
+				]
+			},
+			{
+				"name": "BasketDiscountTotal_Delete_Basket_Persistent",
+				"parameters": [
+					"basket_id",
+					"pgrp_id"
+				]
+			},
+			{
+				"name": "BasketDiscountTotalList_Load_Basket_Persistent",
+				"parameters": [
+					"basket_id",
+					"basketdiscounttotals var"
+				]
+			},
+			{
+				"name": "PriceGroupAndModuleList_Load_Basket_Persistent",
+				"parameters": [
+					"basket var",
+					"pricegroups var"
+				]
+			},
+			{
+				"name": "PriceGroupAndModuleList_Load_Basket_Persistent_AsOf",
+				"parameters": [
+					"basket var",
+					"asof",
+					"pricegroups var"
 				]
 			},
 			{
@@ -11198,7 +12439,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_PGR_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-PGR_JSON",
 		"functions": [
 			{
 				"name": "JSON_DiscountModule_Capabilities",
@@ -11348,12 +12589,6 @@
 			{
 				"name": "JSON_Coupon_Load",
 				"parameters": [
-					"pricegroup var"
-				]
-			},
-			{
-				"name": "JSON_Coupon_Validate",
-				"parameters": [
 					"coupon var"
 				]
 			},
@@ -11412,8 +12647,20 @@
 				"parameters": []
 			},
 			{
+				"name": "JSON_OrderCoupon",
+				"parameters": [
+					"ordercoupon var"
+				]
+			},
+			{
 				"name": "JSON_OrderCouponList_Load",
 				"parameters": []
+			},
+			{
+				"name": "JSON_OrderDiscountTotal",
+				"parameters": [
+					"orderdiscounttotal var"
+				]
 			},
 			{
 				"name": "JSON_OrderDiscountTotalList_Load",
@@ -11500,7 +12747,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_PGR_RT",
+		"distro_path": "g.Module_Feature_MMLSK-PGR_RT",
 		"functions": [
 			{
 				"name": "Action_ApplyCouponToBasket",
@@ -11525,7 +12772,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_PGR_UT",
+		"distro_path": "g.Module_Feature_MMLSK-PGR_UT",
 		"functions": [
 			{
 				"name": "ResolvedPriceGroupAndModuleList_Load_Customer_Cached",
@@ -12508,11 +13755,25 @@
 					"pricegroup_count",
 					"discountsignature var"
 				]
+			},
+			{
+				"name": "Basket_Assign_Persistent_PriceGroup",
+				"parameters": [
+					"basket_id",
+					"pricegroup_name"
+				]
+			},
+			{
+				"name": "Basket_Remove_Persistent_PriceGroup",
+				"parameters": [
+					"basket_id",
+					"pricegroup_name"
+				]
 			}
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_PRV_AD",
+		"distro_path": "g.Module_Feature_MMLSK-PRV_AD",
 		"functions": [
 			{
 				"name": "PRV_ProvisionAsNeeded",
@@ -12598,24 +13859,6 @@
 			},
 			{
 				"name": "PRV_Action_Provision_Store_CustomerFields_Update",
-				"parameters": [
-					"provide_xml var"
-				]
-			},
-			{
-				"name": "PRV_Action_Provision_Store_Group_Add",
-				"parameters": [
-					"provide_xml var"
-				]
-			},
-			{
-				"name": "PRV_Action_Provision_Store_Group_Update",
-				"parameters": [
-					"provide_xml var"
-				]
-			},
-			{
-				"name": "PRV_Action_Provision_Store_Group_Delete",
 				"parameters": [
 					"provide_xml var"
 				]
@@ -13549,6 +14792,12 @@
 				]
 			},
 			{
+				"name": "PRV_Action_Provision_Store_Order_Delete",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
 				"name": "PRV_Order_Shipment_Tag_Combine",
 				"parameters": [
 					"provide_xml var",
@@ -13956,7 +15205,7 @@
 				]
 			},
 			{
-				"name": "PRV_Action_provision_Store_ProductImage_Replace_Type",
+				"name": "PRV_Action_Provision_Store_ProductImage_Replace_Type",
 				"parameters": [
 					"provide_xml var"
 				]
@@ -14082,6 +15331,12 @@
 			},
 			{
 				"name": "PRV_Action_Provision_Store_Skin_Add",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Store_Box_CustomField",
 				"parameters": [
 					"provide_xml var"
 				]
@@ -14340,6 +15595,12 @@
 				]
 			},
 			{
+				"name": "PRV_Action_Provision_Domain_TwoFactorSettings_Update",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
 				"name": "PRV_Action_Provision_Domain_StoreCreate",
 				"parameters": [
 					"provide_xml var"
@@ -14383,6 +15644,60 @@
 			},
 			{
 				"name": "PRV_Action_Provision_Domain_URISettings_Update",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_Group_Add",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_Group_Update",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_Group_Delete",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_GroupUser_Assign",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_GroupUser_Unassign",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_GroupImportModule_Assign",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_GroupImportModule_Unassign",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_GroupExportModule_Assign",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_GroupExportModule_Unassign",
 				"parameters": [
 					"provide_xml var"
 				]
@@ -14563,7 +15878,20 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_RPD_DB",
+		"distro_path": "g.Module_Feature_MMLSK-PRV_JSON",
+		"functions": [
+			{
+				"name": "JSON_Provision_Domain",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Provision_Store",
+				"parameters": []
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Feature_MMLSK-RPD_DB",
 		"functions": [
 			{
 				"name": "RPD_Store_Create",
@@ -14663,7 +15991,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_RPD_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-RPD_JSON",
 		"functions": [
 			{
 				"name": "JSON_RelatedProductIndex_Load_ID",
@@ -14684,7 +16012,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_RPT_DB",
+		"distro_path": "g.Module_Feature_MMLSK-RPT_DB",
 		"functions": [
 			{
 				"name": "RPT_CreateDataFiles",
@@ -14842,7 +16170,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_RPT_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-RPT_JSON",
 		"functions": [
 			{
 				"name": "JSON_ReportModule_Capabilities",
@@ -14925,7 +16253,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_SEA_DB",
+		"distro_path": "g.Module_Feature_MMLSK-SEA_DB",
 		"functions": [
 			{
 				"name": "SEA_Store_Create",
@@ -15011,7 +16339,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_SEA_UT",
+		"distro_path": "g.Module_Feature_MMLSK-SEA_UT",
 		"functions": [
 			{
 				"name": "ProductCustomFieldList_Load_Searchable",
@@ -15113,7 +16441,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_SHP_DB",
+		"distro_path": "g.Module_Feature_MMLSK-SHP_DB",
 		"functions": [
 			{
 				"name": "SHP_Store_Create",
@@ -15472,6 +16800,13 @@
 				]
 			},
 			{
+				"name": "Box_Load_Description",
+				"parameters": [
+					"descrip",
+					"box var"
+				]
+			},
+			{
 				"name": "BoxList_Load_Enabled",
 				"parameters": [
 					"boxes var"
@@ -15480,8 +16815,20 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_SHP_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-SHP_JSON",
 		"functions": [
+			{
+				"name": "JSON_ProductShippingRules",
+				"parameters": [
+					"productshippingrules var"
+				]
+			},
+			{
+				"name": "JSON_ProductShippingMethod",
+				"parameters": [
+					"productshippingmethod var"
+				]
+			},
 			{
 				"name": "ShippingMethodRulesList_Sort_Callback",
 				"parameters": [
@@ -15529,15 +16876,84 @@
 				]
 			},
 			{
+				"name": "JSON_Box_CustomFields_Initialize",
+				"parameters": [
+					"filterlist var",
+					"customfield_state var"
+				]
+			},
+			{
+				"name": "JSON_Box_CustomFields",
+				"parameters": [
+					"customfield_state var",
+					"box_id"
+				]
+			},
+			{
+				"name": "JSON_Box_CustomFields_With_View",
+				"parameters": [
+					"customfield_state var",
+					"box_id",
+					"view"
+				]
+			},
+			{
+				"name": "JSON_Box_CustomFields_With_Query",
+				"parameters": [
+					"query var",
+					"customfield_state var",
+					"box_id",
+					"view"
+				]
+			},
+			{
+				"name": "JSON_Box_CustomFields_Query",
+				"parameters": [
+					"query var",
+					"module var",
+					"code"
+				]
+			},
+			{
+				"name": "JSON_Box_CustomFields_Query_Filter",
+				"parameters": [
+					"query var",
+					"field_count var",
+					"module var",
+					"filter_name",
+					"filter_operator",
+					"filter_value",
+					"data var"
+				]
+			},
+			{
+				"name": "JSON_Box_CustomFields_Query_OrderBy",
+				"parameters": [
+					"query var",
+					"direction",
+					"module var",
+					"code"
+				]
+			},
+			{
+				"name": "JSON_Box_CustomFields_Query_Index",
+				"parameters": [
+					"loaded_record var",
+					"module var",
+					"box_id",
+					"code"
+				]
+			},
+			{
+				"name": "JSON_BoxCustomFieldList_Load",
+				"parameters": []
+			},
+			{
 				"name": "JSON_BoxList_Load_Query",
 				"parameters": []
 			},
 			{
 				"name": "JSON_BoxList_Load_Enabled",
-				"parameters": []
-			},
-			{
-				"name": "JSON_Box_Validate_Common",
 				"parameters": []
 			},
 			{
@@ -15569,7 +16985,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_SHP_UT",
+		"distro_path": "g.Module_Feature_MMLSK-SHP_UT",
 		"functions": [
 			{
 				"name": "HandlingCharge_CalculateAndApplyToBasket",
@@ -15877,7 +17293,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_STA_DB",
+		"distro_path": "g.Module_Feature_MMLSK-STA_DB",
 		"functions": [
 			{
 				"name": "STA_Store_Create",
@@ -16001,7 +17417,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_SUB_DB",
+		"distro_path": "g.Module_Feature_MMLSK-SUB_DB",
 		"functions": [
 			{
 				"name": "SUB_Store_Create",
@@ -16518,10 +17934,16 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_SUB_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-SUB_JSON",
 		"functions": [
 			{
 				"name": "JSON_ProductSubscriptionTerm",
+				"parameters": [
+					"productsubscriptionterm var"
+				]
+			},
+			{
+				"name": "JSON_ProductSubscriptionTerm_Load",
 				"parameters": [
 					"productsubscriptionterm var"
 				]
@@ -16571,6 +17993,14 @@
 				]
 			},
 			{
+				"name": "JSON_BaseSubscription_With_Query",
+				"parameters": [
+					"query var",
+					"ondemandcolumns var",
+					"customfield_state var"
+				]
+			},
+			{
 				"name": "JSON_BaseSubscriptionList_Filters",
 				"parameters": []
 			},
@@ -16605,6 +18035,17 @@
 				]
 			},
 			{
+				"name": "JSON_SubscriptionList_Load_Query_Search_Filter",
+				"parameters": [
+					"query var",
+					"field_count var",
+					"search_field",
+					"search_operator",
+					"search_value",
+					"data var"
+				]
+			},
+			{
 				"name": "JSON_SubscriptionList_CustomFields_Query_Filter",
 				"parameters": [
 					"query var",
@@ -16633,6 +18074,12 @@
 					"shipping var",
 					"subtotal var",
 					"total var"
+				]
+			},
+			{
+				"name": "JSON_Subscription_Load",
+				"parameters": [
+					"subscription var"
 				]
 			},
 			{
@@ -16699,7 +18146,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_SUB_RT",
+		"distro_path": "g.Module_Feature_MMLSK-SUB_RT",
 		"functions": [
 			{
 				"name": "Action_CustomerSubscription_Update",
@@ -16712,7 +18159,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_SUB_UT",
+		"distro_path": "g.Module_Feature_MMLSK-SUB_UT",
 		"functions": [
 			{
 				"name": "ProductSubscriptionTerm_Generate_Description",
@@ -16839,7 +18286,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_TUI_DB",
+		"distro_path": "g.Module_Feature_MMLSK-TUI_DB",
 		"functions": [
 			{
 				"name": "TUI_CreateDataFiles",
@@ -17996,7 +19443,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_TUI_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-TUI_JSON",
 		"functions": [
 			{
 				"name": "JSON_Page_Load",
@@ -18418,7 +19865,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_TUI_MGR",
+		"distro_path": "g.Module_Feature_MMLSK-TUI_MGR",
 		"functions": [
 			{
 				"name": "TemplateManager_Create_Item",
@@ -19206,7 +20653,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_TUI_UT",
+		"distro_path": "g.Module_Feature_MMLSK-TUI_UT",
 		"functions": [
 			{
 				"name": "SKIN_Directory_Delete",
@@ -19836,7 +21283,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_URI_DB",
+		"distro_path": "g.Module_Feature_MMLSK-URI_DB",
 		"functions": [
 			{
 				"name": "URI_CreateDataFiles",
@@ -20030,7 +21477,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_URI_JSON",
+		"distro_path": "g.Module_Feature_MMLSK-URI_JSON",
 		"functions": [
 			{
 				"name": "JSON_URI",
@@ -20203,7 +21650,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_URI_UT",
+		"distro_path": "g.Module_Feature_MMLSK-URI_UT",
 		"functions": [
 			{
 				"name": "URI_Generate_Default_Settings",
@@ -20514,7 +21961,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_USL_DB",
+		"distro_path": "g.Module_Feature_MMLSK-USL_DB",
 		"functions": [
 			{
 				"name": "Store_Create",
@@ -20688,7 +22135,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_USL_RT",
+		"distro_path": "g.Module_Feature_MMLSK-USL_RT",
 		"functions": [
 			{
 				"name": "Action_AddUpsoldProductToBasket",
@@ -20708,7 +22155,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_WSH_DB",
+		"distro_path": "g.Module_Feature_MMLSK-WSH_DB",
 		"functions": [
 			{
 				"name": "WSH_Store_Create",
@@ -21014,7 +22461,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_WSH_RT",
+		"distro_path": "g.Module_Feature_MMLSK-WSH_RT",
 		"functions": [
 			{
 				"name": "WishList_ValidateDestination",
@@ -21384,6 +22831,13 @@
 				"name": "Category_Decrement_AvailabilityGroupCount_All",
 				"parameters": [
 					"agrp_id"
+				]
+			},
+			{
+				"name": "CategoryList_Load_Product",
+				"parameters": [
+					"product_id",
+					"categories var"
 				]
 			},
 			{
@@ -21758,6 +23212,15 @@
 				"name": "Image_FindOrInsert_ExistingFile",
 				"parameters": [
 					"image_filepath",
+					"image var"
+				]
+			},
+			{
+				"name": "Image_FindOrInsert_ExistingFile_With_ImageDimensions",
+				"parameters": [
+					"image_filepath",
+					"width",
+					"height",
 					"image var"
 				]
 			},
@@ -22614,6 +24077,19 @@
 				"parameters": [
 					"order_id"
 				]
+			},
+			{
+				"name": "Order_Update_Total",
+				"parameters": [
+					"order var"
+				]
+			},
+			{
+				"name": "v56_Order_Update_Total",
+				"parameters": [
+					"order var",
+					"total"
+				]
 			}
 		]
 	},
@@ -23123,9 +24599,23 @@
 				]
 			},
 			{
+				"name": "ProductList_Load_SKU_WithRuntimeInventory",
+				"parameters": [
+					"sku",
+					"products var"
+				]
+			},
+			{
 				"name": "ProductAndBasketItemList_Load_Basket_WithRuntimeInventory",
 				"parameters": [
 					"basket_id",
+					"products var"
+				]
+			},
+			{
+				"name": "ProductList_Load_Related",
+				"parameters": [
+					"product_id",
 					"products var"
 				]
 			}
@@ -23731,14 +25221,6 @@
 				]
 			},
 			{
-				"name": "Runtime_Product_Read_CustomFields",
-				"parameters": [
-					"query var",
-					"view",
-					"product var"
-				]
-			},
-			{
 				"name": "Runtime_ProductList_Build_Query_Category",
 				"parameters": [
 					"query var",
@@ -23819,6 +25301,12 @@
 					"searchsettings var",
 					"customfields var",
 					"customfield_count"
+				]
+			},
+			{
+				"name": "Runtime_ProductList_Build_Query_Cache",
+				"parameters": [
+					"query var"
 				]
 			},
 			{
@@ -26357,13 +27845,13 @@
 				]
 			},
 			{
-				"name": "Order_Update_Total",
+				"name": "Order_Update_Total_LowLevel",
 				"parameters": [
 					"order var"
 				]
 			},
 			{
-				"name": "v56_Order_Update_Total",
+				"name": "v56_Order_Update_Total_LowLevel",
 				"parameters": [
 					"order var",
 					"total"
@@ -26866,6 +28354,13 @@
 			{
 				"name": "ProductList_Load_All",
 				"parameters": [
+					"products var"
+				]
+			},
+			{
+				"name": "ProductList_Load_SKU",
+				"parameters": [
+					"sku",
 					"products var"
 				]
 			},
@@ -27487,6 +28982,13 @@
 				]
 			},
 			{
+				"name": "Store_Load_Code_Cached",
+				"parameters": [
+					"code",
+					"store var"
+				]
+			},
+			{
 				"name": "Store_Load_Code",
 				"parameters": [
 					"code",
@@ -27503,6 +29005,20 @@
 				"name": "StoreList_Load_User",
 				"parameters": [
 					"user_id",
+					"stores var"
+				]
+			},
+			{
+				"name": "StoreList_Load_Manager_Cached",
+				"parameters": [
+					"manager_id",
+					"stores var"
+				]
+			},
+			{
+				"name": "StoreList_Load_Manager",
+				"parameters": [
+					"manager_id",
 					"stores var"
 				]
 			},
@@ -27763,24 +29279,6 @@
 				]
 			},
 			{
-				"name": "Element_TemplateBatchReport_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_TemplateBatchReport_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_TemplateBatchReport_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -27791,6 +29289,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -28303,6 +29817,89 @@
 				]
 			},
 			{
+				"name": "Module_Box_Fields",
+				"parameters": [
+					"module var",
+					"fields var"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Name",
+				"parameters": [
+					"module var",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Value",
+				"parameters": [
+					"module var",
+					"box_id",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Box_Set_Field",
+				"parameters": [
+					"module var",
+					"box_id",
+					"code",
+					"value"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Capabilities",
+				"parameters": [
+					"module var",
+					"code",
+					"capabilities var"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Query",
+				"parameters": [
+					"module var",
+					"query var",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Query_Search",
+				"parameters": [
+					"module var",
+					"query var",
+					"code",
+					"operator",
+					"value"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Query_OrderBy",
+				"parameters": [
+					"module var",
+					"query var",
+					"code",
+					"direction"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Query_OrderBy_LoadIndexRecord",
+				"parameters": [
+					"module var",
+					"loaded_record var",
+					"box_id",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Query_Value",
+				"parameters": [
+					"module var",
+					"view_name",
+					"code"
+				]
+			},
+			{
 				"name": "PackByQuantityBox_Read",
 				"parameters": [
 					"pbq var"
@@ -28530,6 +30127,89 @@
 				]
 			},
 			{
+				"name": "Module_Box_Fields",
+				"parameters": [
+					"module var",
+					"fields var"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Name",
+				"parameters": [
+					"module var",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Value",
+				"parameters": [
+					"module var",
+					"box_id",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Box_Set_Field",
+				"parameters": [
+					"module var",
+					"box_id",
+					"code",
+					"value"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Capabilities",
+				"parameters": [
+					"module var",
+					"code",
+					"capabilities var"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Query",
+				"parameters": [
+					"module var",
+					"query var",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Query_Search",
+				"parameters": [
+					"module var",
+					"query var",
+					"code",
+					"operator",
+					"value"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Query_OrderBy",
+				"parameters": [
+					"module var",
+					"query var",
+					"code",
+					"direction"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Query_OrderBy_LoadIndexRecord",
+				"parameters": [
+					"module var",
+					"loaded_record var",
+					"box_id",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Box_Field_Query_Value",
+				"parameters": [
+					"module var",
+					"view_name",
+					"code"
+				]
+			},
+			{
 				"name": "PackByWeightBox_Read",
 				"parameters": [
 					"pbw var"
@@ -28662,6 +30342,940 @@
 				"parameters": [
 					"package var",
 					"item var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-include-basket.mvc'",
+		"functions": [
+			{
+				"name": "ComponentModule_Tabs",
+				"parameters": [
+					"module var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Tabs",
+				"parameters": [
+					"module var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Validate",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Validate",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var"
+				]
+			},
+			{
+				"name": "ComponentModule_Update",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Update",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Content",
+				"parameters": [
+					"module var",
+					"item",
+					"tab",
+					"load_fields",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Content",
+				"parameters": [
+					"module var",
+					"item",
+					"tab",
+					"load_fields",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Defaults",
+				"parameters": [
+					"module var",
+					"settings var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Defaults",
+				"parameters": [
+					"module var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Page_Assign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Page_Assign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Page_Unassign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Page_Unassign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Initialize",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Initialize",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Prerender",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Prerender",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ComponentModule_Render_Start",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Render_Start",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ComponentModule_Render_End",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Render_End",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ComponentModule_Provision",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Provision",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Provision_Buttons",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Provision_Fields",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "BasketComponentModule_Provision_ImageTypes",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "DesignerComponentModule_Export",
+				"parameters": [
+					"module var",
+					"page var",
+					"output_root_option",
+					"output_dir",
+					"extfile_dir",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param",
+					"output_type var",
+					"start_data var",
+					"end_data var"
+				]
+			},
+			{
+				"name": "BasketDesignerComponentModule_Export",
+				"parameters": [
+					"module var",
+					"page var",
+					"output_root_option",
+					"output_dir",
+					"extfile_dir",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param",
+					"output_type var",
+					"start_data var",
+					"end_data var"
+				]
+			},
+			{
+				"name": "DesignerComponentModule_ImportProvisionLines",
+				"parameters": [
+					"module var",
+					"page_code",
+					"name",
+					"param",
+					"settings"
+				]
+			},
+			{
+				"name": "BasketDesignerComponentModule_ImportProvisionLines",
+				"parameters": [
+					"module var",
+					"page_code",
+					"name",
+					"param",
+					"settings"
+				]
+			},
+			{
+				"name": "SkinsComponentModule_Description",
+				"parameters": [
+					"module var",
+					"item var"
+				]
+			},
+			{
+				"name": "BasketSkinsComponentModule_Description",
+				"parameters": [
+					"module var",
+					"item var"
+				]
+			},
+			{
+				"name": "SkinsComponentModule_Export_Item",
+				"parameters": [
+					"module var",
+					"item",
+					"output var"
+				]
+			},
+			{
+				"name": "BasketSkinsComponentModule_Export_Item",
+				"parameters": [
+					"module var",
+					"item",
+					"output var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-include-imagetypes.mvc'",
+		"functions": [
+			{
+				"name": "ComponentModule_Tabs",
+				"parameters": [
+					"module var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Tabs",
+				"parameters": [
+					"module var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Validate",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Validate",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var"
+				]
+			},
+			{
+				"name": "ComponentModule_Update",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Update",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Content",
+				"parameters": [
+					"module var",
+					"item",
+					"tab",
+					"load_fields",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Content",
+				"parameters": [
+					"module var",
+					"item",
+					"tab",
+					"load_fields",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Defaults",
+				"parameters": [
+					"module var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Defaults",
+				"parameters": [
+					"module var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Page_Assign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Page_Assign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Page_Unassign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Page_Unassign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Initialize",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Initialize",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Prerender",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Prerender",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ComponentModule_Render_Start",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Render_Start",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ComponentModule_Render_End",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Render_End",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ComponentModule_Provision",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Provision",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ImageTypesComponentModule_Provision_ImageTypes",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "SkinsComponentModule_Description",
+				"parameters": [
+					"module var",
+					"item var"
+				]
+			},
+			{
+				"name": "ImageTypesSkinsComponentModule_Description",
+				"parameters": [
+					"module var",
+					"item var"
+				]
+			},
+			{
+				"name": "SkinsComponentModule_Export_Item",
+				"parameters": [
+					"module var",
+					"item",
+					"output var"
+				]
+			},
+			{
+				"name": "ImageTypesSkinsComponentModule_Export_Item",
+				"parameters": [
+					"module var",
+					"item",
+					"output var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-include-order.mvc'",
+		"functions": [
+			{
+				"name": "ComponentModule_Tabs",
+				"parameters": [
+					"module var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Tabs",
+				"parameters": [
+					"module var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Validate",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Validate",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var"
+				]
+			},
+			{
+				"name": "ComponentModule_Update",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Update",
+				"parameters": [
+					"module var",
+					"item",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Content",
+				"parameters": [
+					"module var",
+					"item",
+					"tab",
+					"load_fields",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Content",
+				"parameters": [
+					"module var",
+					"item",
+					"tab",
+					"load_fields",
+					"field_prefix",
+					"fields var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Defaults",
+				"parameters": [
+					"module var",
+					"settings var"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Defaults",
+				"parameters": [
+					"module var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Page_Assign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Page_Assign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Page_Unassign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Page_Unassign",
+				"parameters": [
+					"module var",
+					"page var",
+					"item",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Initialize",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Initialize",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Prerender",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Prerender",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ComponentModule_Render_Start",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Render_Start",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ComponentModule_Render_End",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Render_End",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
+				]
+			},
+			{
+				"name": "ComponentModule_Provision",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Provision",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Provision_Fields",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "OrderComponentModule_Provision_ImageTypes",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"settings var"
+				]
+			},
+			{
+				"name": "DesignerComponentModule_Export",
+				"parameters": [
+					"module var",
+					"page var",
+					"output_root_option",
+					"output_dir",
+					"extfile_dir",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param",
+					"output_type var",
+					"start_data var",
+					"end_data var"
+				]
+			},
+			{
+				"name": "OrderDesignerComponentModule_Export",
+				"parameters": [
+					"module var",
+					"page var",
+					"output_root_option",
+					"output_dir",
+					"extfile_dir",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param",
+					"output_type var",
+					"start_data var",
+					"end_data var"
+				]
+			},
+			{
+				"name": "DesignerComponentModule_ImportProvisionLines",
+				"parameters": [
+					"module var",
+					"page_code",
+					"name",
+					"param",
+					"settings"
+				]
+			},
+			{
+				"name": "OrderDesignerComponentModule_ImportProvisionLines",
+				"parameters": [
+					"module var",
+					"page_code",
+					"name",
+					"param",
+					"settings"
+				]
+			},
+			{
+				"name": "SkinsComponentModule_Description",
+				"parameters": [
+					"module var",
+					"item var"
+				]
+			},
+			{
+				"name": "OrderSkinsComponentModule_Description",
+				"parameters": [
+					"module var",
+					"item var"
+				]
+			},
+			{
+				"name": "SkinsComponentModule_Export_Item",
+				"parameters": [
+					"module var",
+					"item",
+					"output var"
+				]
+			},
+			{
+				"name": "OrderSkinsComponentModule_Export_Item",
+				"parameters": [
+					"module var",
+					"item",
+					"output var"
+				]
+			},
+			{
+				"name": "OrderComponent_Initialize_Payments",
+				"parameters": [
+					"order_id",
+					"destination var"
 				]
 			}
 		]
@@ -33145,24 +35759,6 @@
 				]
 			},
 			{
-				"name": "Element_CSSUIMessage_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_CSSUIMessage_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_CSSUIMessage_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -33173,6 +35769,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -35458,6 +38070,29 @@
 				]
 			},
 			{
+				"name": "Module_Clientside_Output_File",
+				"parameters": [
+					"module var",
+					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
 				"name": "Module_Provision_Store",
 				"parameters": [
 					"module var",
@@ -37152,940 +39787,6 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Root $ '/modules/component/cmp-include-basket.mvc'",
-		"functions": [
-			{
-				"name": "ComponentModule_Tabs",
-				"parameters": [
-					"module var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Tabs",
-				"parameters": [
-					"module var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Validate",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Validate",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var"
-				]
-			},
-			{
-				"name": "ComponentModule_Update",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Update",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Content",
-				"parameters": [
-					"module var",
-					"item",
-					"tab",
-					"load_fields",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Content",
-				"parameters": [
-					"module var",
-					"item",
-					"tab",
-					"load_fields",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Defaults",
-				"parameters": [
-					"module var",
-					"settings var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Defaults",
-				"parameters": [
-					"module var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Page_Assign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Page_Assign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Page_Unassign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Page_Unassign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Initialize",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Initialize",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Prerender",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Prerender",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ComponentModule_Render_Start",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Render_Start",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ComponentModule_Render_End",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Render_End",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ComponentModule_Provision",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Provision",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Provision_Buttons",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Provision_Fields",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "BasketComponentModule_Provision_ImageTypes",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "DesignerComponentModule_Export",
-				"parameters": [
-					"module var",
-					"page var",
-					"output_root_option",
-					"output_dir",
-					"extfile_dir",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param",
-					"output_type var",
-					"start_data var",
-					"end_data var"
-				]
-			},
-			{
-				"name": "BasketDesignerComponentModule_Export",
-				"parameters": [
-					"module var",
-					"page var",
-					"output_root_option",
-					"output_dir",
-					"extfile_dir",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param",
-					"output_type var",
-					"start_data var",
-					"end_data var"
-				]
-			},
-			{
-				"name": "DesignerComponentModule_ImportProvisionLines",
-				"parameters": [
-					"module var",
-					"page_code",
-					"name",
-					"param",
-					"settings"
-				]
-			},
-			{
-				"name": "BasketDesignerComponentModule_ImportProvisionLines",
-				"parameters": [
-					"module var",
-					"page_code",
-					"name",
-					"param",
-					"settings"
-				]
-			},
-			{
-				"name": "SkinsComponentModule_Description",
-				"parameters": [
-					"module var",
-					"item var"
-				]
-			},
-			{
-				"name": "BasketSkinsComponentModule_Description",
-				"parameters": [
-					"module var",
-					"item var"
-				]
-			},
-			{
-				"name": "SkinsComponentModule_Export_Item",
-				"parameters": [
-					"module var",
-					"item",
-					"output var"
-				]
-			},
-			{
-				"name": "BasketSkinsComponentModule_Export_Item",
-				"parameters": [
-					"module var",
-					"item",
-					"output var"
-				]
-			}
-		]
-	},
-	{
-		"distro_path": "g.Module_Root $ '/modules/component/cmp-include-imagetypes.mvc'",
-		"functions": [
-			{
-				"name": "ComponentModule_Tabs",
-				"parameters": [
-					"module var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Tabs",
-				"parameters": [
-					"module var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Validate",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Validate",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var"
-				]
-			},
-			{
-				"name": "ComponentModule_Update",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Update",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Content",
-				"parameters": [
-					"module var",
-					"item",
-					"tab",
-					"load_fields",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Content",
-				"parameters": [
-					"module var",
-					"item",
-					"tab",
-					"load_fields",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Defaults",
-				"parameters": [
-					"module var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Defaults",
-				"parameters": [
-					"module var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Page_Assign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Page_Assign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Page_Unassign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Page_Unassign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Initialize",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Initialize",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Prerender",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Prerender",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ComponentModule_Render_Start",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Render_Start",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ComponentModule_Render_End",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Render_End",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ComponentModule_Provision",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Provision",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ImageTypesComponentModule_Provision_ImageTypes",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "SkinsComponentModule_Description",
-				"parameters": [
-					"module var",
-					"item var"
-				]
-			},
-			{
-				"name": "ImageTypesSkinsComponentModule_Description",
-				"parameters": [
-					"module var",
-					"item var"
-				]
-			},
-			{
-				"name": "SkinsComponentModule_Export_Item",
-				"parameters": [
-					"module var",
-					"item",
-					"output var"
-				]
-			},
-			{
-				"name": "ImageTypesSkinsComponentModule_Export_Item",
-				"parameters": [
-					"module var",
-					"item",
-					"output var"
-				]
-			}
-		]
-	},
-	{
-		"distro_path": "g.Module_Root $ '/modules/component/cmp-include-order.mvc'",
-		"functions": [
-			{
-				"name": "ComponentModule_Tabs",
-				"parameters": [
-					"module var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Tabs",
-				"parameters": [
-					"module var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Validate",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Validate",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var"
-				]
-			},
-			{
-				"name": "ComponentModule_Update",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Update",
-				"parameters": [
-					"module var",
-					"item",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Content",
-				"parameters": [
-					"module var",
-					"item",
-					"tab",
-					"load_fields",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Content",
-				"parameters": [
-					"module var",
-					"item",
-					"tab",
-					"load_fields",
-					"field_prefix",
-					"fields var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Defaults",
-				"parameters": [
-					"module var",
-					"settings var"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Defaults",
-				"parameters": [
-					"module var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Page_Assign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Page_Assign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Page_Unassign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Page_Unassign",
-				"parameters": [
-					"module var",
-					"page var",
-					"item",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Initialize",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Initialize",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var"
-				]
-			},
-			{
-				"name": "ComponentModule_Prerender",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Prerender",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ComponentModule_Render_Start",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Render_Start",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ComponentModule_Render_End",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Render_End",
-				"parameters": [
-					"module var",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param"
-				]
-			},
-			{
-				"name": "ComponentModule_Provision",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Provision",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Provision_Fields",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "OrderComponentModule_Provision_ImageTypes",
-				"parameters": [
-					"module var",
-					"provide_xml var",
-					"settings var"
-				]
-			},
-			{
-				"name": "DesignerComponentModule_Export",
-				"parameters": [
-					"module var",
-					"page var",
-					"output_root_option",
-					"output_dir",
-					"extfile_dir",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param",
-					"output_type var",
-					"start_data var",
-					"end_data var"
-				]
-			},
-			{
-				"name": "OrderDesignerComponentModule_Export",
-				"parameters": [
-					"module var",
-					"page var",
-					"output_root_option",
-					"output_dir",
-					"extfile_dir",
-					"item",
-					"all_settings var",
-					"settings var",
-					"param",
-					"output_type var",
-					"start_data var",
-					"end_data var"
-				]
-			},
-			{
-				"name": "DesignerComponentModule_ImportProvisionLines",
-				"parameters": [
-					"module var",
-					"page_code",
-					"name",
-					"param",
-					"settings"
-				]
-			},
-			{
-				"name": "OrderDesignerComponentModule_ImportProvisionLines",
-				"parameters": [
-					"module var",
-					"page_code",
-					"name",
-					"param",
-					"settings"
-				]
-			},
-			{
-				"name": "SkinsComponentModule_Description",
-				"parameters": [
-					"module var",
-					"item var"
-				]
-			},
-			{
-				"name": "OrderSkinsComponentModule_Description",
-				"parameters": [
-					"module var",
-					"item var"
-				]
-			},
-			{
-				"name": "SkinsComponentModule_Export_Item",
-				"parameters": [
-					"module var",
-					"item",
-					"output var"
-				]
-			},
-			{
-				"name": "OrderSkinsComponentModule_Export_Item",
-				"parameters": [
-					"module var",
-					"item",
-					"output var"
-				]
-			},
-			{
-				"name": "OrderComponent_Initialize_Payments",
-				"parameters": [
-					"order_id",
-					"destination var"
-				]
-			}
-		]
-	},
-	{
 		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-adminorderfields.mvc'",
 		"functions": [
 			{
@@ -39122,24 +40823,6 @@
 				]
 			},
 			{
-				"name": "Element_HTTPHeader_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_HTTPHeader_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_HTTPHeader_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -39150,6 +40833,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -40808,24 +42507,6 @@
 				]
 			},
 			{
-				"name": "Element_META_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_META_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_META_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -40836,6 +42517,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -44251,6 +45948,118 @@
 				"parameters": [
 					"module var"
 				]
+			},
+			{
+				"name": "Module_Clientside_Output_File",
+				"parameters": [
+					"module var",
+					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/export/export_include.mvc'",
+		"functions": [
+			{
+				"name": "Buffer_Add_Field",
+				"parameters": [
+					"buffer var",
+					"delimiter",
+					"value"
+				]
+			},
+			{
+				"name": "Buffer_Add_Encoded",
+				"parameters": [
+					"buffer var",
+					"delimiter",
+					"value"
+				]
+			},
+			{
+				"name": "Field_Encode",
+				"parameters": [
+					"string",
+					"delimiter"
+				]
+			},
+			{
+				"name": "Miva_Fwriteln",
+				"parameters": [
+					"output",
+					"buffer"
+				]
+			},
+			{
+				"name": "Export_Product_CustomFields_BuildExecutionPlan",
+				"parameters": [
+					"customfield_list var",
+					"customfield_count",
+					"customfield_plan var",
+					"output_struct var",
+					"output_array var"
+				]
+			},
+			{
+				"name": "Export_Product_CustomFields",
+				"parameters": [
+					"customfield_plan var",
+					"product_id",
+					"output_struct var"
+				]
+			},
+			{
+				"name": "Export_Category_CustomFields_BuildExecutionPlan",
+				"parameters": [
+					"customfield_list var",
+					"customfield_count",
+					"customfield_plan var",
+					"output_struct var",
+					"output_array var"
+				]
+			},
+			{
+				"name": "Export_Category_CustomFields",
+				"parameters": [
+					"customfield_plan var",
+					"cat_id",
+					"output_struct var"
+				]
+			},
+			{
+				"name": "Export_Order_CustomFields_BuildExecutionPlan",
+				"parameters": [
+					"customfield_list var",
+					"customfield_count",
+					"customfield_plan var",
+					"output_struct var",
+					"output_array var"
+				]
+			},
+			{
+				"name": "Export_Order_CustomFields",
+				"parameters": [
+					"customfield_plan var",
+					"order_id",
+					"output_struct var"
+				]
 			}
 		]
 	},
@@ -44377,95 +46186,6 @@
 				"name": "ExportModule_Screen",
 				"parameters": [
 					"module var"
-				]
-			}
-		]
-	},
-	{
-		"distro_path": "g.Module_Root $ '/modules/export/export_include.mvc'",
-		"functions": [
-			{
-				"name": "Buffer_Add_Field",
-				"parameters": [
-					"buffer var",
-					"delimiter",
-					"value"
-				]
-			},
-			{
-				"name": "Buffer_Add_Encoded",
-				"parameters": [
-					"buffer var",
-					"delimiter",
-					"value"
-				]
-			},
-			{
-				"name": "Field_Encode",
-				"parameters": [
-					"string",
-					"delimiter"
-				]
-			},
-			{
-				"name": "Miva_Fwriteln",
-				"parameters": [
-					"output",
-					"buffer"
-				]
-			},
-			{
-				"name": "Export_Product_CustomFields_BuildExecutionPlan",
-				"parameters": [
-					"customfield_list var",
-					"customfield_count",
-					"customfield_plan var",
-					"output_struct var",
-					"output_array var"
-				]
-			},
-			{
-				"name": "Export_Product_CustomFields",
-				"parameters": [
-					"customfield_plan var",
-					"product_id",
-					"output_struct var"
-				]
-			},
-			{
-				"name": "Export_Category_CustomFields_BuildExecutionPlan",
-				"parameters": [
-					"customfield_list var",
-					"customfield_count",
-					"customfield_plan var",
-					"output_struct var",
-					"output_array var"
-				]
-			},
-			{
-				"name": "Export_Category_CustomFields",
-				"parameters": [
-					"customfield_plan var",
-					"cat_id",
-					"output_struct var"
-				]
-			},
-			{
-				"name": "Export_Order_CustomFields_BuildExecutionPlan",
-				"parameters": [
-					"customfield_list var",
-					"customfield_count",
-					"customfield_plan var",
-					"output_struct var",
-					"output_array var"
-				]
-			},
-			{
-				"name": "Export_Order_CustomFields",
-				"parameters": [
-					"customfield_plan var",
-					"order_id",
-					"output_struct var"
 				]
 			}
 		]
@@ -46540,24 +48260,6 @@
 				]
 			},
 			{
-				"name": "Element_TemplateOrderEmail_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_TemplateOrderEmail_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_TemplateOrderEmail_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -46568,6 +48270,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -47503,6 +49221,183 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/import/import_include.mvc'",
+		"functions": [
+			{
+				"name": "Validate_Code",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_Login",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_String",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_Email",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_Float",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_Currency",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_Integer",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_Integer_NonNegative",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_Int_Or_D",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_Bool",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_Bool_Or_D",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_List",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_TimeT",
+				"parameters": [
+					"session var",
+					"record var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Validate_Field",
+				"parameters": [
+					"session var",
+					"record var",
+					"run_data var",
+					"column var",
+					"required"
+				]
+			},
+			{
+				"name": "Set_Field_Default",
+				"parameters": [
+					"session var",
+					"record var",
+					"run_data var",
+					"column var"
+				]
+			},
+			{
+				"name": "Create_Columns_Present",
+				"parameters": [
+					"import var",
+					"columns_present var"
+				]
+			},
+			{
+				"name": "Add_Standard_Column",
+				"parameters": [
+					"columns var",
+					"field",
+					"name",
+					"header",
+					"required",
+					"default",
+					"validation"
+				]
+			},
+			{
+				"name": "Add_Custom_Field_Column",
+				"parameters": [
+					"columns var",
+					"field var",
+					"module var"
+				]
+			},
+			{
+				"name": "Add_Status_Field",
+				"parameters": [
+					"fields var",
+					"code",
+					"prompt",
+					"initial"
+				]
+			}
+		]
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/import/categoryimport.mvc'",
 		"functions": [
 			{
@@ -47811,6 +49706,29 @@
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
+				]
+			},
+			{
+				"name": "Module_Clientside_Output_File",
+				"parameters": [
+					"module var",
+					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -48567,183 +50485,6 @@
 					"record var",
 					"run_data var",
 					"existing_giftcertificate var"
-				]
-			}
-		]
-	},
-	{
-		"distro_path": "g.Module_Root $ '/modules/import/import_include.mvc'",
-		"functions": [
-			{
-				"name": "Validate_Code",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_Login",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_String",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_Email",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_Float",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_Currency",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_Integer",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_Integer_NonNegative",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_Int_Or_D",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_Bool",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_Bool_Or_D",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_List",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_TimeT",
-				"parameters": [
-					"session var",
-					"record var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Validate_Field",
-				"parameters": [
-					"session var",
-					"record var",
-					"run_data var",
-					"column var",
-					"required"
-				]
-			},
-			{
-				"name": "Set_Field_Default",
-				"parameters": [
-					"session var",
-					"record var",
-					"run_data var",
-					"column var"
-				]
-			},
-			{
-				"name": "Create_Columns_Present",
-				"parameters": [
-					"import var",
-					"columns_present var"
-				]
-			},
-			{
-				"name": "Add_Standard_Column",
-				"parameters": [
-					"columns var",
-					"field",
-					"name",
-					"header",
-					"required",
-					"default",
-					"validation"
-				]
-			},
-			{
-				"name": "Add_Custom_Field_Column",
-				"parameters": [
-					"columns var",
-					"field var",
-					"module var"
-				]
-			},
-			{
-				"name": "Add_Status_Field",
-				"parameters": [
-					"fields var",
-					"code",
-					"prompt",
-					"initial"
 				]
 			}
 		]
@@ -51210,24 +52951,6 @@
 				]
 			},
 			{
-				"name": "Element_MOD10_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_MOD10_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_MOD10_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -51238,6 +52961,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -53206,24 +54945,6 @@
 				]
 			},
 			{
-				"name": "Element_BaseUnit_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_BaseUnit_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_BaseUnit_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -53234,6 +54955,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -53767,24 +55504,6 @@
 				]
 			},
 			{
-				"name": "Element_FlatRate_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_FlatRate_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_FlatRate_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -53795,6 +55514,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -53870,24 +55605,6 @@
 				]
 			},
 			{
-				"name": "Element_MinUnit_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_MinUnit_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_MinUnit_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -53898,6 +55615,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -54580,24 +56313,6 @@
 				]
 			},
 			{
-				"name": "Element_PriceTableBasedShipping_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_PriceTableBasedShipping_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_PriceTableBasedShipping_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -54608,6 +56323,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -55124,24 +56855,6 @@
 				]
 			},
 			{
-				"name": "Element_QuantityBasedShipping_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_QuantityBasedShipping_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_QuantityBasedShipping_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -55152,6 +56865,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -55703,24 +57432,6 @@
 				]
 			},
 			{
-				"name": "Element_WeightTableBasedShipping_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_WeightTableBasedShipping_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_WeightTableBasedShipping_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -55731,6 +57442,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -56396,24 +58123,6 @@
 				]
 			},
 			{
-				"name": "Element_CanVat_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_CanVat_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_CanVat_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -56424,6 +58133,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -56989,24 +58714,6 @@
 				]
 			},
 			{
-				"name": "Element_EuropeanVAT_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_EuropeanVAT_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_EuropeanVAT_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -57017,6 +58724,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -57403,24 +59126,6 @@
 				]
 			},
 			{
-				"name": "Element_ShopTax_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_ShopTax_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_ShopTax_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -57431,6 +59136,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -57777,24 +59498,6 @@
 				]
 			},
 			{
-				"name": "Element_StateTax_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_StateTax_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_StateTax_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -57805,6 +59508,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -58195,24 +59914,6 @@
 				]
 			},
 			{
-				"name": "Element_GenericVAT_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_GenericVAT_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_GenericVAT_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -58223,6 +59924,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -59223,24 +60940,6 @@
 				]
 			},
 			{
-				"name": "Element_CombinationFacet_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_CombinationFacet_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_CombinationFacet_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -59251,6 +60950,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -60747,6 +62462,37 @@
 				]
 			},
 			{
+				"name": "Module_Notify_Order_Insert",
+				"parameters": [
+					"module var",
+					"order var"
+				]
+			},
+			{
+				"name": "Module_Notify_Order_Delete",
+				"parameters": [
+					"module var",
+					"order var"
+				]
+			},
+			{
+				"name": "Module_Notify_Order_StatusChange",
+				"parameters": [
+					"module var",
+					"original_status",
+					"order var"
+				]
+			},
+			{
+				"name": "Module_Notify_Order_BatchChange",
+				"parameters": [
+					"module var",
+					"order_count",
+					"original_orders var",
+					"orders var"
+				]
+			},
+			{
 				"name": "JSON_CustomFieldGroupList_Load_All",
 				"parameters": [
 					"module var"
@@ -60818,24 +62564,6 @@
 				]
 			},
 			{
-				"name": "Element_CustomField_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_CustomField_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_CustomField_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -60846,6 +62574,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -62143,24 +63887,6 @@
 				]
 			},
 			{
-				"name": "Element_ImageManagement_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_ImageManagement_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_ImageManagement_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -62171,6 +63897,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -62652,6 +64394,29 @@
 				"parameters": [
 					"module var"
 				]
+			},
+			{
+				"name": "Module_Clientside_Output_File",
+				"parameters": [
+					"module var",
+					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
 			}
 		]
 	},
@@ -62829,6 +64594,1125 @@
 				"name": "Convert_OrderShipment_Status",
 				"parameters": [
 					"status"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/orderworkflow.mvc'",
+		"functions": [
+			{
+				"name": "Module_Description",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_Install_Store",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_Upgrade_Store",
+				"parameters": [
+					"module var",
+					"version"
+				]
+			},
+			{
+				"name": "Module_Uninstall_Store",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "StoreUtilityModule_Action",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "StoreUtilityModule_LeftNavigation",
+				"parameters": [
+					"module var",
+					"indent"
+				]
+			},
+			{
+				"name": "StoreUtilityModule_Screen",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "StoreUtilityModule_Validate",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "StoreUtilityModule_Action_Privileges",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "StoreUtilityModule_Screen_Privileges",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_Utility_Tabs",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_Utility_Head",
+				"parameters": [
+					"module var",
+					"tab"
+				]
+			},
+			{
+				"name": "Module_Utility_Content",
+				"parameters": [
+					"module var",
+					"tab",
+					"load_fields"
+				]
+			},
+			{
+				"name": "Module_Utility_Validate",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_Utility_Update",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_Notify_Order_Insert",
+				"parameters": [
+					"module var",
+					"order var"
+				]
+			},
+			{
+				"name": "Module_Notify_Order_Delete",
+				"parameters": [
+					"module var",
+					"order var"
+				]
+			},
+			{
+				"name": "Module_Notify_Order_StatusChange",
+				"parameters": [
+					"module var",
+					"original_status",
+					"order var"
+				]
+			},
+			{
+				"name": "Module_Notify_Order_BatchChange",
+				"parameters": [
+					"module var",
+					"order_count",
+					"original_orders var",
+					"orders var"
+				]
+			},
+			{
+				"name": "Module_Notify_Order_TotalChange",
+				"parameters": [
+					"module var",
+					"original_total",
+					"order var"
+				]
+			},
+			{
+				"name": "Module_Notify_OrderShipment_Insert",
+				"parameters": [
+					"module var",
+					"ordershipment var"
+				]
+			},
+			{
+				"name": "Module_Notify_OrderShipment_Delete",
+				"parameters": [
+					"module var",
+					"ordershipment var"
+				]
+			},
+			{
+				"name": "Module_Notify_OrderShipment_StatusChange",
+				"parameters": [
+					"module var",
+					"ordershipment_count",
+					"original_ordershipments var",
+					"ordershipments var"
+				]
+			},
+			{
+				"name": "Module_Notify_OrderItem_Insert",
+				"parameters": [
+					"module var",
+					"orderitem var"
+				]
+			},
+			{
+				"name": "Module_Notify_OrderItem_Update",
+				"parameters": [
+					"module var",
+					"original_orderitem var",
+					"orderitem var"
+				]
+			},
+			{
+				"name": "Module_Notify_OrderItem_Delete",
+				"parameters": [
+					"module var",
+					"count",
+					"original_orderitems var",
+					"orderitems var"
+				]
+			},
+			{
+				"name": "Module_Notify_OrderItem_StatusChange",
+				"parameters": [
+					"module var",
+					"orderitem_count",
+					"original_orderitems var",
+					"orderitems var"
+				]
+			},
+			{
+				"name": "Module_Notify_OrderReturn_Insert",
+				"parameters": [
+					"module var",
+					"orderreturn var"
+				]
+			},
+			{
+				"name": "Module_Notify_OrderReturn_Delete",
+				"parameters": [
+					"module var",
+					"orderreturn var"
+				]
+			},
+			{
+				"name": "Module_Notify_OrderReturn_StatusChange",
+				"parameters": [
+					"module var",
+					"orderreturn_count",
+					"original_orderreturns var",
+					"orderreturns var"
+				]
+			},
+			{
+				"name": "ScheduledTaskModule_Capabilities",
+				"parameters": [
+					"module var",
+					"capabilities var"
+				]
+			},
+			{
+				"name": "ScheduledTaskModule_Operations",
+				"parameters": [
+					"module var",
+					"operations var"
+				]
+			},
+			{
+				"name": "ScheduledTaskModule_Fields",
+				"parameters": [
+					"module var",
+					"task var"
+				]
+			},
+			{
+				"name": "ScheduledTaskModule_Prompt",
+				"parameters": [
+					"module var",
+					"field_id"
+				]
+			},
+			{
+				"name": "ScheduledTaskModule_Field",
+				"parameters": [
+					"module var",
+					"field_id"
+				]
+			},
+			{
+				"name": "ScheduledTaskModule_Invalid",
+				"parameters": [
+					"module var",
+					"field_id"
+				]
+			},
+			{
+				"name": "ScheduledTaskModule_Validate",
+				"parameters": [
+					"module var",
+					"task var"
+				]
+			},
+			{
+				"name": "ScheduledTaskModule_Update",
+				"parameters": [
+					"module var",
+					"task var"
+				]
+			},
+			{
+				"name": "ScheduledTaskModule_Delete",
+				"parameters": [
+					"module var",
+					"task var"
+				]
+			},
+			{
+				"name": "ScheduledTaskModule_Execute",
+				"parameters": [
+					"module var",
+					"task var"
+				]
+			},
+			{
+				"name": "ScheduledTaskModule_Provision_Settings",
+				"parameters": [
+					"module var",
+					"task var",
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "Module_Clientside",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_Clientside_Output_File",
+				"parameters": [
+					"module var",
+					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_JSON",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_JSON_API",
+				"parameters": [
+					"module var",
+					"function"
+				]
+			},
+			{
+				"name": "JSON_API_QueueOrderList_Load_Query",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_API_OrderList_Acknowledge",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflow",
+				"parameters": [
+					"workflow var",
+					"ondemandcolumns var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflow_Load",
+				"parameters": [
+					"workflow var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflowTriggerList_Load_Workflow",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflowConditionList_Load_Workflow",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflowActionList_Load_Workflow",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflowActionList_Output_Workflow",
+				"parameters": [
+					"workflow var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflowList_Load_Query",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflowList_Load_Query_Filter",
+				"parameters": [
+					"query var",
+					"field_count var",
+					"filter_name",
+					"filter_value",
+					"data var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflowList_Delete",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflow_Validate_Condition",
+				"parameters": [
+					"prefix",
+					"input_conditions var",
+					"output var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflow_Validate_Triggers",
+				"parameters": [
+					"triggers var",
+					"trigger_count var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflow_Validate_Actions",
+				"parameters": [
+					"actions var",
+					"action_count var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflow_Insert",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflow_Update",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflow_Update_Enabled",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFWorkflow_Delete",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFQueue",
+				"parameters": [
+					"queue var"
+				]
+			},
+			{
+				"name": "JSON_OWFQueue_Load",
+				"parameters": [
+					"queue var"
+				]
+			},
+			{
+				"name": "JSON_OWFQueueList_Load_Query",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFQueueList_Delete",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFQueue_Insert",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFQueue_Update",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "JSON_OWFQueue_Delete",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_Provision_Store",
+				"parameters": [
+					"module var",
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "Module_Provision_Store_Queue_Add",
+				"parameters": [
+					"module var",
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "Module_Provision_Store_Queue_Delete",
+				"parameters": [
+					"module var",
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "Module_Provision_Store_Workflow_Add",
+				"parameters": [
+					"module var",
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "Module_Provision_Store_Workflow_Add_Condition",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"condition var"
+				]
+			},
+			{
+				"name": "Module_Provision_Store_Workflow_Add_Triggers",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"triggers var",
+					"trigger_count var"
+				]
+			},
+			{
+				"name": "Module_Provision_Store_Workflow_Add_Actions",
+				"parameters": [
+					"module var",
+					"provide_xml var",
+					"actions var",
+					"action_count var"
+				]
+			},
+			{
+				"name": "Module_Provision_Store_Workflow_Delete",
+				"parameters": [
+					"module var",
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "Module_Order_Fields",
+				"parameters": [
+					"module var",
+					"fields var"
+				]
+			},
+			{
+				"name": "Module_Order_Field_Name",
+				"parameters": [
+					"module var",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Order_Field_Value",
+				"parameters": [
+					"module var",
+					"order_id",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Order_Field_Value_Array",
+				"parameters": [
+					"module var",
+					"order_id",
+					"code",
+					"values var"
+				]
+			},
+			{
+				"name": "Module_Order_Set_Field",
+				"parameters": [
+					"module var",
+					"order_id",
+					"code",
+					"value"
+				]
+			},
+			{
+				"name": "Module_Order_Set_Field_Array",
+				"parameters": [
+					"module var",
+					"order_id",
+					"code",
+					"values var",
+					"value_count"
+				]
+			},
+			{
+				"name": "Module_Order_Field_Capabilities",
+				"parameters": [
+					"module var",
+					"code",
+					"capabilities var"
+				]
+			},
+			{
+				"name": "Module_Order_Field_Query",
+				"parameters": [
+					"module var",
+					"query var",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Order_Field_Query_Search",
+				"parameters": [
+					"module var",
+					"query var",
+					"code",
+					"operator",
+					"value"
+				]
+			},
+			{
+				"name": "Module_Order_Field_Query_OrderBy",
+				"parameters": [
+					"module var",
+					"query var",
+					"code",
+					"direction"
+				]
+			},
+			{
+				"name": "Module_Order_Field_Query_OrderBy_LoadIndexRecord",
+				"parameters": [
+					"module var",
+					"loaded_record var",
+					"order_id",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Order_Field_Query_Value",
+				"parameters": [
+					"module var",
+					"view_name",
+					"code"
+				]
+			},
+			{
+				"name": "Module_Order_Field_Choices",
+				"parameters": [
+					"module var",
+					"code",
+					"choices var"
+				]
+			},
+			{
+				"name": "Module_Order_Fields_Mapped",
+				"parameters": [
+					"module var",
+					"order_id",
+					"field_map var",
+					"output_fields var"
+				]
+			},
+			{
+				"name": "Module_Order_Head",
+				"parameters": [
+					"module var",
+					"tab",
+					"order var"
+				]
+			},
+			{
+				"name": "Module_Order_Tabs",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_Order_Content",
+				"parameters": [
+					"module var",
+					"tab",
+					"load_fields"
+				]
+			},
+			{
+				"name": "Module_Order_Validate",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_Order_Update",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Module_Order_Delete_Order",
+				"parameters": [
+					"module var",
+					"order var"
+				]
+			},
+			{
+				"name": "QueueList_Load_Default",
+				"parameters": [
+					"queues var"
+				]
+			},
+			{
+				"name": "WorkflowList_Load_Default",
+				"parameters": [
+					"workflows var"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Apply",
+				"parameters": [
+					"workflow var",
+					"data var"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Check_Condition",
+				"parameters": [
+					"condition var",
+					"group_operator",
+					"data var"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Check_Condition_Expression",
+				"parameters": [
+					"operator",
+					"value var",
+					"comparison_value var"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Check_Condition_ValueFromPath",
+				"parameters": [
+					"data var",
+					"field_path_string"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Apply_Action",
+				"parameters": [
+					"workflow var",
+					"action var",
+					"data var"
+				]
+			},
+			{
+				"name": "OWFOrder_Load_ID",
+				"parameters": [
+					"order_id",
+					"data var"
+				]
+			},
+			{
+				"name": "OWFCustomFields_Generic_Query_Field_Alias",
+				"parameters": [
+					"queue var"
+				]
+			},
+			{
+				"name": "OWFCustomFields_Generic_Data_Order",
+				"parameters": [
+					"code",
+					"data var"
+				]
+			},
+			{
+				"name": "OWFCustomFields_Generic_Alias_In_Use",
+				"parameters": [
+					"query var",
+					"alias"
+				]
+			},
+			{
+				"name": "OWFCustomFields_Generic_Query",
+				"parameters": [
+					"data var",
+					"query var",
+					"code"
+				]
+			},
+			{
+				"name": "OWFQueue_Read",
+				"parameters": [
+					"queue var"
+				]
+			},
+			{
+				"name": "OWFQueue_Insert",
+				"parameters": [
+					"queue var"
+				]
+			},
+			{
+				"name": "OWFQueue_Update",
+				"parameters": [
+					"queue var"
+				]
+			},
+			{
+				"name": "OWFQueue_Delete",
+				"parameters": [
+					"queue var"
+				]
+			},
+			{
+				"name": "OWFQueue_Delete_ID",
+				"parameters": [
+					"id"
+				]
+			},
+			{
+				"name": "OWFQueue_Load_ID",
+				"parameters": [
+					"id",
+					"queue var"
+				]
+			},
+			{
+				"name": "OWFQueue_Load_Code_Cached",
+				"parameters": [
+					"code",
+					"queue var"
+				]
+			},
+			{
+				"name": "OWFQueue_Load_Code",
+				"parameters": [
+					"code",
+					"queue var"
+				]
+			},
+			{
+				"name": "OWFQueueList_Load_All",
+				"parameters": [
+					"queues var"
+				]
+			},
+			{
+				"name": "OWFQueueList_Load_Order",
+				"parameters": [
+					"order_id",
+					"queues var"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Read",
+				"parameters": [
+					"workflow var"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Insert",
+				"parameters": [
+					"workflow var"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Update",
+				"parameters": [
+					"workflow var"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Delete",
+				"parameters": [
+					"workflow var"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Delete_ID",
+				"parameters": [
+					"id"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Load_ID",
+				"parameters": [
+					"id",
+					"workflow var"
+				]
+			},
+			{
+				"name": "OWFWorkflow_Load_Name",
+				"parameters": [
+					"name",
+					"workflow var"
+				]
+			},
+			{
+				"name": "OWFWorkflowList_Load_All",
+				"parameters": [
+					"workflows var"
+				]
+			},
+			{
+				"name": "OWFWorkflowList_Load_Trigger",
+				"parameters": [
+					"trigger",
+					"workflows var"
+				]
+			},
+			{
+				"name": "OWFWorkflowTrigger_Read",
+				"parameters": [
+					"workflowtrigger var"
+				]
+			},
+			{
+				"name": "OWFWorkflowTrigger_Insert",
+				"parameters": [
+					"flow_id",
+					"trig_code"
+				]
+			},
+			{
+				"name": "OWFWorkflowTrigger_Delete",
+				"parameters": [
+					"flow_id",
+					"trig_code"
+				]
+			},
+			{
+				"name": "OWFWorkflowTrigger_Load",
+				"parameters": [
+					"flow_id",
+					"trig_code",
+					"workflowtrigger var"
+				]
+			},
+			{
+				"name": "OWFWorkflowTriggerList_Load_Workflow",
+				"parameters": [
+					"flow_id",
+					"workflowtriggerlist var"
+				]
+			},
+			{
+				"name": "OWFWorkflowTriggerList_Load_Trigger",
+				"parameters": [
+					"trig_code",
+					"workflowtriggerlist var"
+				]
+			},
+			{
+				"name": "OWFWorkflowTrigger_Delete_All_Workflow",
+				"parameters": [
+					"flow_id"
+				]
+			},
+			{
+				"name": "OWFWorkflowTrigger_Delete_All_Trigger",
+				"parameters": [
+					"trig_code"
+				]
+			},
+			{
+				"name": "OWFWorkflowAction_Read",
+				"parameters": [
+					"action var"
+				]
+			},
+			{
+				"name": "OWFWorkflowAction_Insert",
+				"parameters": [
+					"action var"
+				]
+			},
+			{
+				"name": "OWFWorkflowAction_Update",
+				"parameters": [
+					"action var"
+				]
+			},
+			{
+				"name": "OWFWorkflowAction_Delete_ID",
+				"parameters": [
+					"id"
+				]
+			},
+			{
+				"name": "OWFWorkflowAction_Delete_All_Workflow",
+				"parameters": [
+					"flow_id"
+				]
+			},
+			{
+				"name": "OWFWorkflowAction_Load_ID",
+				"parameters": [
+					"id",
+					"action var"
+				]
+			},
+			{
+				"name": "OWFWorkflowActionList_Load_Workflow",
+				"parameters": [
+					"flow_id",
+					"actions var"
+				]
+			},
+			{
+				"name": "OWFQueueXOrder_Read",
+				"parameters": [
+					"queuexorder var"
+				]
+			},
+			{
+				"name": "OWFQueueXOrder_Insert",
+				"parameters": [
+					"queue_id",
+					"order_id"
+				]
+			},
+			{
+				"name": "OWFQueueXOrder_Delete",
+				"parameters": [
+					"queue_id",
+					"order_id"
+				]
+			},
+			{
+				"name": "OWFQueueXOrder_Load",
+				"parameters": [
+					"queue_id",
+					"order_id",
+					"queuexorder var"
+				]
+			},
+			{
+				"name": "OWFQueueXOrderList_Load_Order",
+				"parameters": [
+					"order_id",
+					"queuexorderlist var"
+				]
+			},
+			{
+				"name": "OWFQueueXOrder_Delete_All_Queue",
+				"parameters": [
+					"queue_id"
+				]
+			},
+			{
+				"name": "OWFQueueXOrder_Delete_All_Order",
+				"parameters": [
+					"order_id"
+				]
+			},
+			{
+				"name": "OWFWaitQueue_Read",
+				"parameters": [
+					"entry var"
+				]
+			},
+			{
+				"name": "OWFWaitQueue_Insert",
+				"parameters": [
+					"entry var"
+				]
+			},
+			{
+				"name": "OWFWaitQueue_Update",
+				"parameters": [
+					"entry var"
+				]
+			},
+			{
+				"name": "OWFWaitQueue_Delete",
+				"parameters": [
+					"flow_id",
+					"order_id"
+				]
+			},
+			{
+				"name": "OWFWaitQueue_Delete_All_Workflow_ID",
+				"parameters": [
+					"flow_id"
+				]
+			},
+			{
+				"name": "OWFWaitQueue_Delete_All_Order_ID",
+				"parameters": [
+					"order_id"
+				]
+			},
+			{
+				"name": "OWFWaitQueueList_Load_All",
+				"parameters": [
+					"entries var"
+				]
+			},
+			{
+				"name": "OWFWaitQueueList_Load_Pending",
+				"parameters": [
+					"nextcheck",
+					"entries var"
 				]
 			}
 		]
@@ -63064,24 +65948,6 @@
 				]
 			},
 			{
-				"name": "Element_ReviewBaskets_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_ReviewBaskets_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_ReviewBaskets_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -63092,6 +65958,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -63252,24 +66134,6 @@
 				]
 			},
 			{
-				"name": "Element_ShopAsCustomer_JavaScript_Combined_Begin",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_ShopAsCustomer_JavaScript_Combined",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
-				"name": "Element_ShopAsCustomer_JavaScript_Combined_End",
-				"parameters": [
-					"module var"
-				]
-			},
-			{
 				"name": "Module_Clientside",
 				"parameters": [
 					"module var"
@@ -63280,6 +66144,22 @@
 				"parameters": [
 					"module var",
 					"filename"
+				]
+			},
+			{
+				"name": "Module_Clientside_File_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
+				]
+			},
+			{
+				"name": "Module_Clientside_Combined_Integrity",
+				"parameters": [
+					"module var",
+					"filename",
+					"minified"
 				]
 			},
 			{
@@ -64045,6 +66925,54 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/batch/templatebatchreports/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_TemplateBatchReport_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_TemplateBatchReport_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_TemplateBatchReport_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/batch/templatebatchreports/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/batch/templatebatchreports/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_TemplateBatchReport_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_TemplateBatchReport_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/batch/templatebatchreports/integrity.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/batch/templatebatchreports/list.mvc'",
 		"functions": [
 			{
@@ -64072,6 +67000,10 @@
 				]
 			}
 		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/batch/templatebatchreports/output.mvc'",
+		"functions": []
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/fulfill/templateorderemails/addeditdialog.mvc'",
@@ -64103,6 +67035,54 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/fulfill/templateorderemails/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_TemplateOrderEmail_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_TemplateOrderEmail_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_TemplateOrderEmail_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/fulfill/templateorderemails/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/fulfill/templateorderemails/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_TemplateOrderEmail_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_TemplateOrderEmail_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/fulfill/templateorderemails/integrity.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/fulfill/templateorderemails/list.mvc'",
 		"functions": [
 			{
@@ -64132,6 +67112,37 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/fulfill/templateorderemails/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/baseunit/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_BaseUnit_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_BaseUnit_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_BaseUnit_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/baseunit/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/baseunit/functions.mvc'",
 		"functions": [
 			{
@@ -64147,6 +67158,10 @@
 				]
 			}
 		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/baseunit/integrity.mvc'",
+		"functions": []
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/baseunit/methodlist.mvc'",
@@ -64178,6 +67193,37 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/baseunit/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/flatrate/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_FlatRate_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_FlatRate_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_FlatRate_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/flatrate/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/flatrate/functions.mvc'",
 		"functions": [
 			{
@@ -64193,6 +67239,10 @@
 				]
 			}
 		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/flatrate/integrity.mvc'",
+		"functions": []
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/flatrate/list.mvc'",
@@ -64224,6 +67274,37 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/flatrate/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/minunit/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_MinUnit_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_MinUnit_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_MinUnit_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/minunit/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/minunit/functions.mvc'",
 		"functions": [
 			{
@@ -64239,6 +67320,10 @@
 				]
 			}
 		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/minunit/integrity.mvc'",
+		"functions": []
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/minunit/methodlist.mvc'",
@@ -64270,6 +67355,10 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/minunit/output.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/ptbship/chargelist.mvc'",
 		"functions": [
 			{
@@ -64299,6 +67388,33 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/ptbship/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_PriceTableBasedShipping_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_PriceTableBasedShipping_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_PriceTableBasedShipping_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/ptbship/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/ptbship/functions.mvc'",
 		"functions": [
 			{
@@ -64314,6 +67430,10 @@
 				]
 			}
 		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/ptbship/integrity.mvc'",
+		"functions": []
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/ptbship/list.mvc'",
@@ -64345,6 +67465,37 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/ptbship/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/qship/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_QuantityBasedShipping_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_QuantityBasedShipping_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_QuantityBasedShipping_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/qship/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/qship/functions.mvc'",
 		"functions": [
 			{
@@ -64360,6 +67511,10 @@
 				]
 			}
 		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/qship/integrity.mvc'",
+		"functions": []
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/qship/list.mvc'",
@@ -64391,6 +67546,10 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/qship/output.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/wtbship/chargelist.mvc'",
 		"functions": [
 			{
@@ -64420,6 +67579,33 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/wtbship/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_WeightTableBasedShipping_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_WeightTableBasedShipping_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_WeightTableBasedShipping_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/wtbship/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/wtbship/functions.mvc'",
 		"functions": [
 			{
@@ -64435,6 +67621,10 @@
 				]
 			}
 		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/wtbship/integrity.mvc'",
+		"functions": []
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/shipping/wtbship/list.mvc'",
@@ -64464,6 +67654,444 @@
 				]
 			}
 		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/shipping/wtbship/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/canvat/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_CanVat_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CanVat_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CanVat_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/canvat/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/canvat/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_CanVat_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CanVat_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/canvat/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/canvat/list.mvc'",
+		"functions": [
+			{
+				"name": "Element_CanVatList_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CanVatList_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CanVatList_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CanVatList_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/canvat/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/devat/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_EuropeanVAT_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_EuropeanVAT_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_EuropeanVAT_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/devat/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/devat/countrylist.mvc'",
+		"functions": [
+			{
+				"name": "Element_EuropeanVATCountryList_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_EuropeanVATCountryList_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_EuropeanVATCountryList_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_EuropeanVATCountryList_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/devat/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_EuropeanVAT_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_EuropeanVAT_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/devat/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/devat/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/devat/ratelist.mvc'",
+		"functions": [
+			{
+				"name": "Element_EuropeanVATRateList_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_EuropeanVATRateList_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_EuropeanVATRateList_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_EuropeanVATRateList_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/shoptax/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_ShopTax_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ShopTax_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ShopTax_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/shoptax/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/shoptax/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_ShopTax_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ShopTax_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/shoptax/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/shoptax/list.mvc'",
+		"functions": [
+			{
+				"name": "Element_ShopTaxRateList_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ShopTaxRateList_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ShopTaxRateList_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ShopTaxRateList_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/shoptax/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/statetax/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_StateTax_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_StateTax_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_StateTax_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/statetax/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/statetax/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_StateTax_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_StateTax_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/statetax/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/statetax/list.mvc'",
+		"functions": [
+			{
+				"name": "Element_StateTaxStateList_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_StateTaxStateList_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_StateTaxStateList_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_StateTaxStateList_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/statetax/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/vat/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_GenericVAT_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_GenericVAT_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_GenericVAT_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/vat/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/vat/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_GenericVAT_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_GenericVAT_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/vat/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/vat/list.mvc'",
+		"functions": [
+			{
+				"name": "Element_GenericVATList_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_GenericVATList_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_GenericVATList_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_GenericVATList_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/tax/vat/output.mvc'",
+		"functions": []
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/util/combofacets/combinationfacetlist.mvc'",
@@ -64524,6 +68152,33 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/util/combofacets/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_CombinationFacet_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CombinationFacet_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CombinationFacet_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/combofacets/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/util/combofacets/functions.mvc'",
 		"functions": [
 			{
@@ -64539,6 +68194,41 @@
 				]
 			}
 		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/combofacets/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/combofacets/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/customfld/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_CustomField_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CustomField_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CustomField_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/customfld/combined_integrity.mvc'",
+		"functions": []
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/util/customfld/customfieldaddeditdialog.mvc'",
@@ -64628,6 +68318,41 @@
 		]
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/util/customfld/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/customfld/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/imagemanagement/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_ImageManagement_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ImageManagement_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ImageManagement_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/imagemanagement/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/util/imagemanagement/imagedialog.mvc'",
 		"functions": [
 			{
@@ -64684,6 +68409,49 @@
 				]
 			}
 		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/imagemanagement/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/imagemanagement/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/shopascustomer/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_ShopAsCustomer_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ShopAsCustomer_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ShopAsCustomer_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/shopascustomer/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/shopascustomer/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/shopascustomer/output.mvc'",
+		"functions": []
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/util/shopascustomer/shopascustomerdialog.mvc'",

@@ -720,6 +720,7 @@
 		"callvalue",
 		"content_length",
 		"content_type",
+		"content_data",
 		"document_root",
 		"documenturl",
 		"dyn_stm_mon",
