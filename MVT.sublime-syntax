@@ -14,6 +14,10 @@ contexts:
       push: "Packages/HTML/HTML.sublime-syntax"
       with_prototype:
 
+        # AngularJS
+        - include: angular-expression
+        - include: angular-attributes
+
         # Comments
         - match: (?i)<mvt:comment>
           push: comments
@@ -24,6 +28,40 @@ contexts:
         # Entities
         - include: entities
 
+  # =-======================== Angular ========================-= #
+  angular-expression:
+    - match: "{{"
+      embed: scope:source.js
+      embed_scope: source.js.embedded.html
+      escape: "}}"
+
+  angular-attributes:
+    - match: (?i)(?<=[^=])\b((data\-)?ng\-[a-z-]+)\s*(=?)\s*(")
+      captures:
+        1: entity.other.attribute-name.angularjs
+        2: entity.other.attribute-name.angularjs
+        3: punctuation.separator.key-value.angularjs
+        4: attribute-value.angularjs punctuation.definition.string.begin.angularjs
+      push:
+        - match: (")
+          scope: attribute-value.angularjs punctuation.definition.string.end.angularjs
+          pop: true
+        - match: (?=\S)
+          embed: scope:source.js
+          embed_scope: source.js.embedded.html
+          escape: (?=")
+        
+          # embed: scope:source.js
+          # embed_scope: source.js.embedded.html
+          # escape: ([^\]")
+      # push:
+      #   - match: (")
+      #     scope: punctuation.definition.string.begin.html
+      #     embed: scope:source.js
+      #     embed_scope: source.js.embedded.html
+      #     escape: ([^\]")
+            
+        
 
   # =-======================== Comments ========================-= #
   comments:
