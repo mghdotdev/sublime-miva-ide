@@ -6330,7 +6330,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-AFF_DB",
+		"distro_path": "g.Module_Feature_AFF_DB",
 		"functions": [
 			{
 				"name": "AFF_Create_Data_Files",
@@ -6742,7 +6742,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-AGR_DB",
+		"distro_path": "g.Module_Feature_AGR_DB",
 		"functions": [
 			{
 				"name": "AGR_Store_Create",
@@ -7180,7 +7180,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-ATT_DB",
+		"distro_path": "g.Module_Feature_ATT_DB",
 		"functions": [
 			{
 				"name": "ATT_Create_Data_Files",
@@ -7495,7 +7495,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-ATT_JSON",
+		"distro_path": "g.Module_Feature_ATT_JSON",
 		"functions": [
 			{
 				"name": "JSON_AttributeTemplate",
@@ -7607,7 +7607,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-CUS_DB",
+		"distro_path": "g.Module_Feature_CUS_DB",
 		"functions": [
 			{
 				"name": "CUS_Create_Data_Files",
@@ -8235,7 +8235,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-CUS_JSON",
+		"distro_path": "g.Module_Feature_CUS_JSON",
 		"functions": [
 			{
 				"name": "JSON_Customer",
@@ -8485,7 +8485,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-CUS_RT",
+		"distro_path": "g.Module_Feature_CUS_RT",
 		"functions": [
 			{
 				"name": "Customer_Validate",
@@ -8571,7 +8571,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-CUS_UT",
+		"distro_path": "g.Module_Feature_CUS_UT",
 		"functions": [
 			{
 				"name": "Customer_Password_Encrypted",
@@ -8637,7 +8637,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-DDL_DB",
+		"distro_path": "g.Module_Feature_DDL_DB",
 		"functions": [
 			{
 				"name": "DDL_Store_Create",
@@ -8894,7 +8894,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-DDL_JSON",
+		"distro_path": "g.Module_Feature_DDL_JSON",
 		"functions": [
 			{
 				"name": "JSON_DigitalDownload",
@@ -8962,7 +8962,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-DDL_RT",
+		"distro_path": "g.Module_Feature_DDL_RT",
 		"functions": [
 			{
 				"name": "DigitalDownload_DownloadFile",
@@ -8971,7 +8971,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-DDL_UT",
+		"distro_path": "g.Module_Feature_DDL_UT",
 		"functions": [
 			{
 				"name": "DigitalDownload_Redirect",
@@ -9177,7 +9177,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-FCT_DB",
+		"distro_path": "g.Module_Feature_FCT_DB",
 		"functions": [
 			{
 				"name": "FCT_Store_Create",
@@ -9382,7 +9382,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-FCT_JSON",
+		"distro_path": "g.Module_Feature_FCT_JSON",
 		"functions": [
 			{
 				"name": "FacetRulesList_Sort_Callback",
@@ -9443,7 +9443,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-FCT_UT",
+		"distro_path": "g.Module_Feature_FCT_UT",
 		"functions": [
 			{
 				"name": "FacetList_Load_All_Cached",
@@ -9512,7 +9512,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-GFT_DB",
+		"distro_path": "g.Module_Feature_GFT_DB",
 		"functions": [
 			{
 				"name": "GFT_Store_Create",
@@ -9656,7 +9656,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-GFT_JSON",
+		"distro_path": "g.Module_Feature_GFT_JSON",
 		"functions": [
 			{
 				"name": "JSON_GiftCertificate",
@@ -9705,7 +9705,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-GFT_RT",
+		"distro_path": "g.Module_Feature_GFT_RT",
 		"functions": [
 			{
 				"name": "Action_RedeemGiftCertificate",
@@ -9720,7 +9720,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-GFT_UT",
+		"distro_path": "g.Module_Feature_GFT_UT",
 		"functions": [
 			{
 				"name": "GiftCertificate_Generate_Code",
@@ -9748,7 +9748,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-INV_DB",
+		"distro_path": "g.Module_Feature_INV_DB",
 		"functions": [
 			{
 				"name": "INV_Create_Data_Files",
@@ -9893,7 +9893,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-INV_JSON",
+		"distro_path": "g.Module_Feature_INV_JSON",
 		"functions": [
 			{
 				"name": "JSON_InventoryProductSettings_Update",
@@ -9902,7 +9902,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-INV_RT",
+		"distro_path": "g.Module_Feature_INV_RT",
 		"functions": [
 			{
 				"name": "Runtime_Product_InventoryFields_Read",
@@ -10043,7 +10043,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-PAY_DB",
+		"distro_path": "g.Module_Feature_PAY_DB",
 		"functions": [
 			{
 				"name": "PAY_Store_Create",
@@ -10569,7 +10569,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-PAY_JSON",
+		"distro_path": "g.Module_Feature_PAY_JSON",
 		"functions": [
 			{
 				"name": "JSON_PaymentModule_Capabilities",
@@ -10706,7 +10706,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-PAY_UT",
+		"distro_path": "g.Module_Feature_PAY_UT",
 		"functions": [
 			{
 				"name": "PaymentMethodList_Load_Order_Authorize",
@@ -11172,7 +11172,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-PGR_DB",
+		"distro_path": "g.Module_Feature_PGR_DB",
 		"functions": [
 			{
 				"name": "PGR_Store_Create",
@@ -12439,7 +12439,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-PGR_JSON",
+		"distro_path": "g.Module_Feature_PGR_JSON",
 		"functions": [
 			{
 				"name": "JSON_DiscountModule_Capabilities",
@@ -12747,7 +12747,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-PGR_RT",
+		"distro_path": "g.Module_Feature_PGR_RT",
 		"functions": [
 			{
 				"name": "Action_ApplyCouponToBasket",
@@ -12772,7 +12772,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-PGR_UT",
+		"distro_path": "g.Module_Feature_PGR_UT",
 		"functions": [
 			{
 				"name": "ResolvedPriceGroupAndModuleList_Load_Customer_Cached",
@@ -13773,7 +13773,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-PRV_AD",
+		"distro_path": "g.Module_Feature_PRV_AD",
 		"functions": [
 			{
 				"name": "PRV_ProvisionAsNeeded",
@@ -15878,7 +15878,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-PRV_JSON",
+		"distro_path": "g.Module_Feature_PRV_JSON",
 		"functions": [
 			{
 				"name": "JSON_Provision_Domain",
@@ -15891,7 +15891,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-RPD_DB",
+		"distro_path": "g.Module_Feature_RPD_DB",
 		"functions": [
 			{
 				"name": "RPD_Store_Create",
@@ -15991,7 +15991,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-RPD_JSON",
+		"distro_path": "g.Module_Feature_RPD_JSON",
 		"functions": [
 			{
 				"name": "JSON_RelatedProductIndex_Load_ID",
@@ -16012,7 +16012,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-RPT_DB",
+		"distro_path": "g.Module_Feature_RPT_DB",
 		"functions": [
 			{
 				"name": "RPT_CreateDataFiles",
@@ -16170,7 +16170,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-RPT_JSON",
+		"distro_path": "g.Module_Feature_RPT_JSON",
 		"functions": [
 			{
 				"name": "JSON_ReportModule_Capabilities",
@@ -16253,7 +16253,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-SEA_DB",
+		"distro_path": "g.Module_Feature_SEA_DB",
 		"functions": [
 			{
 				"name": "SEA_Store_Create",
@@ -16339,7 +16339,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-SEA_UT",
+		"distro_path": "g.Module_Feature_SEA_UT",
 		"functions": [
 			{
 				"name": "ProductCustomFieldList_Load_Searchable",
@@ -16441,7 +16441,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-SHP_DB",
+		"distro_path": "g.Module_Feature_SHP_DB",
 		"functions": [
 			{
 				"name": "SHP_Store_Create",
@@ -16815,7 +16815,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-SHP_JSON",
+		"distro_path": "g.Module_Feature_SHP_JSON",
 		"functions": [
 			{
 				"name": "JSON_ProductShippingRules",
@@ -16985,7 +16985,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-SHP_UT",
+		"distro_path": "g.Module_Feature_SHP_UT",
 		"functions": [
 			{
 				"name": "HandlingCharge_CalculateAndApplyToBasket",
@@ -17293,7 +17293,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-STA_DB",
+		"distro_path": "g.Module_Feature_STA_DB",
 		"functions": [
 			{
 				"name": "STA_Store_Create",
@@ -17417,7 +17417,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-SUB_DB",
+		"distro_path": "g.Module_Feature_SUB_DB",
 		"functions": [
 			{
 				"name": "SUB_Store_Create",
@@ -17934,7 +17934,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-SUB_JSON",
+		"distro_path": "g.Module_Feature_SUB_JSON",
 		"functions": [
 			{
 				"name": "JSON_ProductSubscriptionTerm",
@@ -18146,7 +18146,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-SUB_RT",
+		"distro_path": "g.Module_Feature_SUB_RT",
 		"functions": [
 			{
 				"name": "Action_CustomerSubscription_Update",
@@ -18159,7 +18159,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-SUB_UT",
+		"distro_path": "g.Module_Feature_SUB_UT",
 		"functions": [
 			{
 				"name": "ProductSubscriptionTerm_Generate_Description",
@@ -18286,7 +18286,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-TUI_DB",
+		"distro_path": "g.Module_Feature_TUI_DB",
 		"functions": [
 			{
 				"name": "TUI_CreateDataFiles",
@@ -19443,7 +19443,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-TUI_JSON",
+		"distro_path": "g.Module_Feature_TUI_JSON",
 		"functions": [
 			{
 				"name": "JSON_Page_Load",
@@ -19865,7 +19865,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-TUI_MGR",
+		"distro_path": "g.Module_Feature_TUI_MGR",
 		"functions": [
 			{
 				"name": "TemplateManager_Create_Item",
@@ -20653,7 +20653,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-TUI_UT",
+		"distro_path": "g.Module_Feature_TUI_UT",
 		"functions": [
 			{
 				"name": "SKIN_Directory_Delete",
@@ -21283,7 +21283,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-URI_DB",
+		"distro_path": "g.Module_Feature_URI_DB",
 		"functions": [
 			{
 				"name": "URI_CreateDataFiles",
@@ -21477,7 +21477,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-URI_JSON",
+		"distro_path": "g.Module_Feature_URI_JSON",
 		"functions": [
 			{
 				"name": "JSON_URI",
@@ -21650,7 +21650,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-URI_UT",
+		"distro_path": "g.Module_Feature_URI_UT",
 		"functions": [
 			{
 				"name": "URI_Generate_Default_Settings",
@@ -21961,7 +21961,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-USL_DB",
+		"distro_path": "g.Module_Feature_USL_DB",
 		"functions": [
 			{
 				"name": "Store_Create",
@@ -22135,7 +22135,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-USL_RT",
+		"distro_path": "g.Module_Feature_USL_RT",
 		"functions": [
 			{
 				"name": "Action_AddUpsoldProductToBasket",
@@ -22155,7 +22155,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-WSH_DB",
+		"distro_path": "g.Module_Feature_WSH_DB",
 		"functions": [
 			{
 				"name": "WSH_Store_Create",
@@ -22461,7 +22461,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Feature_MMLSK-WSH_RT",
+		"distro_path": "g.Module_Feature_WSH_RT",
 		"functions": [
 			{
 				"name": "WishList_ValidateDestination",
