@@ -561,7 +561,7 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Root $ 'json.mvc'",
+		"distro_path": "g.Module_JSON",
 		"functions": [
 			{
 				"name": "JSON_Initialize_Session",
