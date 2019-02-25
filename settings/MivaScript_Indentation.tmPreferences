@@ -4,7 +4,7 @@
 	<key>name</key>
 	<string>Miscellaneous</string>
 	<key>scope</key>
-	<string>text.mvt text.html.basic</string>
+	<string>text.mv text.html.basic</string>
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
@@ -14,7 +14,7 @@
 			    [^<>]*+<\/(?!html)[A-Za-z0-9:-]+\b[^>]*>    # optionally, anything that's not an angle bracket, followed by any valid HTML close tag except "html"
 			|   (<!\[endif\])?-->                           # closing comment punctuation, optionally preceded by an end "comment selector"
 			|   \}                                          # a closing curly brace
-			|	.*?(?=\s*<mvt\:else)
+			|	.*?(?=\s*<(MvELSEIF|MvELSE|MvIFDEF|MvIFNDEF))
 			)
 		]]></string>
 		<key>increaseIndentPattern</key>
@@ -23,7 +23,7 @@
 			(
 			    \{[^}"']*$                                                                           # open curly braces that don't have close braces or string punctuation after them
 			|   <!--(?!.*-->)                                                                        # comments that don't close themselves on the same line
-			|   .*<(?!\?|(?i:area|base|br|col|frame|hr|html|img|input|link|meta|param)\b|[^>]*\/>)   # skip self closing tags (tags that end with />, as well as known self closing tags)
+			|   .*<(?!\?|(?i:area|base|br|col|frame|hr|html|img|input|link|meta|param|MvDO|MvFUNCTIONRETURN|MvCALLSTOP|MvCALLCONTINUE|MvCOMMERCESTOP|MvCOMMERCECONTINUE|MvFORSTOP|MvFORCONTINUE|MvFOREACHSTOP|MvFOREACHCONTINUE|MvIMPORTSTOP|MvIMPORTCONTINUE|MvPOPSTOP|MvPOPCONTINUE|MvWHILESTOP|MvWHILECONTINUE|MvINCLUDE|MvIMPORT|MvASSIGN)\b|[^>]*\/>)   # skip self closing tags (tags that end with />, as well as known self closing tags)
 			        (?<html_tag>[A-Za-z0-9:-]+)(?=\s|>)\b[^>]*>(?!.*<\/\k<html_tag>\s*>)             # a valid non-self-closing HTML tag that doesn't close itself on the same line
 			)
 		]]></string>
