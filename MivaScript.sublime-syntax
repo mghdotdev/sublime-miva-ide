@@ -16,16 +16,16 @@ contexts:
         # Comments
         - match: (?i)<MvCOMMENT>
           push: comments
-        
+
         # Expressions
-        # - include: expression
+        - include: expression
 
         # Tags
         - include: text-tags
 
 
-    
-  
+
+
   # =-======================== Comments ========================-= #
   comments:
     - meta_scope: comment.block.mv
@@ -37,7 +37,8 @@ contexts:
   text-tags:
     - include: tag-function
     - include: tag-do
-    - include: tag-conditional
+    - include: tag-conditional-block
+    - include: tag-conditional-inline
     - include: tag-loop
     - include: tag-flow
     - include: tag-include
@@ -52,7 +53,7 @@ contexts:
     - match: '{'
       scope: puncuation.definition.expression.mv
       push:
-        - clear_scopes: true
+        #- clear_scopes: true
         - meta_scope: text.mv source.mv.expr
         - match: '}'
           scope: puncuation.terminator.expression.mv
@@ -91,13 +92,26 @@ contexts:
           pop: true
         - include: tag-stuff
 
-  tag-conditional:
-    - match: (?i)(<)(MvIF|MvELSEIF|MvELSE|MvIFDEF|MvIFNDEF)\b
+  tag-conditional-block:
+    - match: (?i)(<)(MvIF)\b
       captures:
         1: punctuation.definition.tag.begin.mv
         2: meta.conditional.mv keyword.control.conditional.mv
       push:
         - meta_scope: meta.tag.block.conditional.mv
+        - match: (>)
+          captures:
+            1: punctuation.definition.tag.end.mv
+          pop: true
+        - include: tag-stuff
+
+  tag-conditional-inline:
+    - match: (?i)(<)(MvELSEIF|MvELSE|MvIFDEF|MvIFNDEF)\b
+      captures:
+        1: punctuation.definition.tag.begin.mv
+        2: meta.conditional.mv keyword.control.conditional.mv
+      push:
+        - meta_scope: meta.tag.inline.conditional.mv
         - match: (>)
           captures:
             1: punctuation.definition.tag.end.mv
@@ -116,14 +130,14 @@ contexts:
             1: punctuation.definition.tag.end.mv
           pop: true
         - include: tag-stuff
-  
+
   tag-include:
     - match: (?i)(<\/?)(MvINCLUDE|MvIMPORT)\b
       captures:
         1: punctuation.definition.tag.begin.mv
         2: meta.include.mv keyword.control.import.include.mv
       push:
-        - meta_scope: meta.tag.block.include.mv
+        - meta_scope: meta.tag.inline.include.mv
         - match: (>)
           captures:
             1: punctuation.definition.tag.end.mv
@@ -155,14 +169,14 @@ contexts:
             1: punctuation.definition.tag.end.mv
           pop: true
         - include: tag-stuff
-  
+
   tag-miva:
     - match: (?i)(<\/?)(MIVA)\b
       captures:
         1: punctuation.definition.tag.begin.mv
         2: meta.tag.miva.mv entity.name.tag.miva.mv meta.preprocessor.mv
       push:
-        - meta_scope: meta.tag.block.miva.mv
+        - meta_scope: meta.tag.inline.miva.mv
         - match: (>)
           captures:
             1: punctuation.definition.tag.end.mv
@@ -175,7 +189,7 @@ contexts:
         1: punctuation.definition.tag.begin.mv
         2: meta.tag.assign.mv entity.name.tag.assign.mv
       push:
-        - meta_scope: meta.tag.block.assign.mv
+        - meta_scope: meta.tag.inline.assign.mv
         - match: (>)
           captures:
             1: punctuation.definition.tag.end.mv
@@ -194,20 +208,22 @@ contexts:
             1: punctuation.definition.tag.end.mv
           pop: true
         - include: tag-stuff
-  
+
   # =-======== Tag Stuff ========-= #
   tag-stuff:
-    - include: text-attributes
+    - include: text-attribute-value
+    - include: text-attribute-file
+    - include: text-attributes-generic
     - include: text-string-double-quoted
     - include: text-unquoted-numbers
 
   # =-======== Attributes - Text ========-= #
-  text-attributes:
+  text-attributes-generic:
     - match: '(?<=[^=])\b([a-zA-Z0-9\:\-\_]+)\s*(=?)'
       captures:
-        1: entity.other.attribute-name.mv
+        1: entity.other.attribute-name.generic.mv
         2: punctuation.separator.key-value.mv
-  
+
   text-unquoted-numbers:
     - match: '\s*(=?)([0-9]+(\.[0-9]+)?)(\/>)'
       scope: invalid.illegal.unquoted-numeric-constant
@@ -221,38 +237,50 @@ contexts:
       pop: true
 
   text-attribute-value:
-    - match: '(?i)(?<=[^=])\b(value)\s*(=?)\s*(\")([^\"]*)(\")'
+    - match: '(?i)(?<=[^=])\b(value)\s*(=?)\s*(\")'
       captures:
-        1: entity.other.attribute-name.mv
-        2: punctuation.separator.key-value.mv
-        3: string.quoted.double.mv punctuation.definition.string.begin.mv
-        4: string.quoted.double.mv meta.function.mv entity.name.function.mv
-        5: string.quoted.double.mv punctuation.definition.string.end.mv
-
-  text-function-name:
-    - match: '(?i)(?<=[^=])\b(NAME)\s*(=?)\s*(\")([^\"]*)(\")'
-      captures:
-        1: entity.other.attribute-name.mv
-        2: punctuation.separator.key-value.mv
-        3: string.quoted.double.mv punctuation.definition.string.begin.mv
-        4: string.quoted.double.mv meta.function.mv entity.name.function.mv
-        5: string.quoted.double.mv punctuation.definition.string.end.mv
-
-  text-function-parameters:
-    - match: '(?i)(?<=[^=])\b(PARAMETERS)\s*(=?)\s*(\")'
-      captures:
-        1: entity.other.attribute-name.mv
+        1: entity.other.attribute-name.value.mv
         2: punctuation.separator.key-value.mv
         3: string.quoted.double.mv punctuation.definition.string.begin.mv
       push:
-        - meta_content_scope: source.mv
-        - match: '{{identifier}}'
-          scope: variable.parameter.function.mv string.quoted.double.mv
-        - match: ','
-          scope: punctuation.separator.parameter.function.mv
-        - match: '\"'
-          scope: string.quoted.double.mv punctuation.definition.string.end.mv
+        - meta_scope: attribute-content.value.mv string.quoted.double.mv
+        - match: '"'
+          captures:
+            0: punctuation.definition.string.end.mv
           pop: true
+        - include: source-variables
+        - include: expression
+
+  text-attribute-file:
+    - match: '(?i)(?<=[^=])\b(file)\s*(=?)\s*(\")'
+      captures:
+        1: entity.other.attribute-name.file.mv
+        2: punctuation.separator.key-value.mv
+        3: string.quoted.double.mv punctuation.definition.string.begin.mv
+      push:
+        - meta_scope: attribute-content.file.mv string.quoted.double.mv
+        - match: '"'
+          captures:
+            0: punctuation.definition.string.end.mv
+          pop: true
+        - include: source-variables
+        - include: expression
+
+  # text-function-parameters:
+  #   - match: '(?i)(?<=[^=])\b((?i)parameters)\s*(=?)\s*(\")'
+  #     captures:
+  #       1: entity.other.attribute-name.parameters.mv
+  #       2: punctuation.separator.key-value.mv
+  #       3: string.quoted.double.mv punctuation.definition.string.begin.mv
+  #     push:
+  #       - meta_content_scope: source.mv
+  #       - match: '{{identifier}}'
+  #         scope: variable.parameter.function.mv string.quoted.double.mv
+  #       - match: ','
+  #         scope: punctuation.separator.parameter.function.mv
+  #       - match: '\"'
+  #         scope: string.quoted.double.mv punctuation.definition.string.end.mv
+  #         pop: true
 
 
   # =-======== String Quoted Double - Text ========-= #
@@ -272,6 +300,7 @@ contexts:
 
   # =-======================== Source ========================-= #
   source-mv:
+    - include: source-function-file
     - include: source-brackets
     - include: source-group
     - include: source-variables
@@ -281,7 +310,7 @@ contexts:
     - include: source-constants
     - include: source-functions
     - include: source-function-call
-  
+
 
   # =-======== Functions - Source ========-= #
   source-functions:
@@ -298,11 +327,11 @@ contexts:
     # Arithmetic Operators
     - match: (\b(?i:POW|MOD|ROUND)\b)
       scope: keyword.operator.arithmetic.mv
-  
+
     # Arithmetic Operators (Symbols)
     - match: ((?<!\S)(\+|\-|\*|\/)\B)
       scope: keyword.operator.arithmetic.mv
-    
+
     # Arithmetic Operators (Increment and Decrement)
     - match: (\b(\+\+|\-\-)\B)
       scope: keyword.operator.arithmetic.mv
@@ -336,7 +365,7 @@ contexts:
     # POSX
     - match: \b(POS)[0-9]+\b
       scope: constant.language.posx.mv
-  
+
 
   # =-======== Numbers - Source ========-= #
   source-numbers:
@@ -464,3 +493,15 @@ contexts:
     - match: \)
       scope: invalid.illegal.stray-group-end
 
+  # =-======== Special Bracket Dot Function File - Source ========-= #
+  source-function-file:
+    - match: \[[\s\S]*(?=\]\.)
+      scope: puncuation.definition.function-file.mv
+      push:
+        - meta_scope: function-file.mv
+        - match: \]\.
+          scope: puncuation.terminator.function-file.mv
+          pop: true
+        - include: source-mv
+    - match: \]\.
+      scope: invalid.illegal.stray-function-file-end
