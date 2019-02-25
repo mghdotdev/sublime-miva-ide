@@ -1,6 +1,9 @@
 # Miva IDE!
 
+---
+
 ### Changlog for vX.X.X:
+
 * 
 
 ---
