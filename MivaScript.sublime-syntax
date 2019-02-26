@@ -75,8 +75,8 @@ contexts:
           captures:
             1: punctuation.definition.tag.end.mv
           pop: true
-        - include: text-function-parameters
-        - include: text-function-name
+        # - include: text-function-parameters
+        # - include: text-function-name
         - include: tag-stuff
 
   tag-do:
@@ -90,6 +90,8 @@ contexts:
           captures:
             1: punctuation.definition.tag.end.mv
           pop: true
+        - include: text-attribute-value
+        - include: text-attribute-file
         - include: tag-stuff
 
   tag-conditional-block:
@@ -211,8 +213,6 @@ contexts:
 
   # =-======== Tag Stuff ========-= #
   tag-stuff:
-    - include: text-attribute-value
-    - include: text-attribute-file
     - include: text-attributes-generic
     - include: text-string-double-quoted
     - include: text-unquoted-numbers
@@ -259,6 +259,21 @@ contexts:
         3: string.quoted.double.mv punctuation.definition.string.begin.mv
       push:
         - meta_scope: attribute-content.file.mv string.quoted.double.mv
+        - match: '"'
+          captures:
+            0: punctuation.definition.string.end.mv
+          pop: true
+        - include: source-variables
+        - include: expression
+
+  text-attribute-name:
+    - match: '(?i)(?<=[^=])\b(name)\s*(=?)\s*(\")'
+      captures:
+        1: entity.other.attribute-name.name.mv
+        2: punctuation.separator.key-value.mv
+        3: string.quoted.double.mv punctuation.definition.string.begin.mv
+      push:
+        - meta_scope: attribute-content.name.mv string.quoted.double.mv
         - match: '"'
           captures:
             0: punctuation.definition.string.end.mv
@@ -474,11 +489,11 @@ contexts:
       scope: puncuation.definition.brackets.mv
       push:
         - meta_scope: meta.brackets.mv
-        - match: \]
+        - match: '\]'
           scope: puncuation.terminator.bracket.mv
           pop: true
         - include: source-mv
-    - match: \]
+    - match: '\]'
       scope: invalid.illegal.stray-bracket-end
 
   source-group:
@@ -494,14 +509,17 @@ contexts:
       scope: invalid.illegal.stray-group-end
 
   # =-======== Special Bracket Dot Function File - Source ========-= #
+  # source-function-file:
+  #   - match: \[
+  #     scope: puncuation.definition.function-file.mv
+  #     push:
+  #       - meta_scope: function-file.mv
+  #       - match: \]\.
+  #         scope: puncuation.terminator.function-file-ending.mv
+  #         pop: true
+  #       - include: source-mv
+  #   - match: \]\.
+  #     scope: invalid.illegal.stray-bracket-end
   source-function-file:
-    - match: \[[\s\S]*(?=\]\.)
-      scope: puncuation.definition.function-file.mv
-      push:
-        - meta_scope: function-file.mv
-        - match: \]\.
-          scope: puncuation.terminator.function-file.mv
-          pop: true
-        - include: source-mv
-    - match: \]\.
-      scope: invalid.illegal.stray-function-file-end
+    - match: '(?<=\])([^\.]*?)\.'
+      scope: puncuation.terminator.function-file-ending.mv
