@@ -16,34 +16,46 @@ class MvDoCompletions(sublime_plugin.EventListener):
 	def __init__(self):
 		self.functions_merchant_data = self.read_data_file(__FUNCTIONS_MERCHANT_PATH__)
 		self.quick_panel_data = {}
-
+		self.mode = '';
 
 	def on_query_completions(self, view, prefix, locations):
 		
 		currentPoint = locations[0]
 		previousPoint = max(0, locations[0] - 1)
 
-		# Only Trigger in a <MvDO> Tag
-		if not view.match_selector( currentPoint, 'text.mv text.html.basic meta.tag.inline.do.mv' ):
+		self.mode = ''
+
+		# Only Trigger in a <MvDO> Tag or Function File Terminator
+		if not view.match_selector( currentPoint, 'text.mv text.html.basic meta.tag.inline.do.mv' ) and not ( view.score_selector( previousPoint, 'puncuation.terminator.function-file-ending.mv' ) > 0 ) and not ( view.score_selector( previousPoint, 'function-file.mv' ) > 0 ):
 			return []
 
 		if view.match_selector( currentPoint, 'text.mv text.html.basic meta.tag.inline.do.mv attribute-content.file.mv string.quoted.double.mv text.mv source.mv.expr' ):
-			mvdo_attribute = 'file'
+			self.mode = 'file'
 		elif view.match_selector( currentPoint, 'text.mv text.html.basic meta.tag.inline.do.mv attribute-content.value.mv string.quoted.double.mv text.mv source.mv.expr' ):
 			is_variable = view.match_selector( previousPoint, 'variable.language' )
 			if ( is_variable ):
 				return []
-			mvdo_attribute = 'value'
+			self.mode = 'value'
+		elif view.score_selector( previousPoint, 'puncuation.terminator.function-file-ending.mv' ) > 0:
+			self.mode = 'terminator_value'
+		elif view.score_selector( previousPoint, 'function-file.mv' ) > 0:
+			self.mode = 'terminator_file'
 		else:
 			return []
 
-		return self.get_completions( view, prefix, locations, mvdo_attribute )
+		return self.get_completions( view, prefix, locations, self.mode )
 
 
 	def on_post_text_command(self, view, command_name, *args):
+
+		# print( 'mode is...', self.mode )
+
 		if (command_name == 'commit_completion' or command_name == 'insert_best_completion'):
+
 			for r in view.sel():
+
 				in_value_attribute = view.match_selector(r.begin(), 'text.mv text.html.basic meta.tag.inline.do.mv attribute-content.value.mv string.quoted.double.mv text.mv source.mv.expr')
+				
 				if (in_value_attribute):
 					prev_pt = max(0, r.begin() - 1)
 					is_variable = view.match_selector(prev_pt, 'variable.language')
@@ -62,19 +74,23 @@ class MvDoCompletions(sublime_plugin.EventListener):
 										self.insert_file_name(view, r.begin(), file_name)
 
 
-	def get_completions( self, view, prefix, locations, mvdo_attribute ):
+	def get_completions( self, view, prefix, locations, mode ):
 		
 		completion_list = []
 
-		if (mvdo_attribute == 'file'):
+		if (mode == 'file'):
 			completion_list = self.get_file_completions( view, locations[0], prefix )
 
-		elif (mvdo_attribute == 'value'):
+		elif (mode == 'value'):
 			file_attribute_val = self.get_current_file_attribute_val( view, locations[0], prefix )
 			completion_list = self.get_value_completions( view, locations[0], prefix, file_attribute_val )
 
-		print( 'file_attribute_val', file_attribute_val )
-		print( 'completion_list', completion_list )
+		elif (mode == 'terminator_file'):
+			completion_list = self.get_file_completions( view, locations[0], prefix )
+
+		elif (mode == 'terminator_value'):
+			terminator_file_val = '';
+			completion_list = self.get_value_completions( view, locations[0], prefix, terminator_file_val )
 
 		return ( completion_list, sublime.INHIBIT_WORD_COMPLETIONS | sublime.INHIBIT_EXPLICIT_COMPLETIONS )
 

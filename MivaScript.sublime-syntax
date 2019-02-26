@@ -90,6 +90,8 @@ contexts:
           captures:
             1: punctuation.definition.tag.end.mv
           pop: true
+        - include: text-attribute-value
+        - include: text-attribute-file
         - include: tag-stuff
 
   tag-conditional-block:
@@ -211,8 +213,6 @@ contexts:
 
   # =-======== Tag Stuff ========-= #
   tag-stuff:
-    - include: text-attribute-value
-    - include: text-attribute-file
     - include: text-attributes-generic
     - include: text-string-double-quoted
     - include: text-unquoted-numbers
@@ -266,6 +266,21 @@ contexts:
         - include: source-variables
         - include: expression
 
+  text-attribute-name:
+    - match: '(?i)(?<=[^=])\b(name)\s*(=?)\s*(\")'
+      captures:
+        1: entity.other.attribute-name.name.mv
+        2: punctuation.separator.key-value.mv
+        3: string.quoted.double.mv punctuation.definition.string.begin.mv
+      push:
+        - meta_scope: attribute-content.name.mv string.quoted.double.mv
+        - match: '"'
+          captures:
+            0: punctuation.definition.string.end.mv
+          pop: true
+        - include: source-variables
+        - include: expression
+
   # text-function-parameters:
   #   - match: '(?i)(?<=[^=])\b((?i)parameters)\s*(=?)\s*(\")'
   #     captures:
@@ -302,6 +317,8 @@ contexts:
   source-mv:
     - include: source-function-file
     - include: source-brackets
+
+
     - include: source-group
     - include: source-variables
     - include: source-string-single
@@ -474,11 +491,11 @@ contexts:
       scope: puncuation.definition.brackets.mv
       push:
         - meta_scope: meta.brackets.mv
-        - match: \]
+        - match: '\]'
           scope: puncuation.terminator.bracket.mv
           pop: true
         - include: source-mv
-    - match: \]
+    - match: '\]'
       scope: invalid.illegal.stray-bracket-end
 
   source-group:
@@ -495,13 +512,13 @@ contexts:
 
   # =-======== Special Bracket Dot Function File - Source ========-= #
   source-function-file:
-    - match: \[[\s\S]*(?=\]\.)
+    - match: \[
       scope: puncuation.definition.function-file.mv
       push:
         - meta_scope: function-file.mv
         - match: \]\.
-          scope: puncuation.terminator.function-file.mv
+          scope: puncuation.terminator.function-file-ending.mv
           pop: true
         - include: source-mv
     - match: \]\.
-      scope: invalid.illegal.stray-function-file-end
+      scope: invalid.illegal.stray-bracket-end
