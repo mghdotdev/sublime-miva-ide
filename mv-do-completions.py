@@ -48,30 +48,48 @@ class MvDoCompletions(sublime_plugin.EventListener):
 
 	def on_post_text_command(self, view, command_name, *args):
 
-		# print( 'mode is...', self.mode )
-
 		if (command_name == 'commit_completion' or command_name == 'insert_best_completion'):
+
+			# Return if mode is not set correctly
+			if self.mode == '':
+				return
 
 			for r in view.sel():
 
-				in_value_attribute = view.match_selector(r.begin(), 'text.mv text.html.basic meta.tag.inline.do.mv attribute-content.value.mv string.quoted.double.mv text.mv source.mv.expr')
-				
-				if (in_value_attribute):
-					prev_pt = max(0, r.begin() - 1)
-					is_variable = view.match_selector(prev_pt, 'variable.language')
-					if (is_variable is False):
-						file_attribute_val = self.get_current_file_attribute_val(view, r.begin(), '')
-						if (file_attribute_val == ''):
-							value_attribute_val = self.get_current_value_attribute_val(view, r.begin(), '')
-							function_name = self.get_function_name(view, value_attribute_val)
-							if function_name is not False:
-								file_name = self.get_file_name(view, function_name)
-								if file_name is not False:
-									if type(file_name) is list:
-										self.quick_panel_data = { "view": view, "pt": r.begin(), "file_name": file_name }
-										view.window().show_quick_panel(file_name, self.choose_file_name, sublime.MONOSPACE_FONT)
-									elif type(file_name) is str:
-										self.insert_file_name(view, r.begin(), file_name)
+				if self.mode == 'value':
+					in_value_attribute = view.match_selector(r.begin(), 'text.mv text.html.basic meta.tag.inline.do.mv attribute-content.value.mv string.quoted.double.mv text.mv source.mv.expr')
+					if (in_value_attribute):
+						prev_pt = max(0, r.begin() - 1)
+						is_variable = view.match_selector(prev_pt, 'variable.language')
+						if (is_variable is False):
+							file_attribute_val = self.get_current_file_attribute_val(view, r.begin(), '')
+							if (file_attribute_val == ''):
+								value_attribute_val = self.get_current_value_attribute_val(view, r.begin(), '')
+								function_name = self.get_function_name(view, value_attribute_val)
+								if function_name is not False:
+									file_name = self.get_file_name(view, function_name)
+									if file_name is not False:
+										if type(file_name) is list:
+											self.quick_panel_data = { "view": view, "pt": r.begin(), "file_name": file_name }
+											view.window().show_quick_panel(file_name, self.choose_file_name, sublime.MONOSPACE_FONT)
+										elif type(file_name) is str:
+											self.insert_file_name(view, r.begin(), file_name)
+
+				elif self.mode == 'terminator_value':
+					terminator_file_val = self.get_current_terminator_file_val(view, r.begin(), '')
+					if (terminator_file_val == ''):
+						terminator_function_val = self.get_current_terminator_function_val(view, r.begin(), '')
+						function_name = self.get_function_name(view, terminator_function_val)
+						if (function_name is not False):
+							file_name = self.get_file_name(view, function_name)
+							if file_name is not False:
+								if type(file_name) is list:
+									self.quick_panel_data = { "view": view, "pt": r.begin(), "file_name": file_name }
+									view.window().show_quick_panel(file_name, self.choose_file_name_terminator, sublime.MONOSPACE_FONT)
+								elif type(file_name) is str:
+									self.insert_file_name_terminator(view, r.begin(), file_name)
+
+
 
 
 	def get_completions( self, view, prefix, locations, mode ):
@@ -248,6 +266,88 @@ class MvDoCompletions(sublime_plugin.EventListener):
 						"file_name": file_name
 					}
 				})
+
+	def get_current_terminator_file_val(self, view, pt, prefix):
+
+		function_file_brackets = self.get_function_file_brackets(view, pt, prefix)
+		if (function_file_brackets is False or function_file_brackets.size() <= 1):
+			return ''
+
+		function_file_value = view.substr( function_file_brackets )
+		function_file_value = function_file_value.replace('[', '')
+		function_file_value = function_file_value.replace(']', '')
+		function_file_value.strip()
+
+		return function_file_value
+
+	def get_current_terminator_function_val(self, view, pt, prefix):
+
+		function_terminator_value = self.get_function_terminator_value(view, pt, prefix)
+
+		if function_terminator_value:
+			return function_terminator_value
+		else:
+			return ''
+
+	def choose_file_name_terminator(self, index):
+		self.insert_file_name_terminator(self.quick_panel_data['view'], self.quick_panel_data['pt'], self.quick_panel_data['file_name'][index])
+		self.quick_panel_data = {}
+
+	def insert_file_name_terminator(self, view, pt, file_name):
+
+		function_file_brackets = self.get_function_file_brackets(view, pt, '')
+		if (function_file_brackets is False):
+			return ''
+
+		view.run_command('insert_file_name', {
+			"args": {
+				"file_attribute_pt": function_file_brackets.begin() + 1,
+				"file_name": ' ' + file_name + ' '
+			}
+		})
+
+	def get_function_file_brackets(self, view, pt, prefix):
+		# limit the search left/right to 500 characters
+		_LIMIT = 500
+
+		# check before the pt
+		start_point = pt
+		behind_end = max(0, start_point - _LIMIT)
+		left_bracket = False
+		right_bracket = False
+		i = start_point
+		while i >= behind_end:
+			c = view.substr(i)
+			if (c == '['):
+				left_bracket = i
+				break
+			elif (c == ']'):
+				right_bracket = i
+			i -= 1
+
+		if (left_bracket is False or right_bracket is False):
+			return False
+
+		return sublime.Region(left_bracket, right_bracket)
+
+	def get_function_terminator_value(self, view, pt, prefix):
+		# limit the search left/right to 500 characters
+		_LIMIT = 500
+
+		# check behind the pt
+		start_point = pt
+		behind_end = max(0, start_point - _LIMIT)
+
+		# create region and get text
+		region_to_search = sublime.Region(behind_end, start_point)
+		string_to_search = view.substr(region_to_search)
+
+		# check for match and get last
+		splits = re.split(r'(?<=\])([^\.]*?)\.', string_to_search)
+		if (splits and len(splits) > 0):
+			return splits[-1]
+		else:
+			return False
 
 class InsertFileNameCommand(sublime_plugin.TextCommand):
 	def run(self, edit, args):
