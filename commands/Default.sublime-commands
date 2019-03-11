@@ -4,6 +4,10 @@
 		"caption": "Miva: LSK Goto Definition",
 		"command": "goto_definition"
 	},
+	{
+		"caption": "Miva: l.pos Calculator",
+		"command": "mvt_pos_calculator"
+	},
 	
 	// ==================== Miva Script ==================== //
 	
@@ -23,9 +27,5 @@
 	{
 		"caption": "MVT: Entity → Variable",
 		"command": "mvt_entity_convert_to_variable"
-	},
-	{
-		"caption": "MVT: l.pos Calculator",
-		"command": "mvt_pos_calculator"
 	}
 ]
