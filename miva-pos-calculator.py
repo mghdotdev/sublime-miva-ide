@@ -21,11 +21,11 @@ class MvtPosCalculatorCommand( sublime_plugin.TextCommand ):
 
 			# find all matches of "open" tags
 			if ( is_mvt ):
-				open_tags = re.findall( r'(?i)(<)(mvt:)(foreach|while)', search_text )
-				close_tags = re.findall( r'(?i)(<\/)(mvt:)(foreach|while)', search_text )
+				open_tags = re.findall( r'(?i)(<)(mvt:)(foreach)', search_text )
+				close_tags = re.findall( r'(?i)(<\/)(mvt:)(foreach)', search_text )
 			elif ( is_mv ):
-				open_tags = re.findall( r'(?i)(<Mv)(FOR|WHILE)', search_text )
-				close_tags = re.findall( r'(?i)(<\/Mv)(FOR|WHILE)', search_text )
+				open_tags = re.findall( r'(?i)(<Mv)(FOR)', search_text )
+				close_tags = re.findall( r'(?i)(<\/Mv)(FOR)', search_text )
 			else:
 				continue
 			
