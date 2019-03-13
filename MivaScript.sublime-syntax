@@ -75,8 +75,8 @@ contexts:
           captures:
             1: punctuation.definition.tag.end.mv
           pop: true
-        # - include: text-function-parameters
-        # - include: text-function-name
+        - include: text-function-parameters
+        - include: text-function-name
         - include: tag-stuff
 
   tag-do:
@@ -250,6 +250,31 @@ contexts:
           pop: true
         - include: source-variables
         - include: expression
+
+  text-function-name:
+    - match: '(?i)(?<=[^=])\b(NAME)\s*(=?)\s*(\")([^\"]*)(\")'
+      captures:
+        1: entity.other.attribute-name.mv
+        2: punctuation.separator.key-value.mv
+        3: string.quoted.double.mv punctuation.definition.string.begin.mv
+        4: string.quoted.double.mv meta.function.mv entity.name.function.mv
+        5: string.quoted.double.mv punctuation.definition.string.end.mv
+
+  text-function-parameters:
+    - match: '(?i)(?<=[^=])\b(PARAMETERS)\s*(=?)\s*(\")'
+      captures:
+        1: entity.other.attribute-name.mv
+        2: punctuation.separator.key-value.mv
+        3: string.quoted.double.mv punctuation.definition.string.begin.mv
+      push:
+        - meta_content_scope: source.mv
+        - match: '{{identifier}}'
+          scope: variable.parameter.function.mv string.quoted.double.mv
+        - match: ','
+          scope: punctuation.separator.parameter.function.mv
+        - match: '\"'
+          scope: string.quoted.double.mv punctuation.definition.string.end.mv
+          pop: true
 
   text-attribute-file:
     - match: '(?i)(?<=[^=])\b(file)\s*(=?)\s*(\")'
