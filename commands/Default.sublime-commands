@@ -5,7 +5,7 @@
 		"command": "goto_definition"
 	},
 	{
-		"caption": "Miva: l.pos Calculator",
+		"caption": "Miva: POS Calculator",
 		"command": "mvt_pos_calculator"
 	},
 	
