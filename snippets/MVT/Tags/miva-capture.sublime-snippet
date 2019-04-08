@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+<mvt:capture variable="${1}">
+	${0}
+</mvt:capture>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mvt:capture</tabTrigger>
+	<!-- Optional: Description to show in the menu -->
+	<description>Tag - Capture</description>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.mvt - source.mvt - string</scope>
+</snippet>
