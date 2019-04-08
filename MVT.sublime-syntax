@@ -21,7 +21,7 @@ contexts:
         # Comments
         - match: (?i)<mvt:comment>
           push: comments
-        
+
         # Tags
         - include: tags
 
@@ -50,7 +50,7 @@ contexts:
           embed: scope:source.js
           embed_scope: source.js.embedded.html
           escape: (?=")
-        
+
           # embed: scope:source.js
           # embed_scope: source.js.embedded.html
           # escape: ([^\]")
@@ -60,8 +60,8 @@ contexts:
       #     embed: scope:source.js
       #     embed_scope: source.js.embedded.html
       #     escape: ([^\]")
-            
-        
+
+
 
   # =-======================== Comments ========================-= #
   comments:
@@ -95,6 +95,7 @@ contexts:
     - include: tag-miva
     - include: tag-while
     - include: tag-item
+    - include: tag-capture
 
   tag-item:
     - match: (</?)(?i:(mvt)(:)(item)\b)
@@ -111,6 +112,23 @@ contexts:
           pop: true
         - include: item-name-attribute
         - include: param-attribute
+        - include: illegal-attributes
+
+
+  tag-capture:
+    - match: (</?)(?i:(mvt)(:)(capture)\b)
+      captures:
+        1: punctuation.definition.tag.begin.mvt meta.preprocessor.begin.mvt
+        2: storage.type.namespace.mvt meta.preprocessor.namespace.mvt
+        3: storage.type.namespace.separator.mvt meta.preprocessor.namespace.separator.mvt
+        4: storage.type.localname.mvt meta.preprocessor.localname.mvt
+      push:
+        - meta_scope: meta.tag.block.capture.mvt
+        - match: '(>)'
+          captures:
+            1: punctuation.definition.tag.end.mvt meta.preprocessor.end.mvt
+          pop: true
+        - include: variable-attribute
         - include: illegal-attributes
 
   tag-call:
@@ -329,7 +347,7 @@ contexts:
     - match: (?i)(?<=[^=])\b(output)\s*(=?)\s*(")
       captures:
         1: entity.other.attribute-name.expr.mvt
-        2: punctuation.separator.key-value.mvt 
+        2: punctuation.separator.key-value.mvt
         3: punctuation.definition.string.begin.mvt
       push:
         - meta_content_scope: string.quoted.single.mvt
@@ -346,7 +364,7 @@ contexts:
     - match: (?i)(?<=[^=])\b(compresswhitespace)\s*(=?)\s*(")
       captures:
         1: entity.other.attribute-name.expr.mvt
-        2: punctuation.separator.key-value.mvt 
+        2: punctuation.separator.key-value.mvt
         3: punctuation.definition.string.begin.mvt
       push:
         - meta_content_scope: string.quoted.single.mvt
@@ -629,7 +647,6 @@ contexts:
         - include: source-numbers
         - include: source-brackets-no-functions
         - include: source-group-no-functions
-        
 
   value-attribute:
     - match: (?i)(?<=[^=])\b(value)\s*(=?)\s*(")
@@ -646,6 +663,21 @@ contexts:
         - include: source-mvt
         - include: source-functions-builtins
         - include: source-functions-merchant
+
+  variable-attribute:
+    - match: (?i)(?<=[^=])\b(variable)\s*(=?)\s*(")
+      captures:
+        1: entity.other.attribute-name.variable.mvt
+        2: punctuation.separator.key-value.mvt
+        3: attribute-value.variable.mvt source.mvt punctuation.definition.string.begin.mvt
+      push:
+        - meta_content_scope: attribute-value.variable.mvt source.mvt
+        - match: (")
+          captures:
+            0: attribute-value.variable.mvt source.mvt punctuation.definition.string.end.mvt
+          pop: true
+        - include: source-variables
+        - include: source-brackets-no-functions
 
 
   # =-======================== Source ========================-= #
@@ -764,14 +796,14 @@ contexts:
     # Arithmetic Operators
     - match: (\b(?i:POW|MOD|ROUND)\b)
       scope: keyword.operator.arithmetic.mvt
-  
+
     # Arithmetic Operators (Symbols)
     - match: >-
         (?x)
           --   | # decrement
           \+\+ | # increment
           /    | # division
-          \*   | # multiplication 
+          \*   | # multiplication
           \+   | # addition
           -    | # subtraction
       scope: keyword.operator.arithmetic.mvt
@@ -800,7 +832,7 @@ contexts:
     # NULL
     - match: \b(?i:NULL)\b
       scope: constant.language.null.mvt
-  
+
   # =-======== Numbers - Source ========-= #
   source-numbers:
     - match: \b(([0-9]+(\.[0-9]+)?))\b
