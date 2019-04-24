@@ -24,554 +24,6 @@
 				"parameters": []
 			},
 			{
-				"name": "JSON_ValidateAdminSession",
-				"parameters": []
-			},
-			{
-				"name": "JSON_UpdateAdministrativeSession",
-				"parameters": []
-			},
-			{
-				"name": "JSON_Logout",
-				"parameters": []
-			},
-			{
-				"name": "JSON_FileUpload_Error",
-				"parameters": [
-					"error_code",
-					"error_message"
-				]
-			},
-			{
-				"name": "JSON_Response_Error",
-				"parameters": [
-					"error_code",
-					"error_message"
-				]
-			},
-			{
-				"name": "JSON_Response_FieldError",
-				"parameters": [
-					"error_field",
-					"error_message"
-				]
-			},
-			{
-				"name": "JSON_Response_ListProcessed_Success",
-				"parameters": [
-					"processed"
-				]
-			},
-			{
-				"name": "JSON_Response_ListProcessed_Errors",
-				"parameters": [
-					"processed",
-					"errors var"
-				]
-			},
-			{
-				"name": "JSON_Response_ListProcessed_Error",
-				"parameters": [
-					"identifier",
-					"error_code",
-					"error_message",
-					"errors var"
-				]
-			},
-			{
-				"name": "JSON_Response_FieldErrorWithList_Start",
-				"parameters": [
-					"error_field",
-					"error_message"
-				]
-			},
-			{
-				"name": "JSON_Response_FieldErrorWithList_End",
-				"parameters": []
-			},
-			{
-				"name": "JSON_HTML_Error",
-				"parameters": [
-					"error_code",
-					"error_message"
-				]
-			},
-			{
-				"name": "JSON_Response_Success",
-				"parameters": []
-			},
-			{
-				"name": "JSON_Response_Start",
-				"parameters": []
-			},
-			{
-				"name": "JSON_Response_End",
-				"parameters": []
-			},
-			{
-				"name": "JSON_Store_Open",
-				"parameters": []
-			},
-			{
-				"name": "JSON_Is_Store_Open",
-				"parameters": []
-			},
-			{
-				"name": "JSON_Array_String",
-				"parameters": [
-					"delimited",
-					"output var"
-				]
-			},
-			{
-				"name": "JSON_Array_Integer",
-				"parameters": [
-					"delimited",
-					"output var"
-				]
-			},
-			{
-				"name": "JSON_Array_Rounded",
-				"parameters": [
-					"delimited",
-					"output var",
-					"digits"
-				]
-			},
-			{
-				"name": "JSON_Array_Coalesce_String",
-				"parameters": [
-					"delimited",
-					"output var",
-					"member"
-				]
-			},
-			{
-				"name": "JSON_Array_Coalesce_Integer",
-				"parameters": [
-					"delimited",
-					"output var",
-					"member"
-				]
-			},
-			{
-				"name": "JSON_Array_Coalesce_Rounded",
-				"parameters": [
-					"delimited",
-					"output var",
-					"member",
-					"digits"
-				]
-			},
-			{
-				"name": "JSON_Passphrase_Index",
-				"parameters": [
-					"raw_key_ids var",
-					"raw_passphrases var",
-					"index var"
-				]
-			},
-			{
-				"name": "JSON_ArrayElement_Start",
-				"parameters": [
-					"count var"
-				]
-			},
-			{
-				"name": "JSON_ArrayElement_End",
-				"parameters": []
-			},
-			{
-				"name": "JSON_Output",
-				"parameters": [
-					"value var"
-				]
-			},
-			{
-				"name": "JSON_Decode",
-				"parameters": [
-					"string"
-				]
-			},
-			{
-				"name": "JSON_Decode_ISO_8859_1",
-				"parameters": [
-					"string var"
-				]
-			},
-			{
-				"name": "JSON_Encode",
-				"parameters": [
-					"string"
-				]
-			},
-			{
-				"name": "JSON_Encode_ISO_8859_1",
-				"parameters": [
-					"string var"
-				]
-			},
-			{
-				"name": "JSON_Encode_UTF8",
-				"parameters": [
-					"string var"
-				]
-			},
-			{
-				"name": "JSON_Hex_Byte",
-				"parameters": [
-					"byte"
-				]
-			},
-			{
-				"name": "JSON_Boolean",
-				"parameters": [
-					"value"
-				]
-			},
-			{
-				"name": "JSON_Filter_Contains_Search_Field",
-				"parameters": [
-					"filterlist",
-					"field",
-					"search_value var"
-				]
-			},
-			{
-				"name": "JSON_Filter",
-				"parameters": [
-					"query var",
-					"filterlist",
-					"correlationlist"
-				]
-			},
-			{
-				"name": "JSON_Filter_Callback",
-				"parameters": [
-					"query var",
-					"filterlist",
-					"correlationlist",
-					"callback_filename",
-					"callback_filter",
-					"callback_search",
-					"data var"
-				]
-			},
-			{
-				"name": "JSON_Filter_Callback_With_CustomFields",
-				"parameters": [
-					"query var",
-					"filterlist",
-					"correlationlist",
-					"callback_filename",
-					"callback_filter",
-					"callback_search",
-					"callback_search_customfields",
-					"data var"
-				]
-			},
-			{
-				"name": "JSON_Search_Filter",
-				"parameters": [
-					"query var",
-					"field_count",
-					"filterlist",
-					"correlationlist",
-					"callback_filename",
-					"callback_search",
-					"callback_search_field_count var"
-				]
-			},
-			{
-				"name": "JSON_Search_Filter_Clause",
-				"parameters": [
-					"query var",
-					"outer_joining_clause",
-					"inner_joining_clause",
-					"field_count",
-					"filterlist",
-					"correlationlist",
-					"callback_filename",
-					"callback_search",
-					"callback_search_field_count var"
-				]
-			},
-			{
-				"name": "JSON_Search_Filter_Clause_With_CustomFields",
-				"parameters": [
-					"query var",
-					"outer_joining_clause",
-					"inner_joining_clause",
-					"field_count",
-					"filterlist",
-					"correlationlist",
-					"callback_filename",
-					"callback_search",
-					"callback_search_customfields",
-					"callback_search_field_count var",
-					"data var"
-				]
-			},
-			{
-				"name": "JSON_Search_Filter_CommaSeparatedList",
-				"parameters": [
-					"query var",
-					"correlation",
-					"filter_name",
-					"filter_operator",
-					"filter_value"
-				]
-			},
-			{
-				"name": "JSON_CustomFields_Initialize",
-				"parameters": [
-					"fields var",
-					"field_count",
-					"displayable_custom_fields var",
-					"module_feature_code",
-					"customfield_state var"
-				]
-			},
-			{
-				"name": "JSON_OrderBy",
-				"parameters": [
-					"query var",
-					"sort",
-					"list",
-					"default_sort"
-				]
-			},
-			{
-				"name": "JSON_OrderBy_Callback_With_CustomFields",
-				"parameters": [
-					"query var",
-					"sort",
-					"list",
-					"default_sort",
-					"callback_filename",
-					"callback_orderby_customfields"
-				]
-			},
-			{
-				"name": "JSON_Query_Callback_With_CustomFields",
-				"parameters": [
-					"query var",
-					"filterlist",
-					"callback_filename",
-					"callback_query_customfields"
-				]
-			},
-			{
-				"name": "JSON_SQL_Query_Index_With_CustomFields",
-				"parameters": [
-					"query var",
-					"loaded_record var",
-					"index var",
-					"correlation_data",
-					"callback_filename",
-					"callback_function"
-				]
-			},
-			{
-				"name": "JSON_Filter_MivaScript",
-				"parameters": [
-					"expression var",
-					"filterlist",
-					"variablelist"
-				]
-			},
-			{
-				"name": "JSON_Search_Filter_MivaScript",
-				"parameters": [
-					"expression var",
-					"field_count",
-					"filterlist",
-					"variablelist"
-				]
-			},
-			{
-				"name": "JSON_Search_Filter_MivaScript_CommaSeparatedList",
-				"parameters": [
-					"expression var",
-					"variable",
-					"filter_name",
-					"filter_operator",
-					"filter_value"
-				]
-			},
-			{
-				"name": "Miva_ValidateFileUpload",
-				"parameters": [
-					"field",
-					"filename",
-					"content_type"
-				]
-			},
-			{
-				"name": "Miva_ProcessFileUpload",
-				"parameters": [
-					"field",
-					"filename",
-					"status",
-					"tempfile",
-					"content_type",
-					"size"
-				]
-			}
-		]
-	},
-	{
-		"distro_path": "g.Module_Merchant",
-		"functions": [
-			{
-				"name": "Merchant",
-				"parameters": []
-			},
-			{
-				"name": "Merchant_Actions",
-				"parameters": []
-			},
-			{
-				"name": "Merchant_Screens",
-				"parameters": []
-			},
-			{
-				"name": "MaintenanceMode_StoreClosed",
-				"parameters": []
-			},
-			{
-				"name": "MaintenanceMode_DisallowNewBaskets",
-				"parameters": []
-			},
-			{
-				"name": "Error_Store_Closed",
-				"parameters": []
-			},
-			{
-				"name": "Action_AddProductToBasket",
-				"parameters": []
-			},
-			{
-				"name": "Action_AddMultipleProductsToBasket",
-				"parameters": []
-			},
-			{
-				"name": "Action_UpdateQuantity",
-				"parameters": []
-			},
-			{
-				"name": "Action_UpdateGroupQuantity",
-				"parameters": []
-			},
-			{
-				"name": "Action_RemoveProductFromBasket",
-				"parameters": []
-			},
-			{
-				"name": "Action_RemoveGroupFromBasket",
-				"parameters": []
-			},
-			{
-				"name": "Order_Validate",
-				"parameters": [
-					"tax_module var"
-				]
-			},
-			{
-				"name": "Action_Save_OrderInformation",
-				"parameters": []
-			},
-			{
-				"name": "Action_Save_OrderInformation_Update_CustomerAddress_Shipping",
-				"parameters": [
-					"ship_id",
-					"bill_id",
-					"std_fields var",
-					"address_ship var"
-				]
-			},
-			{
-				"name": "Action_Save_OrderInformation_Update_CustomerAddress_Billing",
-				"parameters": [
-					"ship_id",
-					"bill_id",
-					"std_fields var",
-					"address_bill var"
-				]
-			},
-			{
-				"name": "Action_Save_OrderInformation_Update_Customer_Shipping_FromCustomerAddress",
-				"parameters": [
-					"customer var",
-					"address var",
-					"std_fields var"
-				]
-			},
-			{
-				"name": "Action_Save_OrderInformation_Update_Customer_Billing_FromCustomerAddress",
-				"parameters": [
-					"customer var",
-					"address var",
-					"std_fields var"
-				]
-			},
-			{
-				"name": "Action_CalculateTax",
-				"parameters": []
-			},
-			{
-				"name": "Action_CalculateShipping",
-				"parameters": []
-			},
-			{
-				"name": "Action_PaymentManipulateShipping",
-				"parameters": []
-			},
-			{
-				"name": "Action_AuthorizePayment",
-				"parameters": []
-			},
-			{
-				"name": "Action_AuthorizePayment_LowLevel",
-				"parameters": []
-			},
-			{
-				"name": "UIException",
-				"parameters": [
-					"code"
-				]
-			},
-			{
-				"name": "v56_Address_Compatibility",
-				"parameters": []
-			}
-		]
-	},
-	{
-		"distro_path": "g.Module_Root $ 'download.mvc'",
-		"functions": [
-			{
-				"name": "Download",
-				"parameters": []
-			},
-			{
-				"name": "DigitalDownload",
-				"parameters": []
-			}
-		]
-	},
-	{
-		"distro_path": "g.Module_JSON",
-		"functions": [
-			{
-				"name": "JSON_Initialize_Session",
-				"parameters": []
-			},
-			{
-				"name": "JSON",
-				"parameters": []
-			},
-			{
 				"name": "JSON_API",
 				"parameters": []
 			},
@@ -771,15 +223,34 @@
 				]
 			},
 			{
-				"name": "JSON_Clear_Parameters",
-				"parameters": []
-			},
-			{
-				"name": "JSON_Input_Copy",
+				"name": "JSON_Input_Copy_Parameter",
 				"parameters": [
 					"struct var",
 					"member"
 				]
+			},
+			{
+				"name": "JSON_Input_Copy_Parameters",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Input_Clear_Parameters",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Input_Copy_Field",
+				"parameters": [
+					"struct var",
+					"member"
+				]
+			},
+			{
+				"name": "JSON_Input_Copy_Fields",
+				"parameters": []
+			},
+			{
+				"name": "JSON_Input_Clear_Fields",
+				"parameters": []
 			},
 			{
 				"name": "JSON_Input_Retrieve_Raw",
@@ -1390,15 +861,6 @@
 		]
 	},
 	{
-		"distro_path": "g.Module_Root $ 'uri.mvc'",
-		"functions": [
-			{
-				"name": "URI",
-				"parameters": []
-			}
-		]
-	},
-	{
 		"distro_path": "g.Module_Admin",
 		"functions": [
 			{
@@ -1598,6 +1060,24 @@
 				"name": "DrawButton_ViewOnLiveStore",
 				"parameters": [
 					"uri"
+				]
+			},
+			{
+				"name": "DrawButton_ViewProductOnLiveStore",
+				"parameters": [
+					"product var"
+				]
+			},
+			{
+				"name": "DrawButton_ViewCategoryOnLiveStore",
+				"parameters": [
+					"category var"
+				]
+			},
+			{
+				"name": "DrawButton_ViewOnLiveStore_LowLevel",
+				"parameters": [
+					"url"
 				]
 			},
 			{
@@ -2716,6 +2196,13 @@
 				]
 			},
 			{
+				"name": "JSON_OrderItem_OnDemandColumns",
+				"parameters": [
+					"orderitem var",
+					"ondemandcolumns var"
+				]
+			},
+			{
 				"name": "JSON_OrderItemList",
 				"parameters": [
 					"query",
@@ -2760,6 +2247,10 @@
 				"parameters": []
 			},
 			{
+				"name": "JSON_Order_Create_FromOrder",
+				"parameters": []
+			},
+			{
 				"name": "JSON_Order_Create_Empty",
 				"parameters": []
 			},
@@ -2771,6 +2262,7 @@
 				"name": "JSON_Order_Create_LowLevel",
 				"parameters": [
 					"order var",
+					"customer var",
 					"shipping_module var",
 					"shipping_module_data",
 					"calculatecharges",
@@ -2793,6 +2285,7 @@
 				"name": "JSON_Order_Products",
 				"parameters": [
 					"order var",
+					"customer var",
 					"orderitems var",
 					"orderitem_count var"
 				]
@@ -4508,8 +4001,21 @@
 				]
 			},
 			{
+				"name": "DB_Load_Source",
+				"parameters": [
+					"source",
+					"connection var"
+				]
+			},
+			{
 				"name": "DB_Open",
 				"parameters": []
+			},
+			{
+				"name": "DB_Open_Source",
+				"parameters": [
+					"source"
+				]
 			},
 			{
 				"name": "DB_Open_Parameters",
@@ -4541,6 +4047,19 @@
 					"username",
 					"password",
 					"flags"
+				]
+			},
+			{
+				"name": "DB_Increment_Lock_Table",
+				"parameters": [
+					"primary_table",
+					"additional_tables"
+				]
+			},
+			{
+				"name": "DB_Increment_Unlock_Table",
+				"parameters": [
+					"primary_table"
 				]
 			}
 		]
@@ -4625,6 +4144,10 @@
 				"parameters": [
 					"primary_table"
 				]
+			},
+			{
+				"name": "DB_Increment_Requires_Lock",
+				"parameters": []
 			},
 			{
 				"name": "Pack",
@@ -4782,6 +4305,10 @@
 				"parameters": [
 					"primary_table"
 				]
+			},
+			{
+				"name": "DB_Increment_Requires_Lock",
+				"parameters": []
 			},
 			{
 				"name": "Pack",
@@ -10565,6 +10092,111 @@
 					"cust_id",
 					"paymentcards var"
 				]
+			},
+			{
+				"name": "OrderPaymentCard_Read",
+				"parameters": [
+					"paymentcard var"
+				]
+			},
+			{
+				"name": "OrderPaymentCard_Load_ID",
+				"parameters": [
+					"id",
+					"order_id",
+					"paymentcard var"
+				]
+			},
+			{
+				"name": "OrderPaymentCardList_Load_Order",
+				"parameters": [
+					"order_id",
+					"paymentcards var"
+				]
+			},
+			{
+				"name": "OrderPaymentCardList_Load_Expired",
+				"parameters": [
+					"paymentcards var"
+				]
+			},
+			{
+				"name": "OrderPaymentCard_Insert",
+				"parameters": [
+					"paymentcard var"
+				]
+			},
+			{
+				"name": "OrderPaymentCard_Delete",
+				"parameters": [
+					"paymentcard var"
+				]
+			},
+			{
+				"name": "OrderPaymentCard_Delete_LowLevel",
+				"parameters": [
+					"id"
+				]
+			},
+			{
+				"name": "OrderPaymentCard_Delete_All_ExpiredOrUnreferenced",
+				"parameters": []
+			},
+			{
+				"name": "OrderPaymentCard_Delete_All_Unreferenced",
+				"parameters": []
+			},
+			{
+				"name": "OrderPaymentCard_Detatch_All_Order",
+				"parameters": [
+					"order var"
+				]
+			},
+			{
+				"name": "OrderPaymentCard_Increment_RefCount",
+				"parameters": [
+					"id"
+				]
+			},
+			{
+				"name": "OrderPaymentCard_Decrement_RefCount",
+				"parameters": [
+					"id"
+				]
+			},
+			{
+				"name": "OrderPaymentCardXOrder_Insert",
+				"parameters": [
+					"paymentcard var",
+					"order var"
+				]
+			},
+			{
+				"name": "OrderPaymentCardXOrder_Insert_LowLevel",
+				"parameters": [
+					"card_id",
+					"order_id"
+				]
+			},
+			{
+				"name": "OrderPaymentCardXOrder_Delete",
+				"parameters": [
+					"paymentcard var",
+					"order var"
+				]
+			},
+			{
+				"name": "OrderPaymentCardXOrder_Delete_LowLevel",
+				"parameters": [
+					"card_id",
+					"order_id"
+				]
+			},
+			{
+				"name": "OrderPaymentCardXOrder_Delete_All_PaymentCard",
+				"parameters": [
+					"card_id"
+				]
 			}
 		]
 	},
@@ -10682,6 +10314,12 @@
 				"parameters": []
 			},
 			{
+				"name": "JSON_OrderPaymentCard",
+				"parameters": [
+					"paymentcard var"
+				]
+			},
+			{
 				"name": "JSON_AuthorizationBlacklistList_Load_Query",
 				"parameters": []
 			},
@@ -10710,6 +10348,20 @@
 		"functions": [
 			{
 				"name": "PaymentMethodList_Load_Order_Authorize",
+				"parameters": [
+					"order var",
+					"methods var"
+				]
+			},
+			{
+				"name": "PaymentMethodList_Load_Order_Authorize_OnSite",
+				"parameters": [
+					"order var",
+					"methods var"
+				]
+			},
+			{
+				"name": "PaymentMethodList_Load_Order_Authorize_LowLevel",
 				"parameters": [
 					"order var",
 					"methods var"
@@ -10854,6 +10506,18 @@
 				]
 			},
 			{
+				"name": "PaymentMethod_Parse",
+				"parameters": [
+					"paymentmethod",
+					"cust_id",
+					"order_id",
+					"module_code var",
+					"module_data var",
+					"paymentcard var",
+					"paymentcardtype var"
+				]
+			},
+			{
 				"name": "PaymentMethod_Parse_Runtime_WithModule",
 				"parameters": [
 					"paymentmethod",
@@ -10877,6 +10541,21 @@
 				"parameters": [
 					"paymentmethod",
 					"cust_id",
+					"module_code var",
+					"module_data var",
+					"paymentcard var",
+					"paymentcardtype var",
+					"response_xml var",
+					"response_signature var",
+					"mivapay_response var"
+				]
+			},
+			{
+				"name": "PaymentMethod_Parse_WithMivaPayResponse",
+				"parameters": [
+					"paymentmethod",
+					"cust_id",
+					"order_id",
 					"module_code var",
 					"module_data var",
 					"paymentcard var",
@@ -15060,6 +14739,24 @@
 				]
 			},
 			{
+				"name": "PRV_Action_Provision_Store_JavaScriptCombinedResourceXResource_Assign",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Store_JavaScriptCombinedResourceXResource_Unassign",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Store_JavaScriptCombinedResourceXResource_Unassign_All_CombinedResource",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
 				"name": "PRV_Action_Provision_Store_CSSResource_Add",
 				"parameters": [
 					"provide_xml var"
@@ -15122,6 +14819,24 @@
 			},
 			{
 				"name": "PRV_Action_Provision_Store_CSSResourceXGroup_Unassign_All_Group",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Store_CSSCombinedResourceXResource_Assign",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Store_CSSCombinedResourceXResource_Unassign",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Store_CSSCombinedResourceXResource_Unassign_All_CombinedResource",
 				"parameters": [
 					"provide_xml var"
 				]
@@ -15698,6 +15413,24 @@
 			},
 			{
 				"name": "PRV_Action_Provision_Domain_GroupExportModule_Unassign",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_PrintQueue_Add",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_PrintQueue_Update",
+				"parameters": [
+					"provide_xml var"
+				]
+			},
+			{
+				"name": "PRV_Action_Provision_Domain_PrintQueue_Delete",
 				"parameters": [
 					"provide_xml var"
 				]
@@ -18988,6 +18721,23 @@
 				]
 			},
 			{
+				"name": "Runtime_JavaScriptResourceList_Load_CombinedResource",
+				"parameters": [
+					"comb_id",
+					"scriptresources var"
+				]
+			},
+			{
+				"name": "JavaScriptResource_Create_Type_Combined",
+				"parameters": [
+					"code",
+					"attributes",
+					"is_global",
+					"active",
+					"scriptresource var"
+				]
+			},
+			{
 				"name": "JavaScriptResource_Create_Type_InlineScript",
 				"parameters": [
 					"code",
@@ -19041,6 +18791,78 @@
 			{
 				"name": "JavaScriptResource_Delete_All",
 				"parameters": []
+			},
+			{
+				"name": "JavaScriptCombinedResourceXResource_Read",
+				"parameters": [
+					"scriptcombinedresourcexresource var"
+				]
+			},
+			{
+				"name": "JavaScriptCombinedResourceXResource_Insert",
+				"parameters": [
+					"comb_id",
+					"res_id"
+				]
+			},
+			{
+				"name": "JavaScriptCombinedResourceXResource_Delete_All_CombinedResource",
+				"parameters": [
+					"comb_id"
+				]
+			},
+			{
+				"name": "JavaScriptCombinedResourceXResource_Delete_All_Resource",
+				"parameters": [
+					"res_id"
+				]
+			},
+			{
+				"name": "JavaScriptCombinedResourceXResource_Delete_All",
+				"parameters": []
+			},
+			{
+				"name": "JavaScriptCombinedResourceXResource_Delete",
+				"parameters": [
+					"comb_id",
+					"res_id"
+				]
+			},
+			{
+				"name": "JavaScriptCombinedResourceXResource_Load",
+				"parameters": [
+					"comb_id",
+					"res_id",
+					"scriptcombinedresourcexresource var"
+				]
+			},
+			{
+				"name": "JavaScriptCombinedResourceXResource_Load_All_CombinedResource",
+				"parameters": [
+					"comb_id",
+					"scriptcombinedresourcexresources var"
+				]
+			},
+			{
+				"name": "JavaScriptCombinedResourceXResource_Load_All",
+				"parameters": [
+					"scriptcombinedresourcexresources var"
+				]
+			},
+			{
+				"name": "JavaScriptCombinedResourceXResource_Update_Offsets_PastEnd",
+				"parameters": [
+					"comb_id",
+					"pastend var",
+					"pastend_count"
+				]
+			},
+			{
+				"name": "JavaScriptCombinedResourceXResource_Update_Offsets",
+				"parameters": [
+					"comb_id",
+					"scriptcombinedresourcexresources var"
+				]
 			},
 			{
 				"name": "JavaScriptResourceXGroup_Read",
@@ -19213,6 +19035,23 @@
 				]
 			},
 			{
+				"name": "Runtime_CSSResourceList_Load_CombinedResource",
+				"parameters": [
+					"comb_id",
+					"cssresources var"
+				]
+			},
+			{
+				"name": "CSSResource_Create_Type_Combined",
+				"parameters": [
+					"code",
+					"attributes",
+					"is_global",
+					"active",
+					"cssresource var"
+				]
+			},
+			{
 				"name": "CSSResource_Create_Type_InlineCSS",
 				"parameters": [
 					"code",
@@ -19266,6 +19105,78 @@
 			{
 				"name": "CSSResource_Delete_All",
 				"parameters": []
+			},
+			{
+				"name": "CSSCombinedResourceXResource_Read",
+				"parameters": [
+					"csscombinedresourcexresource var"
+				]
+			},
+			{
+				"name": "CSSCombinedResourceXResource_Insert",
+				"parameters": [
+					"comb_id",
+					"res_id"
+				]
+			},
+			{
+				"name": "CSSCombinedResourceXResource_Delete_All_CombinedResource",
+				"parameters": [
+					"comb_id"
+				]
+			},
+			{
+				"name": "CSSCombinedResourceXResource_Delete_All_Resource",
+				"parameters": [
+					"res_id"
+				]
+			},
+			{
+				"name": "CSSCombinedResourceXResource_Delete_All",
+				"parameters": []
+			},
+			{
+				"name": "CSSCombinedResourceXResource_Delete",
+				"parameters": [
+					"comb_id",
+					"res_id"
+				]
+			},
+			{
+				"name": "CSSCombinedResourceXResource_Load",
+				"parameters": [
+					"comb_id",
+					"res_id",
+					"csscombinedresourcexresource var"
+				]
+			},
+			{
+				"name": "CSSCombinedResourceXResource_Load_All_CombinedResource",
+				"parameters": [
+					"comb_id",
+					"csscombinedresourcexresources var"
+				]
+			},
+			{
+				"name": "CSSCombinedResourceXResource_Load_All",
+				"parameters": [
+					"csscombinedresourcexresources var"
+				]
+			},
+			{
+				"name": "CSSCombinedResourceXResource_Update_Offsets_PastEnd",
+				"parameters": [
+					"comb_id",
+					"pastend var",
+					"pastend_count"
+				]
+			},
+			{
+				"name": "CSSCombinedResourceXResource_Update_Offsets",
+				"parameters": [
+					"comb_id",
+					"csscombinedresourcexresources var"
+				]
 			},
 			{
 				"name": "CSSResourceXGroup_Read",
@@ -19605,14 +19516,26 @@
 				]
 			},
 			{
-				"name": "JSON_JavaScriptResourceList_Load_Query",
-				"parameters": []
+				"name": "JSON_JavaScriptResource",
+				"parameters": [
+					"scriptresource var"
+				]
 			},
 			{
 				"name": "JSON_JavaScriptResource_Load",
 				"parameters": [
 					"scriptresource var"
 				]
+			},
+			{
+				"name": "JSON_JavaScriptCombinedResource_Load",
+				"parameters": [
+					"combinedresource var"
+				]
+			},
+			{
+				"name": "JSON_JavaScriptResourceList_Load_Query",
+				"parameters": []
 			},
 			{
 				"name": "JSON_JavaScriptResource_Insert",
@@ -19632,6 +19555,14 @@
 			},
 			{
 				"name": "JSON_JavaScriptResource_Update_Attributes",
+				"parameters": []
+			},
+			{
+				"name": "JSON_JavaScriptResource_Generate_SRI",
+				"parameters": []
+			},
+			{
+				"name": "JSON_JavaScriptResource_Clear_SRI",
 				"parameters": []
 			},
 			{
@@ -19710,6 +19641,28 @@
 				"parameters": []
 			},
 			{
+				"name": "JSON_JavaScriptCombinedResource_LinkedResourceList_Load_Query",
+				"parameters": []
+			},
+			{
+				"name": "JSON_JavaScriptCombinedResource_LinkedResource_Update_Assigned",
+				"parameters": []
+			},
+			{
+				"name": "JSON_JavaScriptCombinedResource_LinkedResourceList_DisplayOrder_Update",
+				"parameters": []
+			},
+			{
+				"name": "JSON_JavaScriptCombinedResource_Output",
+				"parameters": []
+			},
+			{
+				"name": "JSON_CSSResource",
+				"parameters": [
+					"cssresource var"
+				]
+			},
+			{
 				"name": "JSON_CSSResourceList_Load_Query",
 				"parameters": []
 			},
@@ -19717,6 +19670,12 @@
 				"name": "JSON_CSSResource_Load",
 				"parameters": [
 					"cssresource var"
+				]
+			},
+			{
+				"name": "JSON_CSSCombinedResource_Load",
+				"parameters": [
+					"combinedresource var"
 				]
 			},
 			{
@@ -19737,6 +19696,14 @@
 			},
 			{
 				"name": "JSON_CSSResource_Update_Attributes",
+				"parameters": []
+			},
+			{
+				"name": "JSON_CSSResource_Generate_SRI",
+				"parameters": []
+			},
+			{
+				"name": "JSON_CSSResource_Clear_SRI",
 				"parameters": []
 			},
 			{
@@ -19812,6 +19779,22 @@
 			},
 			{
 				"name": "JSON_CSSResource_LinkedResourceGroup_Update_Assigned",
+				"parameters": []
+			},
+			{
+				"name": "JSON_CSSCombinedResource_LinkedResourceList_Load_Query",
+				"parameters": []
+			},
+			{
+				"name": "JSON_CSSCombinedResource_LinkedResource_Update_Assigned",
+				"parameters": []
+			},
+			{
+				"name": "JSON_CSSCombinedResource_LinkedResourceList_DisplayOrder_Update",
+				"parameters": []
+			},
+			{
+				"name": "JSON_CSSCombinedResource_Output",
 				"parameters": []
 			},
 			{
@@ -20155,9 +20138,22 @@
 				]
 			},
 			{
+				"name": "TemplateManager_Render_Clientside_Deferred",
+				"parameters": [
+					"all_settings var",
+					"filename"
+				]
+			},
+			{
 				"name": "TemplateManager_Render_Head",
 				"parameters": [
 					"all_settings var"
+				]
+			},
+			{
+				"name": "TemplateManager_Generate_ResourceToken",
+				"parameters": [
+					"string"
 				]
 			},
 			{
@@ -20573,6 +20569,40 @@
 				"parameters": []
 			},
 			{
+				"name": "TemplateManager_Register_Global_JavaScriptResource_LocalFile_BuildPath",
+				"parameters": [
+					"filename",
+					"abs_file_path var",
+					"rel_file_path var"
+				]
+			},
+			{
+				"name": "TemplateManager_Register_Global_JavaScriptResource_LocalFile_WithFile",
+				"parameters": [
+					"group_code",
+					"filename",
+					"source_file_path",
+					"scriptresource var"
+				]
+			},
+			{
+				"name": "TemplateManager_Register_Global_JavaScriptResource_LocalFile_WithContent",
+				"parameters": [
+					"group_code",
+					"filename",
+					"content var",
+					"scriptresource var"
+				]
+			},
+			{
+				"name": "TemplateManager_Register_Global_JavaScriptResource_LocalFile_LowLevel",
+				"parameters": [
+					"group_code",
+					"file_path",
+					"scriptresource var"
+				]
+			},
+			{
 				"name": "TemplateManager_Delete_CSSResource",
 				"parameters": [
 					"cssresource var"
@@ -20614,40 +20644,6 @@
 					"group_code",
 					"file_path",
 					"cssresource var"
-				]
-			},
-			{
-				"name": "TemplateManager_Register_Global_JavaScriptResource_LocalFile_BuildPath",
-				"parameters": [
-					"filename",
-					"abs_file_path var",
-					"rel_file_path var"
-				]
-			},
-			{
-				"name": "TemplateManager_Register_Global_JavaScriptResource_LocalFile_WithFile",
-				"parameters": [
-					"group_code",
-					"filename",
-					"source_file_path",
-					"scriptresource var"
-				]
-			},
-			{
-				"name": "TemplateManager_Register_Global_JavaScriptResource_LocalFile_WithContent",
-				"parameters": [
-					"group_code",
-					"filename",
-					"content var",
-					"scriptresource var"
-				]
-			},
-			{
-				"name": "TemplateManager_Register_Global_JavaScriptResource_LocalFile_LowLevel",
-				"parameters": [
-					"group_code",
-					"file_path",
-					"scriptresource var"
 				]
 			}
 		]
@@ -21427,13 +21423,31 @@
 				]
 			},
 			{
+				"name": "URI_Insert_LowLevel",
+				"parameters": [
+					"uri var"
+				]
+			},
+			{
 				"name": "URI_Update",
 				"parameters": [
 					"uri var"
 				]
 			},
 			{
+				"name": "URI_Update_LowLevel",
+				"parameters": [
+					"uri var"
+				]
+			},
+			{
 				"name": "URI_Delete",
+				"parameters": [
+					"uri var"
+				]
+			},
+			{
+				"name": "URI_Delete_LowLevel",
 				"parameters": [
 					"uri var"
 				]
@@ -22603,6 +22617,42 @@
 		"distro_path": "g.Module_Library_DB",
 		"functions": [
 			{
+				"name": "Basket_Create",
+				"parameters": [
+					"basket var"
+				]
+			},
+			{
+				"name": "Basket_Create_Provisional",
+				"parameters": [
+					"basket var"
+				]
+			},
+			{
+				"name": "Basket_Register",
+				"parameters": [
+					"basket var"
+				]
+			},
+			{
+				"name": "Basket_ID_Register",
+				"parameters": [
+					"basket_id var"
+				]
+			},
+			{
+				"name": "Basket_Is_Provisional",
+				"parameters": [
+					"basket var"
+				]
+			},
+			{
+				"name": "Basket_ID_Is_Provisional",
+				"parameters": [
+					"basket_id"
+				]
+			},
+			{
 				"name": "Basket_Dirty",
 				"parameters": [
 					"basket var"
@@ -23349,6 +23399,14 @@
 				"name": "OpenDataFiles",
 				"parameters": [
 					"merchant_version",
+					"domain var"
+				]
+			},
+			{
+				"name": "OpenDataFiles_Source",
+				"parameters": [
+					"merchant_version",
+					"source",
 					"domain var"
 				]
 			},
@@ -39042,6 +39100,14 @@
 					"settings var",
 					"param"
 				]
+			},
+			{
+				"name": "CSSUI_URL_Callback",
+				"parameters": [
+					"urls var",
+					"screen",
+					"data var"
+				]
 			}
 		]
 	},
@@ -40950,6 +41016,16 @@
 					"item",
 					"all_settings var",
 					"settings var"
+				]
+			},
+			{
+				"name": "ComponentModule_Prerender",
+				"parameters": [
+					"module var",
+					"item",
+					"all_settings var",
+					"settings var",
+					"param"
 				]
 			},
 			{
@@ -67006,6 +67082,257 @@
 		"functions": []
 	},
 	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-cssui-messages/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_CSSUIMessage_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CSSUIMessage_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CSSUIMessage_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-cssui-messages/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-cssui-messages/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_CSSUIMessage_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CSSUIMessage_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-cssui-messages/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-cssui-messages/list.mvc'",
+		"functions": [
+			{
+				"name": "Element_CSSUIMessageList_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CSSUIMessageList_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CSSUIMessageList_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_CSSUIMessageList_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-cssui-messages/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-cssui-searchfield/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-cssui-searchfield/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-http-headers/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_HTTPHeader_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_HTTPHeader_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_HTTPHeader_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-http-headers/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-http-headers/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_HTTPHeader_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_HTTPHeader_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-http-headers/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-http-headers/list.mvc'",
+		"functions": [
+			{
+				"name": "Element_HTTPHeaderList_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_HTTPHeaderList_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_HTTPHeaderList_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_HTTPHeaderList_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-http-headers/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-prodctgy-meta/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_META_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_META_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_META_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-prodctgy-meta/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-prodctgy-meta/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_META_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_META_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-prodctgy-meta/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-prodctgy-meta/metanamelist.mvc'",
+		"functions": [
+			{
+				"name": "Element_METAName_List_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_METAName_List_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_METAName_List_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_METAName_List_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/component/cmp-mv-prodctgy-meta/output.mvc'",
+		"functions": []
+	},
+	{
 		"distro_path": "g.Module_Root $ '/modules/fulfill/templateorderemails/addeditdialog.mvc'",
 		"functions": [
 			{
@@ -67113,6 +67440,87 @@
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/fulfill/templateorderemails/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/payment/mod10/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_MOD10_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_MOD10_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_MOD10_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/payment/mod10/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/payment/mod10/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_MOD10_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_MOD10_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/payment/mod10/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/payment/mod10/list.mvc'",
+		"functions": [
+			{
+				"name": "Element_MOD10CardList_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_MOD10CardList_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_MOD10CardList_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_MOD10CardList_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/payment/mod10/output.mvc'",
 		"functions": []
 	},
 	{
@@ -68417,6 +68825,358 @@
 	{
 		"distro_path": "g.Module_Root $ '/modules/util/imagemanagement/output.mvc'",
 		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/mvga/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/mvga/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/orderworkflow/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_OWF_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWF_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWF_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/orderworkflow/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/orderworkflow/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_OWF_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWF_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/orderworkflow/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/orderworkflow/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/orderworkflow/queueadddialog.mvc'",
+		"functions": [
+			{
+				"name": "Element_OWFQueue_AddDialog_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFQueue_AddDialog_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFQueue_AddDialog_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFQueue_AddDialog_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/orderworkflow/queuelist.mvc'",
+		"functions": [
+			{
+				"name": "Element_OWFQueue_List_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFQueue_List_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFQueue_List_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFQueue_List_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/orderworkflow/workflowaddeditdialog.mvc'",
+		"functions": [
+			{
+				"name": "Element_OWFWorkflow_AddEditDialog_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFWorkflow_AddEditDialog_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFWorkflow_AddEditDialog_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFWorkflow_AddEditDialog_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/orderworkflow/workflowlist.mvc'",
+		"functions": [
+			{
+				"name": "Element_OWFWorkflow_List_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFWorkflow_List_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFWorkflow_List_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_OWFWorkflow_List_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/reviewbaskets/combined.mvc'",
+		"functions": [
+			{
+				"name": "Element_ReviewBaskets_JavaScript_Combined_Begin",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBaskets_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBaskets_JavaScript_Combined_End",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/reviewbaskets/combined_integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/reviewbaskets/functions.mvc'",
+		"functions": [
+			{
+				"name": "Element_ReviewBaskets_Functions_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBaskets_Functions_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/reviewbaskets/integrity.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/reviewbaskets/output.mvc'",
+		"functions": []
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/reviewbaskets/overlay.mvc'",
+		"functions": [
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_CSS",
+				"parameters": []
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/reviewbaskets/overlay_details.mvc'",
+		"functions": [
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_Details_CSS",
+				"parameters": []
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_Details_CSS_Combined",
+				"parameters": []
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_Details_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_Details_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_Details_External_HTML",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_Details_Overlay_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/reviewbaskets/overlay_list.mvc'",
+		"functions": [
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_List_CSS",
+				"parameters": []
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_List_CSS_Combined",
+				"parameters": []
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_List_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_List_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBasketsListDetailOverlay_List_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
+	},
+	{
+		"distro_path": "g.Module_Root $ '/modules/util/reviewbaskets/reviewbasketslist.mvc'",
+		"functions": [
+			{
+				"name": "Element_ReviewBasketsList_CSS",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBasketsList_JavaScript",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBasketsList_JavaScript_Combined",
+				"parameters": [
+					"module var"
+				]
+			},
+			{
+				"name": "Element_ReviewBasketsList_HTML",
+				"parameters": [
+					"module var"
+				]
+			}
+		]
 	},
 	{
 		"distro_path": "g.Module_Root $ '/modules/util/shopascustomer/combined.mvc'",
