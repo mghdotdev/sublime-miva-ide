@@ -1,8 +1,6 @@
-## UPDATED FOR Miva 9.12.00!
+## UPDATED FOR Miva 9.13.00!
 
-## UPDATED FOR ENGINE 5.31!
-### Functions Added:
-* miva_joinstring
+## UPDATED FOR ENGINE 5.32!
 
 # Miva IDE
 A comprehensive syntax, autocompletion, and snippet package for Miva Script & MVT. This package will assist developers working within the Miva environment. Either module development with Miva Script, or site development with MVT.
