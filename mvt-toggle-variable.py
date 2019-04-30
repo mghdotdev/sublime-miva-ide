@@ -36,7 +36,7 @@ def variable_to_entity(string_value, view):
 		varname_len = len(varname)
 
 		# Generate Entity String
-		output = '&mvt:global:%s;' % (varname)
+		output = '&mvt' + mvt_entity_encoding + ':global:%s;' % (varname)
 
 	else:
 		return False
