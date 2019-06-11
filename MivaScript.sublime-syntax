@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-name: Miva Script
+name: Miva Script (MV)
 file_extensions:
   - mv
 scope: text.mv
