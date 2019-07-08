@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-name: MVT
+name: Miva Template Language (MVT)
 file_extensions:
   - mvt
 scope: text.mvt

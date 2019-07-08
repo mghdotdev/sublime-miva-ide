@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-name: Miva Script
+name: Miva Script (MV)
 file_extensions:
   - mv
 scope: text.mv
@@ -340,10 +340,10 @@ contexts:
 
   # =-======================== Source ========================-= #
   source-mv:
+    - include: source-variables
     - include: source-function-file
     - include: source-brackets
     - include: source-group
-    - include: source-variables
     - include: source-string-single
     - include: source-numbers
     - include: source-operators
